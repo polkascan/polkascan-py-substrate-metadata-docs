@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -9195,6 +9199,8 @@
       
         
       
+        
+      
     
     
     
@@ -9237,6 +9243,8 @@
       
         
           
+        
+      
         
       
         
@@ -10888,6 +10896,23 @@
                 'NewAccount': {'account': '[u8; 20]'},
                 'Remarked': {'hash': 'scale_info::12', 'sender': '[u8; 20]'},
             },
+            'Whitelist': {
+                'CallWhitelisted': {'call_hash': 'scale_info::12'},
+                'WhitelistedCallDispatched': {
+                    'call_hash': 'scale_info::12',
+                    'result': 'scale_info::294',
+                },
+                'WhitelistedCallRemoved': {'call_hash': 'scale_info::12'},
+            },
+            'XTokens': {
+                'TransferredMultiAssets': {
+                    'assets': ['scale_info::223'],
+                    'dest': 'scale_info::122',
+                    'fee': 'scale_info::223',
+                    'sender': '[u8; 20]',
+                },
+            },
+            None: None,
             'TechnicalCommittee': {
                 'Approved': {'proposal_hash': 'scale_info::12'},
                 'Closed': {
@@ -10918,6 +10943,13 @@
                     'yes': 'u32',
                 },
             },
+            'TransactionPayment': {
+                'TransactionFeePaid': {
+                    'actual_fee': 'u128',
+                    'tip': 'u128',
+                    'who': '[u8; 20]',
+                },
+            },
             'Treasury': {
                 'Awarded': {
                     'account': '[u8; 20]',
@@ -10940,14 +10972,6 @@
                     'reactivated': 'u128',
                 },
             },
-            None: None,
-            'TransactionPayment': {
-                'TransactionFeePaid': {
-                    'actual_fee': 'u128',
-                    'tip': 'u128',
-                    'who': '[u8; 20]',
-                },
-            },
             'Utility': {
                 'BatchCompleted': None,
                 'BatchCompletedWithErrors': None,
@@ -10962,22 +10986,6 @@
             'Vesting': {
                 'VestingCompleted': {'account': '[u8; 20]'},
                 'VestingUpdated': {'account': '[u8; 20]', 'unvested': 'u128'},
-            },
-            'Whitelist': {
-                'CallWhitelisted': {'call_hash': 'scale_info::12'},
-                'WhitelistedCallDispatched': {
-                    'call_hash': 'scale_info::12',
-                    'result': 'scale_info::294',
-                },
-                'WhitelistedCallRemoved': {'call_hash': 'scale_info::12'},
-            },
-            'XTokens': {
-                'TransferredMultiAssets': {
-                    'assets': ['scale_info::223'],
-                    'dest': 'scale_info::122',
-                    'fee': 'scale_info::223',
-                    'sender': '[u8; 20]',
-                },
             },
             'XcmpQueue': {
                 'BadFormat': {'message_hash': '[u8; 32]'},

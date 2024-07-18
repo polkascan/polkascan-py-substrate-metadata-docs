@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -7904,6 +7908,8 @@
       
         
       
+        
+      
     
     
     
@@ -7948,6 +7954,8 @@
       
         
           
+        
+      
         
       
         
@@ -8997,6 +9005,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#currentauthid" class="md-nav__link">
+    <span class="md-ellipsis">
+      CurrentAuthId
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#currentdid" class="md-nav__link">
     <span class="md-ellipsis">
       CurrentDid
@@ -9087,9 +9104,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#numberofgivenauths" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumberOfGivenAuths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#offchainauthorizationnonce" class="md-nav__link">
     <span class="md-ellipsis">
       OffChainAuthorizationNonce
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outdatedauthorizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutdatedAuthorizations
     </span>
   </a>
   
@@ -9132,6 +9167,15 @@
   <a href="#initialpolyx" class="md-nav__link">
     <span class="md-ellipsis">
       InitialPOLYX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxgivenauths" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxGivenAuths
     </span>
   </a>
   
@@ -9273,6 +9317,15 @@
   <a href="#duplicatekey" class="md-nav__link">
     <span class="md-ellipsis">
       DuplicateKey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceedednumberofgivenauths" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExceededNumberOfGivenAuths
     </span>
   </a>
   
@@ -9814,6 +9867,26 @@
   
   <span class="md-ellipsis">
     Staking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statetriemigration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StateTrieMigration
   </span>
   
 
@@ -10603,6 +10676,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#currentauthid" class="md-nav__link">
+    <span class="md-ellipsis">
+      CurrentAuthId
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#currentdid" class="md-nav__link">
     <span class="md-ellipsis">
       CurrentDid
@@ -10693,9 +10775,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#numberofgivenauths" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumberOfGivenAuths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#offchainauthorizationnonce" class="md-nav__link">
     <span class="md-ellipsis">
       OffChainAuthorizationNonce
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outdatedauthorizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      OutdatedAuthorizations
     </span>
   </a>
   
@@ -10738,6 +10838,15 @@
   <a href="#initialpolyx" class="md-nav__link">
     <span class="md-ellipsis">
       InitialPOLYX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxgivenauths" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxGivenAuths
     </span>
   </a>
   
@@ -10879,6 +10988,15 @@
   <a href="#duplicatekey" class="md-nav__link">
     <span class="md-ellipsis">
       DuplicateKey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceedednumberofgivenauths" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExceededNumberOfGivenAuths
     </span>
   </a>
   
@@ -13675,102 +13793,113 @@ instead of unlinking the old primary key.</p>
 }
 </code></pre>
 <hr />
+<h3 id="currentauthid">CurrentAuthId<a class="headerlink" href="#currentauthid" title="Permanent link">&para;</a></h3>
+<p>Controls the authorization id.</p>
+<h4 id="python_30">Python<a class="headerlink" href="#python_30" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">result = substrate.query(
+    'Identity', 'CurrentAuthId', []
+)
+</code></pre>
+<h4 id="return-value_6">Return value<a class="headerlink" href="#return-value_6" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">'u64'
+</code></pre>
+<hr />
 <h3 id="currentdid">CurrentDid<a class="headerlink" href="#currentdid" title="Permanent link">&para;</a></h3>
 <p>It stores the current identity for current transaction.</p>
-<h4 id="python_30">Python<a class="headerlink" href="#python_30" title="Permanent link">&para;</a></h4>
+<h4 id="python_31">Python<a class="headerlink" href="#python_31" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'CurrentDid', []
 )
 </code></pre>
-<h4 id="return-value_6">Return value<a class="headerlink" href="#return-value_6" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_7">Return value<a class="headerlink" href="#return-value_7" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'[u8; 32]'
 </code></pre>
 <hr />
 <h3 id="currentpayer">CurrentPayer<a class="headerlink" href="#currentpayer" title="Permanent link">&para;</a></h3>
 <p>It stores the current gas fee payer for the current transaction</p>
-<h4 id="python_31">Python<a class="headerlink" href="#python_31" title="Permanent link">&para;</a></h4>
+<h4 id="python_32">Python<a class="headerlink" href="#python_32" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'CurrentPayer', []
 )
 </code></pre>
-<h4 id="return-value_7">Return value<a class="headerlink" href="#return-value_7" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_8">Return value<a class="headerlink" href="#return-value_8" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'AccountId'
 </code></pre>
 <hr />
 <h3 id="customclaimidsequence">CustomClaimIdSequence<a class="headerlink" href="#customclaimidsequence" title="Permanent link">&para;</a></h3>
 <p>The next <code>CustomClaimTypeId</code>.</p>
-<h4 id="python_32">Python<a class="headerlink" href="#python_32" title="Permanent link">&para;</a></h4>
+<h4 id="python_33">Python<a class="headerlink" href="#python_33" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'CustomClaimIdSequence', []
 )
 </code></pre>
-<h4 id="return-value_8">Return value<a class="headerlink" href="#return-value_8" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_9">Return value<a class="headerlink" href="#return-value_9" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'u32'
 </code></pre>
 <hr />
 <h3 id="customclaims">CustomClaims<a class="headerlink" href="#customclaims" title="Permanent link">&para;</a></h3>
 <p>CustomClaimTypeId -&gt; String constant</p>
-<h4 id="python_33">Python<a class="headerlink" href="#python_33" title="Permanent link">&para;</a></h4>
+<h4 id="python_34">Python<a class="headerlink" href="#python_34" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'CustomClaims', ['u32']
 )
 </code></pre>
-<h4 id="return-value_9">Return value<a class="headerlink" href="#return-value_9" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_10">Return value<a class="headerlink" href="#return-value_10" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'Bytes'
 </code></pre>
 <hr />
 <h3 id="customclaimsinverse">CustomClaimsInverse<a class="headerlink" href="#customclaimsinverse" title="Permanent link">&para;</a></h3>
 <p>String constant -&gt; CustomClaimTypeId</p>
-<h4 id="python_34">Python<a class="headerlink" href="#python_34" title="Permanent link">&para;</a></h4>
+<h4 id="python_35">Python<a class="headerlink" href="#python_35" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'CustomClaimsInverse', ['Bytes']
 )
 </code></pre>
-<h4 id="return-value_10">Return value<a class="headerlink" href="#return-value_10" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_11">Return value<a class="headerlink" href="#return-value_11" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'u32'
 </code></pre>
 <hr />
 <h3 id="didkeys">DidKeys<a class="headerlink" href="#didkeys" title="Permanent link">&para;</a></h3>
 <p>A reverse double map to allow finding all keys for an identity.</p>
-<h4 id="python_35">Python<a class="headerlink" href="#python_35" title="Permanent link">&para;</a></h4>
+<h4 id="python_36">Python<a class="headerlink" href="#python_36" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'DidKeys', ['[u8; 32]', 'AccountId']
 )
 </code></pre>
-<h4 id="return-value_11">Return value<a class="headerlink" href="#return-value_11" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_12">Return value<a class="headerlink" href="#return-value_12" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'bool'
 </code></pre>
 <hr />
 <h3 id="didrecords">DidRecords<a class="headerlink" href="#didrecords" title="Permanent link">&para;</a></h3>
 <p>DID -&gt; identity info</p>
-<h4 id="python_36">Python<a class="headerlink" href="#python_36" title="Permanent link">&para;</a></h4>
+<h4 id="python_37">Python<a class="headerlink" href="#python_37" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'DidRecords', ['[u8; 32]']
 )
 </code></pre>
-<h4 id="return-value_12">Return value<a class="headerlink" href="#return-value_12" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_13">Return value<a class="headerlink" href="#return-value_13" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{'primary_key': (None, 'AccountId')}
 </code></pre>
 <hr />
 <h3 id="isdidfrozen">IsDidFrozen<a class="headerlink" href="#isdidfrozen" title="Permanent link">&para;</a></h3>
 <p>DID -&gt; bool that indicates if secondary keys are frozen.</p>
-<h4 id="python_37">Python<a class="headerlink" href="#python_37" title="Permanent link">&para;</a></h4>
+<h4 id="python_38">Python<a class="headerlink" href="#python_38" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'IsDidFrozen', ['[u8; 32]']
 )
 </code></pre>
-<h4 id="return-value_13">Return value<a class="headerlink" href="#return-value_13" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_14">Return value<a class="headerlink" href="#return-value_14" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'bool'
 </code></pre>
 <hr />
 <h3 id="keyrecords">KeyRecords<a class="headerlink" href="#keyrecords" title="Permanent link">&para;</a></h3>
 <p>Map from AccountId to <code>KeyRecord</code> that holds the key&#x27;s identity and permissions.</p>
-<h4 id="python_38">Python<a class="headerlink" href="#python_38" title="Permanent link">&para;</a></h4>
+<h4 id="python_39">Python<a class="headerlink" href="#python_39" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'KeyRecords', ['AccountId']
 )
 </code></pre>
-<h4 id="return-value_14">Return value<a class="headerlink" href="#return-value_14" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_15">Return value<a class="headerlink" href="#return-value_15" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'MultiSigSignerKey': 'AccountId',
     'PrimaryKey': '[u8; 32]',
@@ -13799,45 +13928,72 @@ instead of unlinking the old primary key.</p>
 <hr />
 <h3 id="multipurposenonce">MultiPurposeNonce<a class="headerlink" href="#multipurposenonce" title="Permanent link">&para;</a></h3>
 <p>Nonce to ensure unique actions. starts from 1.</p>
-<h4 id="python_39">Python<a class="headerlink" href="#python_39" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">result = substrate.query(
-    'Identity', 'MultiPurposeNonce', []
-)
-</code></pre>
-<h4 id="return-value_15">Return value<a class="headerlink" href="#return-value_15" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">'u64'
-</code></pre>
-<hr />
-<h3 id="offchainauthorizationnonce">OffChainAuthorizationNonce<a class="headerlink" href="#offchainauthorizationnonce" title="Permanent link">&para;</a></h3>
-<p>Authorization nonce per Identity. Initially is 0.</p>
 <h4 id="python_40">Python<a class="headerlink" href="#python_40" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
-    'Identity', 'OffChainAuthorizationNonce', ['[u8; 32]']
+    'Identity', 'MultiPurposeNonce', []
 )
 </code></pre>
 <h4 id="return-value_16">Return value<a class="headerlink" href="#return-value_16" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'u64'
 </code></pre>
 <hr />
+<h3 id="numberofgivenauths">NumberOfGivenAuths<a class="headerlink" href="#numberofgivenauths" title="Permanent link">&para;</a></h3>
+<p>Track the number of authorizations given by each identity.</p>
+<h4 id="python_41">Python<a class="headerlink" href="#python_41" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">result = substrate.query(
+    'Identity', 'NumberOfGivenAuths', ['[u8; 32]']
+)
+</code></pre>
+<h4 id="return-value_17">Return value<a class="headerlink" href="#return-value_17" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">'u32'
+</code></pre>
+<hr />
+<h3 id="offchainauthorizationnonce">OffChainAuthorizationNonce<a class="headerlink" href="#offchainauthorizationnonce" title="Permanent link">&para;</a></h3>
+<p>Authorization nonce per Identity. Initially is 0.</p>
+<h4 id="python_42">Python<a class="headerlink" href="#python_42" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">result = substrate.query(
+    'Identity', 'OffChainAuthorizationNonce', ['[u8; 32]']
+)
+</code></pre>
+<h4 id="return-value_18">Return value<a class="headerlink" href="#return-value_18" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">'u64'
+</code></pre>
+<hr />
+<h3 id="outdatedauthorizations">OutdatedAuthorizations<a class="headerlink" href="#outdatedauthorizations" title="Permanent link">&para;</a></h3>
+<p>Tracks all authorizations that must be deleted</p>
+<h4 id="python_43">Python<a class="headerlink" href="#python_43" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">result = substrate.query(
+    'Identity', 'OutdatedAuthorizations', [
+    {
+        'Account': 'AccountId',
+        'Identity': '[u8; 32]',
+    },
+]
+)
+</code></pre>
+<h4 id="return-value_19">Return value<a class="headerlink" href="#return-value_19" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">'u64'
+</code></pre>
+<hr />
 <h3 id="parentdid">ParentDid<a class="headerlink" href="#parentdid" title="Permanent link">&para;</a></h3>
 <p>Parent identity if the DID is a child Identity.</p>
-<h4 id="python_41">Python<a class="headerlink" href="#python_41" title="Permanent link">&para;</a></h4>
+<h4 id="python_44">Python<a class="headerlink" href="#python_44" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'ParentDid', ['[u8; 32]']
 )
 </code></pre>
-<h4 id="return-value_17">Return value<a class="headerlink" href="#return-value_17" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_20">Return value<a class="headerlink" href="#return-value_20" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'[u8; 32]'
 </code></pre>
 <hr />
 <h3 id="storageversion">StorageVersion<a class="headerlink" href="#storageversion" title="Permanent link">&para;</a></h3>
 <p>Storage version.</p>
-<h4 id="python_42">Python<a class="headerlink" href="#python_42" title="Permanent link">&para;</a></h4>
+<h4 id="python_45">Python<a class="headerlink" href="#python_45" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Identity', 'StorageVersion', []
 )
 </code></pre>
-<h4 id="return-value_18">Return value<a class="headerlink" href="#return-value_18" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_21">Return value<a class="headerlink" href="#return-value_21" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'u8'
 </code></pre>
 <hr />
@@ -13847,8 +14003,16 @@ instead of unlinking the old primary key.</p>
 <h4 id="value">Value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">0
 </code></pre>
-<h4 id="python_43">Python<a class="headerlink" href="#python_43" title="Permanent link">&para;</a></h4>
+<h4 id="python_46">Python<a class="headerlink" href="#python_46" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Identity', 'InitialPOLYX')
+</code></pre>
+<hr />
+<h3 id="maxgivenauths">MaxGivenAuths<a class="headerlink" href="#maxgivenauths" title="Permanent link">&para;</a></h3>
+<h4 id="value_1">Value<a class="headerlink" href="#value_1" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">1024
+</code></pre>
+<h4 id="python_47">Python<a class="headerlink" href="#python_47" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">constant = substrate.get_constant('Identity', 'MaxGivenAuths')
 </code></pre>
 <hr />
 <h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
@@ -13895,6 +14059,9 @@ It can at most be <code>32</code> characters long.</p>
 <hr />
 <h3 id="duplicatekey">DuplicateKey<a class="headerlink" href="#duplicatekey" title="Permanent link">&para;</a></h3>
 <p>The same key was included multiple times.</p>
+<hr />
+<h3 id="exceedednumberofgivenauths">ExceededNumberOfGivenAuths<a class="headerlink" href="#exceedednumberofgivenauths" title="Permanent link">&para;</a></h3>
+<p>Maximum number of given authorizations was exceeded.</p>
 <hr />
 <h3 id="exceptnotallowedforextrinsics">ExceptNotAllowedForExtrinsics<a class="headerlink" href="#exceptnotallowedforextrinsics" title="Permanent link">&para;</a></h3>
 <p>Cannot use Except when specifying extrinsic permissions.</p>

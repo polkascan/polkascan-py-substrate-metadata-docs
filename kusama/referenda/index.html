@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3660,10 +3666,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -4175,46 +4177,6 @@
   
   <span class="md-ellipsis">
     Hrmp
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../identity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Identity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../identitymigrator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IdentityMigrator
   </span>
   
 
@@ -9277,6 +9239,8 @@
       
         
       
+        
+      
     
     
     
@@ -9769,6 +9733,8 @@
       
         
       
+        
+      
     
     
     
@@ -9811,6 +9777,8 @@
       
         
           
+        
+      
         
       
         
@@ -10789,11 +10757,16 @@
             'Fellowship9Dan',
             'WishForChange',
         ),
-        'Void': (),
+        'system': {
+            'None': None,
+            'Root': None,
+            'Signed': 'AccountId',
+        },
         None: None,
         'ParachainsOrigin': {
             'Parachain': 'u32',
         },
+        'Void': (),
         'XcmPallet': {
             'Response': {
                 'interior': {
@@ -10823,11 +10796,6 @@
                 },
                 'parents': 'u8',
             },
-        },
-        'system': {
-            'None': None,
-            'Root': None,
-            'Signed': 'AccountId',
         },
     },
 }
@@ -11315,6 +11283,8 @@
         'enactment': {'After': 'u32', 'At': 'u32'},
         'in_queue': 'bool',
         'origin': {
+            'system': {'None': None, 'Root': None, 'Signed': 'AccountId'},
+            None: None,
             'Origins': (
                 'StakingAdmin',
                 'Treasurer',
@@ -11345,14 +11315,12 @@
                 'Fellowship9Dan',
                 'WishForChange',
             ),
-            'Void': (),
-            None: None,
             'ParachainsOrigin': {'Parachain': 'u32'},
+            'Void': (),
             'XcmPallet': {
                 'Response': {'interior': 'scale_info::71', 'parents': 'u8'},
                 'Xcm': {'interior': 'scale_info::71', 'parents': 'u8'},
             },
-            'system': {'None': None, 'Root': None, 'Signed': 'AccountId'},
         },
         'proposal': {
             'Inline': 'Bytes',

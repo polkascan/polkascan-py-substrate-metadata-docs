@@ -532,6 +532,8 @@
       
         
       
+        
+      
     
     
     
@@ -983,6 +985,26 @@
   
   <span class="md-ellipsis">
     Identity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../identitymigrator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IdentityMigrator
   </span>
   
 
@@ -3108,6 +3130,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -4914,10 +4940,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -8796,6 +8818,8 @@
       
         
       
+        
+      
     
     
     
@@ -9288,6 +9312,8 @@
       
         
       
+        
+      
     
     
     
@@ -9330,6 +9356,8 @@
       
         
           
+        
+      
         
       
         
@@ -9818,12 +9846,6 @@
 <pre><code class="language-python">call = substrate.compose_call(
     'Utility', 'dispatch_as', {
     'as_origin': {
-        'system': {
-            'None': None,
-            'Root': None,
-            'Signed': 'AccountId',
-        },
-        None: None,
         'Origins': (
             'StakingAdmin',
             'Treasurer',
@@ -9875,6 +9897,12 @@
                 'parents': 'u8',
             },
         },
+        'system': {
+            'None': None,
+            'Root': None,
+            'Signed': 'AccountId',
+        },
+        None: None,
     },
     'call': 'Call',
 }

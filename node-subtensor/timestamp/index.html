@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -7645,6 +7649,26 @@
   
   <span class="md-ellipsis">
     Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
   </span>
   
 
@@ -8443,6 +8467,8 @@
       
         
       
+        
+      
     
     
     
@@ -8485,6 +8511,8 @@
       
         
           
+        
+      
         
       
         
@@ -8771,7 +8799,20 @@
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="set">set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::set</code>].</p>
+<p>Set the current time.</p>
+<p>This call should be invoked exactly once per block. It will panic at the finalization
+phase, if this call hasn&amp;#x27;t been invoked by that time.</p>
+<p>The timestamp should be greater than the previous one by the amount specified by
+[<code>Config::MinimumPeriod</code>].</p>
+<p>The dispatch origin for this call must be <em>None</em>.</p>
+<p>This dispatch class is <em>Mandatory</em> to ensure it gets executed in the block. Be aware
+that changing the complexity of this call could result exhausting the resources in a
+block to execute any other calls.</p>
+<p>## Complexity
+- <code>O(1)</code> (Note that implementations of <code>OnTimestampSet</code> must also be <code>O(1)</code>)
+- 1 storage read and 1 storage mutation (codec <code>O(1)</code> because of <code>DidUpdate::take</code> in
+  <code>on_finalize</code>)
+- 1 event handler <code>on_timestamp_set</code>. Must be <code>O(1)</code>.</p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -8796,7 +8837,9 @@
 <h2 id="storage-functions">Storage functions<a class="headerlink" href="#storage-functions" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="didupdate">DidUpdate<a class="headerlink" href="#didupdate" title="Permanent link">&para;</a></h3>
-<p>Did the timestamp get updated in this block?</p>
+<p>Whether the timestamp has been updated in this block.</p>
+<p>This value is updated to <code>true</code> upon successful submission of a timestamp by a node.
+ It is then checked at the end of each block execution in the <code>on_finalize</code> hook.</p>
 <h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Timestamp', 'DidUpdate', []
@@ -8807,7 +8850,7 @@
 </code></pre>
 <hr />
 <h3 id="now">Now<a class="headerlink" href="#now" title="Permanent link">&para;</a></h3>
-<p>Current time for the current block.</p>
+<p>The current time for the current block.</p>
 <h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Timestamp', 'Now', []
@@ -8820,10 +8863,11 @@
 <h2 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="minimumperiod">MinimumPeriod<a class="headerlink" href="#minimumperiod" title="Permanent link">&para;</a></h3>
-<p>The minimum period between blocks. Beware that this is different to the <em>expected</em>
- period that the block production apparatus provides. Your chosen consensus system will
- generally work with this to determine a sensible block time. e.g. For Aura, it will be
- double this period on default settings.</p>
+<p>The minimum period between blocks.</p>
+<p>Be aware that this is different to the <em>expected</em> period that the block production
+ apparatus provides. Your chosen consensus system will generally work with this to
+ determine a sensible block time. For example, in the Aura pallet it will be double this
+ period on default settings.</p>
 <h4 id="value">Value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">6000
 </code></pre>

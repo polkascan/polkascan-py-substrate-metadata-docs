@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../democracy/">
+        <link rel="prev" href="../depositstorage/">
       
       
         <link rel="next" href="../didlookup/">
@@ -414,6 +414,8 @@
       
         
           
+        
+      
         
       
         
@@ -1726,6 +1728,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1957,6 +1963,26 @@
   
   <span class="md-ellipsis">
     Democracy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../depositstorage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DepositStorage
   </span>
   
 
@@ -2706,6 +2732,26 @@
   
   <span class="md-ellipsis">
     DidLookup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dipprovider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DipProvider
   </span>
   
 
@@ -5017,10 +5063,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -8899,6 +8941,8 @@
       
         
       
+        
+      
     
     
     
@@ -9391,6 +9435,8 @@
       
         
       
+        
+      
     
     
     
@@ -9433,6 +9479,8 @@
       
         
           
+        
+      
         
       
         
@@ -10412,7 +10460,7 @@
                 'Sr25519': '[u8; 32]',
             },
         ),
-        'new_key_agreement_keys': 'scale_info::321',
+        'new_key_agreement_keys': 'scale_info::328',
         'new_service_details': [
             {
                 'id': 'Bytes',
@@ -10877,9 +10925,9 @@
     'authentication_key': 'scale_info::12',
     'delegation_key': (None, 'scale_info::12'),
     'deposit': {'amount': 'u128', 'owner': 'AccountId'},
-    'key_agreement_keys': 'scale_info::451',
+    'key_agreement_keys': 'scale_info::460',
     'last_tx_counter': 'u64',
-    'public_keys': 'scale_info::459',
+    'public_keys': 'scale_info::468',
 }
 </code></pre>
 <hr />
@@ -11035,7 +11083,7 @@
 <h3 id="maxserviceurllength">MaxServiceUrlLength<a class="headerlink" href="#maxserviceurllength" title="Permanent link">&para;</a></h3>
 <p>The maximum length of a service URL.</p>
 <h4 id="value_11">Value<a class="headerlink" href="#value_11" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">200
+<pre><code class="language-python">2000
 </code></pre>
 <h4 id="python_32">Python<a class="headerlink" href="#python_32" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Did', 'MaxServiceUrlLength')
@@ -11058,7 +11106,7 @@
  deposit can be reclaimed when the service endpoint is removed or the
  DID deleted.</p>
 <h4 id="value_13">Value<a class="headerlink" href="#value_13" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">81400000000000
+<pre><code class="language-python">261400000000000
 </code></pre>
 <h4 id="python_34">Python<a class="headerlink" href="#python_34" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Did', 'ServiceEndpointDeposit')
@@ -11187,7 +11235,7 @@ of verification keys.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../democracy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Democracy">
+          <a href="../depositstorage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DepositStorage">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -11197,7 +11245,7 @@ of verification keys.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Democracy
+                DepositStorage
               </div>
             </div>
           </a>

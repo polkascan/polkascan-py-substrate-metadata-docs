@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -7906,6 +7910,8 @@
       
         
       
+        
+      
     
     
     
@@ -7957,6 +7963,26 @@
   
   <span class="md-ellipsis">
     AppWorkingGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../argobridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoBridge
   </span>
   
 
@@ -9395,6 +9421,8 @@
       
         
       
+        
+      
     
     
     
@@ -10394,21 +10422,9 @@ the prefix we are removing to accurately calculate the weight of this function.<
 <pre><code class="language-python">[
     {
         'event': {
-            'System': {
-                'CodeUpdated': None,
-                'ExtrinsicFailed': {
-                    'dispatch_error': 'scale_info::24',
-                    'dispatch_info': 'scale_info::21',
-                },
-                'ExtrinsicSuccess': {'dispatch_info': 'scale_info::21'},
-                'KilledAccount': {'account': 'AccountId'},
-                'NewAccount': {'account': 'AccountId'},
-                'Remarked': {'hash': 'scale_info::11', 'sender': 'AccountId'},
-            },
-            None: None,
             'AppWorkingGroup': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -10418,13 +10434,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -10433,7 +10449,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -10444,30 +10460,35 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'WorkerStartedLeaving': ('u64', (None, 'Bytes')),
                 'WorkingGroupBudgetFunded': ('u64', 'u128', 'Bytes'),
             },
-            'Balances': {
-                'BalanceSet': {
-                    'free': 'u128',
-                    'reserved': 'u128',
-                    'who': 'AccountId',
+            'ArgoBridge': {
+                'BridgeConfigUpdated': {
+                    'bridging_fee': (None, 'u128'),
+                    'operator_account': (None, 'AccountId'),
+                    'pauser_accounts': (None, ['AccountId']),
+                    'remote_chains': (None, ['u32']),
+                    'thawn_duration': (None, 'u32'),
                 },
-                'Deposit': {'amount': 'u128', 'who': 'AccountId'},
-                'DustLost': {'account': 'AccountId', 'amount': 'u128'},
-                'Endowed': {'account': 'AccountId', 'free_balance': 'u128'},
-                'ReserveRepatriated': {
-                    'amount': 'u128',
-                    'destination_status': 'scale_info::33',
-                    'from': 'AccountId',
-                    'to': 'AccountId',
-                },
-                'Reserved': {'amount': 'u128', 'who': 'AccountId'},
-                'Slashed': {'amount': 'u128', 'who': 'AccountId'},
-                'Transfer': {
-                    'amount': 'u128',
-                    'from': 'AccountId',
-                    'to': 'AccountId',
-                },
-                'Unreserved': {'amount': 'u128', 'who': 'AccountId'},
-                'Withdraw': {'amount': 'u128', 'who': 'AccountId'},
+                'BridgePaused': 'AccountId',
+                'BridgeThawnFinished': None,
+                'BridgeThawnStarted': ('AccountId', 'u32'),
+                'InboundTransferFinalized': (
+                    'scale_info::261',
+                    'AccountId',
+                    'u128',
+                ),
+                'OutboundTransferRequested': (
+                    'u64',
+                    'AccountId',
+                    'scale_info::260',
+                    'u128',
+                    'u128',
+                ),
+                'OutboundTransferReverted': (
+                    'u64',
+                    'AccountId',
+                    'u128',
+                    'Bytes',
+                ),
             },
             'Bounty': {
                 'BountyContributorRemarked': (
@@ -10685,7 +10706,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'ContentWorkingGroup': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -10695,13 +10716,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -10710,7 +10731,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -10746,7 +10767,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'DistributionWorkingGroup': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -10756,13 +10777,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -10771,7 +10792,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -10851,7 +10872,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'ForumWorkingGroup': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -10861,13 +10882,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -10876,7 +10897,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -10940,7 +10961,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'MembershipWorkingGroup': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -10950,13 +10971,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -10965,7 +10986,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -11005,7 +11026,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             'Offences': {'Offence': {'kind': '[u8; 16]', 'timeslot': 'Bytes'}},
             'OperationsWorkingGroupAlpha': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -11015,13 +11036,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -11030,7 +11051,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -11043,7 +11064,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'OperationsWorkingGroupBeta': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -11053,13 +11074,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -11068,7 +11089,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -11081,7 +11102,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'OperationsWorkingGroupGamma': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -11091,13 +11112,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -11106,7 +11127,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -11217,18 +11238,18 @@ the prefix we are removing to accurately calculate the weight of this function.<
                     'delay': 'u32',
                     'delegatee': 'AccountId',
                     'delegator': 'AccountId',
-                    'proxy_type': 'scale_info::251',
+                    'proxy_type': 'scale_info::257',
                 },
                 'ProxyExecuted': {'result': 'scale_info::30'},
                 'ProxyRemoved': {
                     'delay': 'u32',
                     'delegatee': 'AccountId',
                     'delegator': 'AccountId',
-                    'proxy_type': 'scale_info::251',
+                    'proxy_type': 'scale_info::257',
                 },
                 'PureCreated': {
                     'disambiguation_index': 'u16',
-                    'proxy_type': 'scale_info::251',
+                    'proxy_type': 'scale_info::257',
                     'pure': 'AccountId',
                     'who': 'AccountId',
                 },
@@ -11384,7 +11405,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
             },
             'StorageWorkingGroup': {
                 'ApplicationWithdrawn': 'u64',
-                'AppliedOnOpening': ('scale_info::229', 'u64'),
+                'AppliedOnOpening': ('scale_info::235', 'u64'),
                 'BudgetSet': 'u128',
                 'BudgetSpending': ('AccountId', 'u128', (None, 'Bytes')),
                 'LeadRemarked': 'Bytes',
@@ -11394,13 +11415,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'OpeningAdded': (
                     'u64',
                     'Bytes',
-                    'scale_info::228',
-                    'scale_info::220',
+                    'scale_info::234',
+                    'scale_info::226',
                     (None, 'u128'),
                 ),
                 'OpeningCanceled': 'u64',
-                'OpeningFilled': ('u64', 'scale_info::225', 'scale_info::91'),
-                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::233'),
+                'OpeningFilled': ('u64', 'scale_info::231', 'scale_info::91'),
+                'RewardPaid': ('u64', 'AccountId', 'u128', 'scale_info::239'),
                 'StakeDecreased': ('u64', 'u128'),
                 'StakeIncreased': ('u64', 'u128'),
                 'StakeSlashed': ('u64', 'u128', 'u128', (None, 'Bytes')),
@@ -11409,7 +11430,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'TerminatedWorker': ('u64', (None, 'u128'), (None, 'Bytes')),
                 'VestedBudgetSpending': (
                     'AccountId',
-                    'scale_info::231',
+                    'scale_info::237',
                     (None, 'Bytes'),
                 ),
                 'WorkerExited': 'u64',
@@ -11420,12 +11441,16 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'WorkerStartedLeaving': ('u64', (None, 'Bytes')),
                 'WorkingGroupBudgetFunded': ('u64', 'u128', 'Bytes'),
             },
-            'TransactionPayment': {
-                'TransactionFeePaid': {
-                    'actual_fee': 'u128',
-                    'tip': 'u128',
-                    'who': 'AccountId',
+            'System': {
+                'CodeUpdated': None,
+                'ExtrinsicFailed': {
+                    'dispatch_error': 'scale_info::24',
+                    'dispatch_info': 'scale_info::21',
                 },
+                'ExtrinsicSuccess': {'dispatch_info': 'scale_info::21'},
+                'KilledAccount': {'account': 'AccountId'},
+                'NewAccount': {'account': 'AccountId'},
+                'Remarked': {'hash': 'scale_info::11', 'sender': 'AccountId'},
             },
             'Utility': {
                 'BatchCompleted': None,
@@ -11445,6 +11470,39 @@ the prefix we are removing to accurately calculate the weight of this function.<
             'VoterList': {
                 'Rebagged': {'from': 'u64', 'to': 'u64', 'who': 'AccountId'},
                 'ScoreUpdated': {'new_score': 'u64', 'who': 'AccountId'},
+            },
+            None: None,
+            'Balances': {
+                'BalanceSet': {
+                    'free': 'u128',
+                    'reserved': 'u128',
+                    'who': 'AccountId',
+                },
+                'Deposit': {'amount': 'u128', 'who': 'AccountId'},
+                'DustLost': {'account': 'AccountId', 'amount': 'u128'},
+                'Endowed': {'account': 'AccountId', 'free_balance': 'u128'},
+                'ReserveRepatriated': {
+                    'amount': 'u128',
+                    'destination_status': 'scale_info::33',
+                    'from': 'AccountId',
+                    'to': 'AccountId',
+                },
+                'Reserved': {'amount': 'u128', 'who': 'AccountId'},
+                'Slashed': {'amount': 'u128', 'who': 'AccountId'},
+                'Transfer': {
+                    'amount': 'u128',
+                    'from': 'AccountId',
+                    'to': 'AccountId',
+                },
+                'Unreserved': {'amount': 'u128', 'who': 'AccountId'},
+                'Withdraw': {'amount': 'u128', 'who': 'AccountId'},
+            },
+            'TransactionPayment': {
+                'TransactionFeePaid': {
+                    'actual_fee': 'u128',
+                    'tip': 'u128',
+                    'who': 'AccountId',
+                },
             },
         },
         'phase': {
@@ -11659,7 +11717,7 @@ the prefix we are removing to accurately calculate the weight of this function.<
     'impl_name': 'joystream-node',
     'impl_version': 0,
     'spec_name': 'joystream-node',
-    'spec_version': 2003,
+    'spec_version': 2004,
     'state_version': 1,
     'transaction_version': 2,
 }

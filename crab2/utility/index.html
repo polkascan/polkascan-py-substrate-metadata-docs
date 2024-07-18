@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -8828,6 +8832,8 @@
       
         
       
+        
+      
     
     
     
@@ -8870,6 +8876,8 @@
       
         
           
+        
+      
         
       
         
@@ -9358,21 +9366,21 @@
 <pre><code class="language-python">call = substrate.compose_call(
     'Utility', 'dispatch_as', {
     'as_origin': {
-        'CumulusXcm': {
-            'Relay': None,
-            'SiblingParachain': 'u32',
-        },
-        'Ethereum': {
-            'EthereumTransaction': '[u8; 20]',
-        },
         'system': {
             'None': None,
             'Root': None,
             'Signed': '[u8; 20]',
         },
         None: None,
+        'CumulusXcm': {
+            'Relay': None,
+            'SiblingParachain': 'u32',
+        },
         'EthTxForwarder': {
             'ForwardEth': '[u8; 20]',
+        },
+        'Ethereum': {
+            'EthereumTransaction': '[u8; 20]',
         },
         'Origins': (
             'WhitelistedCaller',

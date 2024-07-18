@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -8039,6 +8043,26 @@
   
   <span class="md-ellipsis">
     Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
   </span>
   
 
@@ -8716,6 +8740,8 @@
       
         
       
+        
+      
     
     
     
@@ -8758,6 +8784,8 @@
       
         
           
+        
+      
         
       
         
@@ -9317,7 +9345,13 @@
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="add_proxy">add_proxy<a class="headerlink" href="#add_proxy" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::add_proxy</code>].</p>
+<p>Register a proxy account for the sender that is able to make calls on its behalf.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>Parameters:
+- <code>proxy</code>: The account that the <code>caller</code> would like to make a proxy.
+- <code>proxy_type</code>: The permissions allowed for this proxy account.
+- <code>delay</code>: The announcement period required of the initial proxy. Will generally be
+zero.</p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9369,7 +9403,16 @@
 </code></pre>
 <hr />
 <h3 id="announce">announce<a class="headerlink" href="#announce" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::announce</code>].</p>
+<p>Publish the hash of a proxy-call that will be made in the future.</p>
+<p>This must be called some number of blocks before the corresponding <code>proxy</code> is attempted
+if the delay associated with the proxy relationship is greater than zero.</p>
+<p>No more than <code>MaxPending</code> announcements may be made at any one time.</p>
+<p>This will take a deposit of <code>AnnouncementDepositFactor</code> as well as
+<code>AnnouncementDepositBase</code> if there are no other pending announcements.</p>
+<p>The dispatch origin for this call must be <em>Signed</em> and a proxy of <code>real</code>.</p>
+<p>Parameters:
+- <code>real</code>: The account that the proxy will make a call on behalf of.
+- <code>call_hash</code>: The hash of the call to be made by the <code>real</code> account.</p>
 <h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9392,7 +9435,7 @@
 <h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Proxy', 'announce', {
-    'call_hash': 'scale_info::12',
+    'call_hash': 'scale_info::13',
     'real': {
         'Address20': '[u8; 20]',
         'Address32': '[u8; 32]',
@@ -9405,7 +9448,22 @@
 </code></pre>
 <hr />
 <h3 id="create_pure">create_pure<a class="headerlink" href="#create_pure" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::create_pure</code>].</p>
+<p>Spawn a fresh new account that is guaranteed to be otherwise inaccessible, and
+initialize it with a proxy of <code>proxy_type</code> for <code>origin</code> sender.</p>
+<p>Requires a <code>Signed</code> origin.</p>
+<ul>
+<li><code>proxy_type</code>: The type of the proxy that the sender will be registered as over the
+new account. This will almost always be the most permissive <code>ProxyType</code> possible to
+allow for maximum flexibility.</li>
+<li><code>index</code>: A disambiguation index, in case this is called multiple times in the same
+transaction (e.g. with <code>utility::batch</code>). Unless you&amp;#x27;re using <code>batch</code> you probably just
+want to use <code>0</code>.</li>
+<li><code>delay</code>: The announcement period required of the initial proxy. Will generally be
+zero.</li>
+</ul>
+<p>Fails with <code>Duplicate</code> if this has already been called in this transaction, from the
+same sender, with the same parameters.</p>
+<p>Fails if there are insufficient funds to pay for deposit.</p>
 <h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9451,7 +9509,20 @@
 </code></pre>
 <hr />
 <h3 id="kill_pure">kill_pure<a class="headerlink" href="#kill_pure" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::kill_pure</code>].</p>
+<p>Removes a previously spawned pure proxy.</p>
+<p>WARNING: <strong>All access to this account will be lost.</strong> Any funds held in it will be
+inaccessible.</p>
+<p>Requires a <code>Signed</code> origin, and the sender account must have been created by a call to
+<code>pure</code> with corresponding parameters.</p>
+<ul>
+<li><code>spawner</code>: The account that originally called <code>pure</code> to create this account.</li>
+<li><code>index</code>: The disambiguation index originally passed to <code>pure</code>. Probably <code>0</code>.</li>
+<li><code>proxy_type</code>: The proxy type originally passed to <code>pure</code>.</li>
+<li><code>height</code>: The height of the chain when the call to <code>pure</code> was processed.</li>
+<li><code>ext_index</code>: The extrinsic index in which the call to <code>pure</code> was processed.</li>
+</ul>
+<p>Fails with <code>NoPermission</code> in case the caller is not a previously created pure
+account whose <code>pure</code> call has corresponding parameters.</p>
 <h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9513,7 +9584,13 @@
 </code></pre>
 <hr />
 <h3 id="proxy_1">proxy<a class="headerlink" href="#proxy_1" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::proxy</code>].</p>
+<p>Dispatch the given <code>call</code> from an account that the sender is authorised for through
+<code>add_proxy</code>.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>Parameters:
+- <code>real</code>: The account that the proxy will make a call on behalf of.
+- <code>force_proxy_type</code>: Specify the exact proxy type to be used and checked for this call.
+- <code>call</code>: The call to be made by the <code>real</code> account.</p>
 <h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9568,7 +9645,14 @@
 </code></pre>
 <hr />
 <h3 id="proxy_announced">proxy_announced<a class="headerlink" href="#proxy_announced" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::proxy_announced</code>].</p>
+<p>Dispatch the given <code>call</code> from an account that the sender is authorized for through
+<code>add_proxy</code>.</p>
+<p>Removes any corresponding announcement(s).</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>Parameters:
+- <code>real</code>: The account that the proxy will make a call on behalf of.
+- <code>force_proxy_type</code>: Specify the exact proxy type to be used and checked for this call.
+- <code>call</code>: The call to be made by the <code>real</code> account.</p>
 <h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9634,7 +9718,13 @@
 </code></pre>
 <hr />
 <h3 id="reject_announcement">reject_announcement<a class="headerlink" href="#reject_announcement" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::reject_announcement</code>].</p>
+<p>Remove the given announcement of a delegate.</p>
+<p>May be called by a target (proxied) account to remove a call that one of their delegates
+(<code>delegate</code>) has announced they want to execute. The deposit is returned.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>Parameters:
+- <code>delegate</code>: The account that previously announced the call.
+- <code>call_hash</code>: The hash of the call to be made.</p>
 <h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9657,7 +9747,7 @@
 <h4 id="python_6">Python<a class="headerlink" href="#python_6" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Proxy', 'reject_announcement', {
-    'call_hash': 'scale_info::12',
+    'call_hash': 'scale_info::13',
     'delegate': {
         'Address20': '[u8; 20]',
         'Address32': '[u8; 32]',
@@ -9670,7 +9760,13 @@
 </code></pre>
 <hr />
 <h3 id="remove_announcement">remove_announcement<a class="headerlink" href="#remove_announcement" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::remove_announcement</code>].</p>
+<p>Remove a given announcement.</p>
+<p>May be called by a proxy account to remove a call they previously announced and return
+the deposit.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>Parameters:
+- <code>real</code>: The account that the proxy will make a call on behalf of.
+- <code>call_hash</code>: The hash of the call to be made by the <code>real</code> account.</p>
 <h4 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9693,7 +9789,7 @@
 <h4 id="python_7">Python<a class="headerlink" href="#python_7" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Proxy', 'remove_announcement', {
-    'call_hash': 'scale_info::12',
+    'call_hash': 'scale_info::13',
     'real': {
         'Address20': '[u8; 20]',
         'Address32': '[u8; 32]',
@@ -9706,7 +9802,10 @@
 </code></pre>
 <hr />
 <h3 id="remove_proxies">remove_proxies<a class="headerlink" href="#remove_proxies" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::remove_proxies</code>].</p>
+<p>Unregister all proxy accounts for the sender.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>WARNING: This may be called on accounts created by <code>pure</code>, however if done, then
+the unreserved fees will be inaccessible. <strong>All access to this account will be lost.</strong></p>
 <h4 id="attributes_8">Attributes<a class="headerlink" href="#attributes_8" title="Permanent link">&para;</a></h4>
 <p>No attributes</p>
 <h4 id="python_8">Python<a class="headerlink" href="#python_8" title="Permanent link">&para;</a></h4>
@@ -9716,7 +9815,11 @@
 </code></pre>
 <hr />
 <h3 id="remove_proxy">remove_proxy<a class="headerlink" href="#remove_proxy" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::remove_proxy</code>].</p>
+<p>Unregister a proxy account for the sender.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<p>Parameters:
+- <code>proxy</code>: The account that the <code>caller</code> would like to remove as a proxy.
+- <code>proxy_type</code>: The permissions currently enabled for the removed proxy account.</p>
 <h4 id="attributes_9">Attributes<a class="headerlink" href="#attributes_9" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9794,7 +9897,7 @@
 <tr>
 <td>call_hash</td>
 <td><code>CallHashOf&lt;T&gt;</code></td>
-<td><code>scale_info::12</code></td>
+<td><code>scale_info::13</code></td>
 </tr>
 </tbody>
 </table>
@@ -9935,7 +10038,7 @@ disambiguation index and proxy type.</p>
 )
 </code></pre>
 <h4 id="return-value">Return value<a class="headerlink" href="#return-value" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">([{'call_hash': 'scale_info::12', 'height': 'u32', 'real': 'AccountId'}], 'u64')
+<pre><code class="language-python">([{'call_hash': 'scale_info::13', 'height': 'u32', 'real': 'AccountId'}], 'u64')
 </code></pre>
 <hr />
 <h3 id="proxies">Proxies<a class="headerlink" href="#proxies" title="Permanent link">&para;</a></h3>

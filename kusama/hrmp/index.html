@@ -12,7 +12,7 @@
         <link rel="prev" href="../historical/">
       
       
-        <link rel="next" href="../identity/">
+        <link rel="next" href="../indices/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -412,6 +412,8 @@
       
         
           
+        
+      
         
       
         
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3660,10 +3666,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -4226,6 +4228,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#establish_channel_with_system" class="md-nav__link">
+    <span class="md-ellipsis">
+      establish_channel_with_system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#establish_system_channel" class="md-nav__link">
     <span class="md-ellipsis">
       establish_system_channel
@@ -4720,46 +4731,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../identity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Identity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../identitymigrator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IdentityMigrator
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -9271,6 +9242,8 @@
       
         
       
+        
+      
     
     
     
@@ -9763,6 +9736,8 @@
       
         
       
+        
+      
     
     
     
@@ -9805,6 +9780,8 @@
       
         
           
+        
+      
         
       
         
@@ -9996,6 +9973,15 @@
   
     <nav class="md-nav" aria-label="Calls">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#establish_channel_with_system" class="md-nav__link">
+    <span class="md-ellipsis">
+      establish_channel_with_system
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#establish_system_channel" class="md-nav__link">
@@ -10510,9 +10496,32 @@
 <hr />
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
+<h3 id="establish_channel_with_system">establish_channel_with_system<a class="headerlink" href="#establish_channel_with_system" title="Permanent link">&para;</a></h3>
+<p>See [<code>Pallet::establish_channel_with_system</code>].</p>
+<h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target_system_chain</td>
+<td><code>ParaId</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">call = substrate.compose_call(
+    'Hrmp', 'establish_channel_with_system', {'target_system_chain': 'u32'}
+)
+</code></pre>
+<hr />
 <h3 id="establish_system_channel">establish_system_channel<a class="headerlink" href="#establish_system_channel" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::establish_system_channel</code>].</p>
-<h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10531,7 +10540,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'establish_system_channel', {'recipient': 'u32', 'sender': 'u32'}
 )
@@ -10539,7 +10548,7 @@
 <hr />
 <h3 id="force_clean_hrmp">force_clean_hrmp<a class="headerlink" href="#force_clean_hrmp" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::force_clean_hrmp</code>].</p>
-<h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10562,7 +10571,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
+<h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'force_clean_hrmp', {
     'num_inbound': 'u32',
@@ -10574,7 +10583,7 @@
 <hr />
 <h3 id="force_open_hrmp_channel">force_open_hrmp_channel<a class="headerlink" href="#force_open_hrmp_channel" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::force_open_hrmp_channel</code>].</p>
-<h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10601,7 +10610,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
+<h4 id="python_3">Python<a class="headerlink" href="#python_3" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'force_open_hrmp_channel', {
     'max_capacity': 'u32',
@@ -10614,29 +10623,6 @@
 <hr />
 <h3 id="force_process_hrmp_close">force_process_hrmp_close<a class="headerlink" href="#force_process_hrmp_close" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::force_process_hrmp_close</code>].</p>
-<h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>channels</td>
-<td><code>u32</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="python_3">Python<a class="headerlink" href="#python_3" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">call = substrate.compose_call(
-    'Hrmp', 'force_process_hrmp_close', {'channels': 'u32'}
-)
-</code></pre>
-<hr />
-<h3 id="force_process_hrmp_open">force_process_hrmp_open<a class="headerlink" href="#force_process_hrmp_open" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::force_process_hrmp_open</code>].</p>
 <h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -10654,13 +10640,36 @@
 </table>
 <h4 id="python_4">Python<a class="headerlink" href="#python_4" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
+    'Hrmp', 'force_process_hrmp_close', {'channels': 'u32'}
+)
+</code></pre>
+<hr />
+<h3 id="force_process_hrmp_open">force_process_hrmp_open<a class="headerlink" href="#force_process_hrmp_open" title="Permanent link">&para;</a></h3>
+<p>See [<code>Pallet::force_process_hrmp_open</code>].</p>
+<h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>channels</td>
+<td><code>u32</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="python_5">Python<a class="headerlink" href="#python_5" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'force_process_hrmp_open', {'channels': 'u32'}
 )
 </code></pre>
 <hr />
 <h3 id="hrmp_accept_open_channel">hrmp_accept_open_channel<a class="headerlink" href="#hrmp_accept_open_channel" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::hrmp_accept_open_channel</code>].</p>
-<h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10675,7 +10684,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_5">Python<a class="headerlink" href="#python_5" title="Permanent link">&para;</a></h4>
+<h4 id="python_6">Python<a class="headerlink" href="#python_6" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'hrmp_accept_open_channel', {'sender': 'u32'}
 )
@@ -10683,7 +10692,7 @@
 <hr />
 <h3 id="hrmp_cancel_open_request">hrmp_cancel_open_request<a class="headerlink" href="#hrmp_cancel_open_request" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::hrmp_cancel_open_request</code>].</p>
-<h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10702,7 +10711,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_6">Python<a class="headerlink" href="#python_6" title="Permanent link">&para;</a></h4>
+<h4 id="python_7">Python<a class="headerlink" href="#python_7" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'hrmp_cancel_open_request', {
     'channel_id': {
@@ -10716,7 +10725,7 @@
 <hr />
 <h3 id="hrmp_close_channel">hrmp_close_channel<a class="headerlink" href="#hrmp_close_channel" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::hrmp_close_channel</code>].</p>
-<h4 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_8">Attributes<a class="headerlink" href="#attributes_8" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10731,7 +10740,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_7">Python<a class="headerlink" href="#python_7" title="Permanent link">&para;</a></h4>
+<h4 id="python_8">Python<a class="headerlink" href="#python_8" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'hrmp_close_channel', {
     'channel_id': {
@@ -10744,7 +10753,7 @@
 <hr />
 <h3 id="hrmp_init_open_channel">hrmp_init_open_channel<a class="headerlink" href="#hrmp_init_open_channel" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::hrmp_init_open_channel</code>].</p>
-<h4 id="attributes_8">Attributes<a class="headerlink" href="#attributes_8" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_9">Attributes<a class="headerlink" href="#attributes_9" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10767,7 +10776,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_8">Python<a class="headerlink" href="#python_8" title="Permanent link">&para;</a></h4>
+<h4 id="python_9">Python<a class="headerlink" href="#python_9" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'hrmp_init_open_channel', {
     'proposed_max_capacity': 'u32',
@@ -10779,7 +10788,7 @@
 <hr />
 <h3 id="poke_channel_deposits">poke_channel_deposits<a class="headerlink" href="#poke_channel_deposits" title="Permanent link">&para;</a></h3>
 <p>See [<code>Pallet::poke_channel_deposits</code>].</p>
-<h4 id="attributes_9">Attributes<a class="headerlink" href="#attributes_9" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_10">Attributes<a class="headerlink" href="#attributes_10" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10798,7 +10807,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_9">Python<a class="headerlink" href="#python_9" title="Permanent link">&para;</a></h4>
+<h4 id="python_10">Python<a class="headerlink" href="#python_10" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Hrmp', 'poke_channel_deposits', {'recipient': 'u32', 'sender': 'u32'}
 )
@@ -10808,7 +10817,7 @@
 <hr />
 <h3 id="channelclosed">ChannelClosed<a class="headerlink" href="#channelclosed" title="Permanent link">&para;</a></h3>
 <p>HRMP channel closed.</p>
-<h4 id="attributes_10">Attributes<a class="headerlink" href="#attributes_10" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_11">Attributes<a class="headerlink" href="#attributes_11" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10833,7 +10842,7 @@
 <hr />
 <h3 id="hrmpchannelforceopened">HrmpChannelForceOpened<a class="headerlink" href="#hrmpchannelforceopened" title="Permanent link">&para;</a></h3>
 <p>An HRMP channel was opened via Root origin.</p>
-<h4 id="attributes_11">Attributes<a class="headerlink" href="#attributes_11" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_12">Attributes<a class="headerlink" href="#attributes_12" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10867,8 +10876,8 @@
 </table>
 <hr />
 <h3 id="hrmpsystemchannelopened">HrmpSystemChannelOpened<a class="headerlink" href="#hrmpsystemchannelopened" title="Permanent link">&para;</a></h3>
-<p>An HRMP channel was opened between two system chains.</p>
-<h4 id="attributes_12">Attributes<a class="headerlink" href="#attributes_12" title="Permanent link">&para;</a></h4>
+<p>An HRMP channel was opened with a system chain.</p>
+<h4 id="attributes_13">Attributes<a class="headerlink" href="#attributes_13" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10903,7 +10912,7 @@
 <hr />
 <h3 id="openchannelaccepted">OpenChannelAccepted<a class="headerlink" href="#openchannelaccepted" title="Permanent link">&para;</a></h3>
 <p>Open HRMP channel accepted.</p>
-<h4 id="attributes_13">Attributes<a class="headerlink" href="#attributes_13" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_14">Attributes<a class="headerlink" href="#attributes_14" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10928,7 +10937,7 @@
 <hr />
 <h3 id="openchannelcanceled">OpenChannelCanceled<a class="headerlink" href="#openchannelcanceled" title="Permanent link">&para;</a></h3>
 <p>An HRMP channel request sent by the receiver was canceled by either party.</p>
-<h4 id="attributes_14">Attributes<a class="headerlink" href="#attributes_14" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_15">Attributes<a class="headerlink" href="#attributes_15" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10953,7 +10962,7 @@
 <hr />
 <h3 id="openchanneldepositsupdated">OpenChannelDepositsUpdated<a class="headerlink" href="#openchanneldepositsupdated" title="Permanent link">&para;</a></h3>
 <p>An HRMP channel&amp;#x27;s deposits were updated.</p>
-<h4 id="attributes_15">Attributes<a class="headerlink" href="#attributes_15" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_16">Attributes<a class="headerlink" href="#attributes_16" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -10978,7 +10987,7 @@
 <hr />
 <h3 id="openchannelrequested">OpenChannelRequested<a class="headerlink" href="#openchannelrequested" title="Permanent link">&para;</a></h3>
 <p>Open HRMP channel requested.</p>
-<h4 id="attributes_16">Attributes<a class="headerlink" href="#attributes_16" title="Permanent link">&para;</a></h4>
+<h4 id="attributes_17">Attributes<a class="headerlink" href="#attributes_17" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -11017,7 +11026,7 @@
 <p>This mapping tracks how many open channel requests were accepted by a given recipient para.
  Invariant: <code>HrmpOpenChannelRequests</code> should contain the same number of items <code>(_, X)</code> with
  <code>confirmed</code> set to true, as the number of <code>HrmpAcceptedChannelRequestCount</code> for <code>X</code>.</p>
-<h4 id="python_10">Python<a class="headerlink" href="#python_10" title="Permanent link">&para;</a></h4>
+<h4 id="python_11">Python<a class="headerlink" href="#python_11" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpAcceptedChannelRequestCount', ['u32']
 )
@@ -11029,7 +11038,7 @@
 <h3 id="hrmpchannelcontents">HrmpChannelContents<a class="headerlink" href="#hrmpchannelcontents" title="Permanent link">&para;</a></h3>
 <p>Storage for the messages for each channel.
  Invariant: cannot be non-empty if the corresponding channel in <code>HrmpChannels</code> is <code>None</code>.</p>
-<h4 id="python_11">Python<a class="headerlink" href="#python_11" title="Permanent link">&para;</a></h4>
+<h4 id="python_12">Python<a class="headerlink" href="#python_12" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpChannelContents', [{'recipient': 'u32', 'sender': 'u32'}]
 )
@@ -11045,7 +11054,7 @@
  - The inner <code>Vec&amp;lt;ParaId&amp;gt;</code> cannot store two same <code>ParaId</code>.
  - The outer vector is sorted ascending by block number and cannot store two items with the
    same block number.</p>
-<h4 id="python_12">Python<a class="headerlink" href="#python_12" title="Permanent link">&para;</a></h4>
+<h4 id="python_13">Python<a class="headerlink" href="#python_13" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpChannelDigests', ['u32']
 )
@@ -11058,7 +11067,7 @@
 <p>HRMP channel data associated with each para.
  Invariant:
  - each participant in the channel should satisfy <code>Paras::is_valid_para(P)</code> within a session.</p>
-<h4 id="python_13">Python<a class="headerlink" href="#python_13" title="Permanent link">&para;</a></h4>
+<h4 id="python_14">Python<a class="headerlink" href="#python_14" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpChannels', [{'recipient': 'u32', 'sender': 'u32'}]
 )
@@ -11082,7 +11091,7 @@
 <p>The set is accompanied by a list for iteration.</p>
 <p>Invariant:
  - There are no channels that exists in list but not in the set and vice versa.</p>
-<h4 id="python_14">Python<a class="headerlink" href="#python_14" title="Permanent link">&para;</a></h4>
+<h4 id="python_15">Python<a class="headerlink" href="#python_15" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpCloseChannelRequests', [{'recipient': 'u32', 'sender': 'u32'}]
 )
@@ -11092,7 +11101,7 @@
 </code></pre>
 <hr />
 <h3 id="hrmpclosechannelrequestslist">HrmpCloseChannelRequestsList<a class="headerlink" href="#hrmpclosechannelrequestslist" title="Permanent link">&para;</a></h3>
-<h4 id="python_15">Python<a class="headerlink" href="#python_15" title="Permanent link">&para;</a></h4>
+<h4 id="python_16">Python<a class="headerlink" href="#python_16" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpCloseChannelRequestsList', []
 )
@@ -11102,7 +11111,7 @@
 </code></pre>
 <hr />
 <h3 id="hrmpegresschannelsindex">HrmpEgressChannelsIndex<a class="headerlink" href="#hrmpegresschannelsindex" title="Permanent link">&para;</a></h3>
-<h4 id="python_16">Python<a class="headerlink" href="#python_16" title="Permanent link">&para;</a></h4>
+<h4 id="python_17">Python<a class="headerlink" href="#python_17" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpEgressChannelsIndex', ['u32']
 )
@@ -11123,7 +11132,7 @@
    <code>HrmpChannels</code> as <code>(P, E)</code>.
  - there should be no other dangling channels in <code>HrmpChannels</code>.
  - the vectors are sorted.</p>
-<h4 id="python_17">Python<a class="headerlink" href="#python_17" title="Permanent link">&para;</a></h4>
+<h4 id="python_18">Python<a class="headerlink" href="#python_18" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpIngressChannelsIndex', ['u32']
 )
@@ -11136,7 +11145,7 @@
 <p>This mapping tracks how many open channel requests are initiated by a given sender para.
  Invariant: <code>HrmpOpenChannelRequests</code> should contain the same number of items that has
  <code>(X, _)</code> as the number of <code>HrmpOpenChannelRequestCount</code> for <code>X</code>.</p>
-<h4 id="python_18">Python<a class="headerlink" href="#python_18" title="Permanent link">&para;</a></h4>
+<h4 id="python_19">Python<a class="headerlink" href="#python_19" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpOpenChannelRequestCount', ['u32']
 )
@@ -11150,7 +11159,7 @@
 <p>The set is accompanied by a list for iteration.</p>
 <p>Invariant:
  - There are no channels that exists in list but not in the set and vice versa.</p>
-<h4 id="python_19">Python<a class="headerlink" href="#python_19" title="Permanent link">&para;</a></h4>
+<h4 id="python_20">Python<a class="headerlink" href="#python_20" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpOpenChannelRequests', [{'recipient': 'u32', 'sender': 'u32'}]
 )
@@ -11167,7 +11176,7 @@
 </code></pre>
 <hr />
 <h3 id="hrmpopenchannelrequestslist">HrmpOpenChannelRequestsList<a class="headerlink" href="#hrmpopenchannelrequestslist" title="Permanent link">&para;</a></h3>
-<h4 id="python_20">Python<a class="headerlink" href="#python_20" title="Permanent link">&para;</a></h4>
+<h4 id="python_21">Python<a class="headerlink" href="#python_21" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpOpenChannelRequestsList', []
 )
@@ -11181,7 +11190,7 @@
  Invariant:
  - each para <code>P</code> used here as a key should satisfy <code>Paras::is_valid_para(P)</code> within a
    session.</p>
-<h4 id="python_21">Python<a class="headerlink" href="#python_21" title="Permanent link">&para;</a></h4>
+<h4 id="python_22">Python<a class="headerlink" href="#python_22" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Hrmp', 'HrmpWatermarks', ['u32']
 )
@@ -11298,13 +11307,13 @@
         
         
           
-          <a href="../identity/" class="md-footer__link md-footer__link--next" aria-label="Next: Identity">
+          <a href="../indices/" class="md-footer__link md-footer__link--next" aria-label="Next: Indices">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Identity
+                Indices
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3660,10 +3666,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -4175,46 +4177,6 @@
   
   <span class="md-ellipsis">
     Hrmp
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../identity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Identity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../identitymigrator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    IdentityMigrator
   </span>
   
 
@@ -9286,6 +9248,8 @@
       
         
       
+        
+      
     
     
     
@@ -9778,6 +9742,8 @@
       
         
       
+        
+      
     
     
     
@@ -9820,6 +9786,8 @@
       
         
           
+        
+      
         
       
         
@@ -11077,40 +11045,6 @@
 <pre><code class="language-python">[
     {
         'event': {
-            'Balances': {
-                'BalanceSet': {'free': 'u128', 'who': 'AccountId'},
-                'Burned': {'amount': 'u128', 'who': 'AccountId'},
-                'Deposit': {'amount': 'u128', 'who': 'AccountId'},
-                'DustLost': {'account': 'AccountId', 'amount': 'u128'},
-                'Endowed': {'account': 'AccountId', 'free_balance': 'u128'},
-                'Frozen': {'amount': 'u128', 'who': 'AccountId'},
-                'Issued': {'amount': 'u128'},
-                'Locked': {'amount': 'u128', 'who': 'AccountId'},
-                'Minted': {'amount': 'u128', 'who': 'AccountId'},
-                'Rescinded': {'amount': 'u128'},
-                'ReserveRepatriated': {
-                    'amount': 'u128',
-                    'destination_status': 'scale_info::33',
-                    'from': 'AccountId',
-                    'to': 'AccountId',
-                },
-                'Reserved': {'amount': 'u128', 'who': 'AccountId'},
-                'Restored': {'amount': 'u128', 'who': 'AccountId'},
-                'Slashed': {'amount': 'u128', 'who': 'AccountId'},
-                'Suspended': {'amount': 'u128', 'who': 'AccountId'},
-                'Thawed': {'amount': 'u128', 'who': 'AccountId'},
-                'TotalIssuanceForced': {'new': 'u128', 'old': 'u128'},
-                'Transfer': {
-                    'amount': 'u128',
-                    'from': 'AccountId',
-                    'to': 'AccountId',
-                },
-                'Unlocked': {'amount': 'u128', 'who': 'AccountId'},
-                'Unreserved': {'amount': 'u128', 'who': 'AccountId'},
-                'Upgraded': {'who': 'AccountId'},
-                'Withdraw': {'amount': 'u128', 'who': 'AccountId'},
-            },
-            None: None,
             'AssetRate': {
                 'AssetRateCreated': {
                     'asset_kind': 'scale_info::59',
@@ -11152,6 +11086,39 @@
                     'auction_index': 'u32',
                     'block_number': 'u32',
                 },
+            },
+            'Balances': {
+                'BalanceSet': {'free': 'u128', 'who': 'AccountId'},
+                'Burned': {'amount': 'u128', 'who': 'AccountId'},
+                'Deposit': {'amount': 'u128', 'who': 'AccountId'},
+                'DustLost': {'account': 'AccountId', 'amount': 'u128'},
+                'Endowed': {'account': 'AccountId', 'free_balance': 'u128'},
+                'Frozen': {'amount': 'u128', 'who': 'AccountId'},
+                'Issued': {'amount': 'u128'},
+                'Locked': {'amount': 'u128', 'who': 'AccountId'},
+                'Minted': {'amount': 'u128', 'who': 'AccountId'},
+                'Rescinded': {'amount': 'u128'},
+                'ReserveRepatriated': {
+                    'amount': 'u128',
+                    'destination_status': 'scale_info::33',
+                    'from': 'AccountId',
+                    'to': 'AccountId',
+                },
+                'Reserved': {'amount': 'u128', 'who': 'AccountId'},
+                'Restored': {'amount': 'u128', 'who': 'AccountId'},
+                'Slashed': {'amount': 'u128', 'who': 'AccountId'},
+                'Suspended': {'amount': 'u128', 'who': 'AccountId'},
+                'Thawed': {'amount': 'u128', 'who': 'AccountId'},
+                'TotalIssuanceForced': {'new': 'u128', 'old': 'u128'},
+                'Transfer': {
+                    'amount': 'u128',
+                    'from': 'AccountId',
+                    'to': 'AccountId',
+                },
+                'Unlocked': {'amount': 'u128', 'who': 'AccountId'},
+                'Unreserved': {'amount': 'u128', 'who': 'AccountId'},
+                'Upgraded': {'who': 'AccountId'},
+                'Withdraw': {'amount': 'u128', 'who': 'AccountId'},
             },
             'Bounties': {
                 'BountyApproved': {'index': 'u32'},
@@ -11216,7 +11183,7 @@
                 'Edited': {'para_id': 'u32'},
                 'HandleBidResult': {
                     'para_id': 'u32',
-                    'result': 'scale_info::521',
+                    'result': 'scale_info::482',
                 },
                 'MemoUpdated': {
                     'memo': 'Bytes',
@@ -11233,18 +11200,18 @@
             'ElectionProviderMultiPhase': {
                 'ElectionFailed': None,
                 'ElectionFinalized': {
-                    'compute': 'scale_info::535',
-                    'score': 'scale_info::321',
+                    'compute': 'scale_info::495',
+                    'score': 'scale_info::277',
                 },
                 'PhaseTransitioned': {
-                    'from': 'scale_info::536',
+                    'from': 'scale_info::496',
                     'round': 'u32',
-                    'to': 'scale_info::536',
+                    'to': 'scale_info::496',
                 },
                 'Rewarded': {'account': 'AccountId', 'value': 'u128'},
                 'Slashed': {'account': 'AccountId', 'value': 'u128'},
                 'SolutionStored': {
-                    'compute': 'scale_info::535',
+                    'compute': 'scale_info::495',
                     'origin': (None, 'AccountId'),
                     'prev_ejected': 'bool',
                 },
@@ -11255,7 +11222,7 @@
                 'InternalError': None,
                 'Slashed': {'amount': 'u128', 'stash': 'AccountId'},
                 'Unstaked': {
-                    'result': 'scale_info::521',
+                    'result': 'scale_info::482',
                     'stash': 'AccountId',
                 },
             },
@@ -11269,17 +11236,17 @@
                 'RankChanged': {'rank': 'u16', 'who': 'AccountId'},
                 'Voted': {
                     'poll': 'u32',
-                    'tally': 'scale_info::512',
-                    'vote': 'scale_info::511',
+                    'tally': 'scale_info::473',
+                    'vote': 'scale_info::472',
                     'who': 'AccountId',
                 },
             },
             'FellowshipReferenda': {
                 'Approved': {'index': 'u32'},
-                'Cancelled': {'index': 'u32', 'tally': 'scale_info::512'},
+                'Cancelled': {'index': 'u32', 'tally': 'scale_info::473'},
                 'ConfirmAborted': {'index': 'u32'},
                 'ConfirmStarted': {'index': 'u32'},
-                'Confirmed': {'index': 'u32', 'tally': 'scale_info::512'},
+                'Confirmed': {'index': 'u32', 'tally': 'scale_info::473'},
                 'DecisionDepositPlaced': {
                     'amount': 'u128',
                     'index': 'u32',
@@ -11293,14 +11260,14 @@
                 'DecisionStarted': {
                     'index': 'u32',
                     'proposal': 'scale_info::95',
-                    'tally': 'scale_info::512',
+                    'tally': 'scale_info::473',
                     'track': 'u16',
                 },
                 'DepositSlashed': {'amount': 'u128', 'who': 'AccountId'},
-                'Killed': {'index': 'u32', 'tally': 'scale_info::512'},
+                'Killed': {'index': 'u32', 'tally': 'scale_info::473'},
                 'MetadataCleared': {'hash': 'scale_info::12', 'index': 'u32'},
                 'MetadataSet': {'hash': 'scale_info::12', 'index': 'u32'},
-                'Rejected': {'index': 'u32', 'tally': 'scale_info::512'},
+                'Rejected': {'index': 'u32', 'tally': 'scale_info::473'},
                 'SubmissionDepositRefunded': {
                     'amount': 'u128',
                     'index': 'u32',
@@ -11311,7 +11278,7 @@
                     'proposal': 'scale_info::95',
                     'track': 'u16',
                 },
-                'TimedOut': {'index': 'u32', 'tally': 'scale_info::512'},
+                'TimedOut': {'index': 'u32', 'tally': 'scale_info::473'},
             },
             'Grandpa': {
                 'NewAuthorities': {'authority_set': [('[u8; 32]', 'u64')]},
@@ -11321,7 +11288,7 @@
             'Hrmp': {
                 'ChannelClosed': {
                     'by_parachain': 'u32',
-                    'channel_id': 'scale_info::397',
+                    'channel_id': 'scale_info::354',
                 },
                 'HrmpChannelForceOpened': {
                     'proposed_max_capacity': 'u32',
@@ -11338,7 +11305,7 @@
                 'OpenChannelAccepted': {'recipient': 'u32', 'sender': 'u32'},
                 'OpenChannelCanceled': {
                     'by_parachain': 'u32',
-                    'channel_id': 'scale_info::397',
+                    'channel_id': 'scale_info::354',
                 },
                 'OpenChannelDepositsUpdated': {
                     'recipient': 'u32',
@@ -11350,64 +11317,6 @@
                     'recipient': 'u32',
                     'sender': 'u32',
                 },
-            },
-            'Identity': {
-                'AuthorityAdded': {'authority': 'AccountId'},
-                'AuthorityRemoved': {'authority': 'AccountId'},
-                'DanglingUsernameRemoved': {
-                    'username': 'Bytes',
-                    'who': 'AccountId',
-                },
-                'IdentityCleared': {'deposit': 'u128', 'who': 'AccountId'},
-                'IdentityKilled': {'deposit': 'u128', 'who': 'AccountId'},
-                'IdentitySet': {'who': 'AccountId'},
-                'JudgementGiven': {
-                    'registrar_index': 'u32',
-                    'target': 'AccountId',
-                },
-                'JudgementRequested': {
-                    'registrar_index': 'u32',
-                    'who': 'AccountId',
-                },
-                'JudgementUnrequested': {
-                    'registrar_index': 'u32',
-                    'who': 'AccountId',
-                },
-                'PreapprovalExpired': {'whose': 'AccountId'},
-                'PrimaryUsernameSet': {
-                    'username': 'Bytes',
-                    'who': 'AccountId',
-                },
-                'RegistrarAdded': {'registrar_index': 'u32'},
-                'SubIdentityAdded': {
-                    'deposit': 'u128',
-                    'main': 'AccountId',
-                    'sub': 'AccountId',
-                },
-                'SubIdentityRemoved': {
-                    'deposit': 'u128',
-                    'main': 'AccountId',
-                    'sub': 'AccountId',
-                },
-                'SubIdentityRevoked': {
-                    'deposit': 'u128',
-                    'main': 'AccountId',
-                    'sub': 'AccountId',
-                },
-                'UsernameQueued': {
-                    'expiration': 'u32',
-                    'username': 'Bytes',
-                    'who': 'AccountId',
-                },
-                'UsernameSet': {'username': 'Bytes', 'who': 'AccountId'},
-            },
-            'IdentityMigrator': {
-                'DepositUpdated': {
-                    'identity': 'u128',
-                    'subs': 'u128',
-                    'who': 'AccountId',
-                },
-                'IdentityReaped': {'who': 'AccountId'},
             },
             'ImOnline': {
                 'AllGood': None,
@@ -11423,20 +11332,20 @@
                 'OverweightEnqueued': {
                     'id': '[u8; 32]',
                     'message_index': 'u32',
-                    'origin': 'scale_info::494',
+                    'origin': 'scale_info::455',
                     'page_index': 'u32',
                 },
-                'PageReaped': {'index': 'u32', 'origin': 'scale_info::494'},
+                'PageReaped': {'index': 'u32', 'origin': 'scale_info::455'},
                 'Processed': {
                     'id': 'scale_info::12',
-                    'origin': 'scale_info::494',
+                    'origin': 'scale_info::455',
                     'success': 'bool',
                     'weight_used': 'scale_info::9',
                 },
                 'ProcessingFailed': {
-                    'error': 'scale_info::561',
+                    'error': 'scale_info::521',
                     'id': 'scale_info::12',
-                    'origin': 'scale_info::494',
+                    'origin': 'scale_info::455',
                 },
             },
             'Multisig': {
@@ -11444,20 +11353,20 @@
                     'approving': 'AccountId',
                     'call_hash': '[u8; 32]',
                     'multisig': 'AccountId',
-                    'timepoint': 'scale_info::239',
+                    'timepoint': 'scale_info::195',
                 },
                 'MultisigCancelled': {
                     'call_hash': '[u8; 32]',
                     'cancelling': 'AccountId',
                     'multisig': 'AccountId',
-                    'timepoint': 'scale_info::239',
+                    'timepoint': 'scale_info::195',
                 },
                 'MultisigExecuted': {
                     'approving': 'AccountId',
                     'call_hash': '[u8; 32]',
                     'multisig': 'AccountId',
-                    'result': 'scale_info::521',
-                    'timepoint': 'scale_info::239',
+                    'result': 'scale_info::482',
+                    'timepoint': 'scale_info::195',
                 },
                 'NewMultisig': {
                     'approving': 'AccountId',
@@ -11559,11 +11468,11 @@
                     'pool_id': 'u32',
                 },
                 'PoolCommissionChangeRateUpdated': {
-                    'change_rate': 'scale_info::344',
+                    'change_rate': 'scale_info::300',
                     'pool_id': 'u32',
                 },
                 'PoolCommissionClaimPermissionUpdated': {
-                    'permission': (None, 'scale_info::346'),
+                    'permission': (None, 'scale_info::302'),
                     'pool_id': 'u32',
                 },
                 'PoolCommissionClaimed': {
@@ -11585,7 +11494,7 @@
                     'root': (None, 'AccountId'),
                 },
                 'StateChanged': {
-                    'new_state': 'scale_info::336',
+                    'new_state': 'scale_info::292',
                     'pool_id': 'u32',
                 },
                 'Unbonded': {
@@ -11616,14 +11525,14 @@
                 'SpotTrafficSet': {'traffic': 'u128'},
             },
             'ParaInclusion': {
-                'CandidateBacked': ('scale_info::544', 'Bytes', 'u32', 'u32'),
+                'CandidateBacked': ('scale_info::504', 'Bytes', 'u32', 'u32'),
                 'CandidateIncluded': (
-                    'scale_info::544',
+                    'scale_info::504',
                     'Bytes',
                     'u32',
                     'u32',
                 ),
-                'CandidateTimedOut': ('scale_info::544', 'Bytes', 'u32'),
+                'CandidateTimedOut': ('scale_info::504', 'Bytes', 'u32'),
                 'UpwardMessagesReceived': {'count': 'u32', 'from': 'u32'},
             },
             'Paras': {
@@ -11637,8 +11546,8 @@
                 'PvfCheckStarted': ('scale_info::12', 'u32'),
             },
             'ParasDisputes': {
-                'DisputeConcluded': ('scale_info::12', 'scale_info::551'),
-                'DisputeInitiated': ('scale_info::12', 'scale_info::550'),
+                'DisputeConcluded': ('scale_info::12', 'scale_info::511'),
+                'DisputeInitiated': ('scale_info::12', 'scale_info::510'),
                 'Revert': 'u32',
             },
             'Preimage': {
@@ -11656,18 +11565,18 @@
                     'delay': 'u32',
                     'delegatee': 'AccountId',
                     'delegator': 'AccountId',
-                    'proxy_type': 'scale_info::236',
+                    'proxy_type': 'scale_info::192',
                 },
-                'ProxyExecuted': {'result': 'scale_info::521'},
+                'ProxyExecuted': {'result': 'scale_info::482'},
                 'ProxyRemoved': {
                     'delay': 'u32',
                     'delegatee': 'AccountId',
                     'delegator': 'AccountId',
-                    'proxy_type': 'scale_info::236',
+                    'proxy_type': 'scale_info::192',
                 },
                 'PureCreated': {
                     'disambiguation_index': 'u16',
-                    'proxy_type': 'scale_info::236',
+                    'proxy_type': 'scale_info::192',
                     'pure': 'AccountId',
                     'who': 'AccountId',
                 },
@@ -11695,10 +11604,10 @@
             },
             'Referenda': {
                 'Approved': {'index': 'u32'},
-                'Cancelled': {'index': 'u32', 'tally': 'scale_info::509'},
+                'Cancelled': {'index': 'u32', 'tally': 'scale_info::470'},
                 'ConfirmAborted': {'index': 'u32'},
                 'ConfirmStarted': {'index': 'u32'},
-                'Confirmed': {'index': 'u32', 'tally': 'scale_info::509'},
+                'Confirmed': {'index': 'u32', 'tally': 'scale_info::470'},
                 'DecisionDepositPlaced': {
                     'amount': 'u128',
                     'index': 'u32',
@@ -11712,14 +11621,14 @@
                 'DecisionStarted': {
                     'index': 'u32',
                     'proposal': 'scale_info::95',
-                    'tally': 'scale_info::509',
+                    'tally': 'scale_info::470',
                     'track': 'u16',
                 },
                 'DepositSlashed': {'amount': 'u128', 'who': 'AccountId'},
-                'Killed': {'index': 'u32', 'tally': 'scale_info::509'},
+                'Killed': {'index': 'u32', 'tally': 'scale_info::470'},
                 'MetadataCleared': {'hash': 'scale_info::12', 'index': 'u32'},
                 'MetadataSet': {'hash': 'scale_info::12', 'index': 'u32'},
-                'Rejected': {'index': 'u32', 'tally': 'scale_info::509'},
+                'Rejected': {'index': 'u32', 'tally': 'scale_info::470'},
                 'SubmissionDepositRefunded': {
                     'amount': 'u128',
                     'index': 'u32',
@@ -11730,7 +11639,7 @@
                     'proposal': 'scale_info::95',
                     'track': 'u16',
                 },
-                'TimedOut': {'index': 'u32', 'tally': 'scale_info::509'},
+                'TimedOut': {'index': 'u32', 'tally': 'scale_info::470'},
             },
             'Registrar': {
                 'Deregistered': {'para_id': 'u32'},
@@ -11746,7 +11655,7 @@
                 'Canceled': {'index': 'u32', 'when': 'u32'},
                 'Dispatched': {
                     'id': (None, '[u8; 32]'),
-                    'result': 'scale_info::521',
+                    'result': 'scale_info::482',
                     'task': ('u32', 'u32'),
                 },
                 'PeriodicFailed': {
@@ -11782,7 +11691,7 @@
                 'Founded': {'founder': 'AccountId'},
                 'Inducted': {'candidates': ['AccountId'], 'primary': 'AccountId'},
                 'MemberSuspended': {'member': 'AccountId'},
-                'NewParams': {'params': 'scale_info::524'},
+                'NewParams': {'params': 'scale_info::484'},
                 'SuspendedMemberJudgement': {
                     'judged': 'bool',
                     'who': 'AccountId',
@@ -11902,7 +11811,7 @@
                     'error': 'scale_info::25',
                     'index': 'u32',
                 },
-                'DispatchedAs': {'result': 'scale_info::521'},
+                'DispatchedAs': {'result': 'scale_info::482'},
                 'ItemCompleted': None,
                 'ItemFailed': {'error': 'scale_info::25'},
             },
@@ -11918,23 +11827,24 @@
                 'CallWhitelisted': {'call_hash': 'scale_info::12'},
                 'WhitelistedCallDispatched': {
                     'call_hash': 'scale_info::12',
-                    'result': 'scale_info::515',
+                    'result': 'scale_info::476',
                 },
                 'WhitelistedCallRemoved': {'call_hash': 'scale_info::12'},
             },
+            None: None,
             'XcmPallet': {
                 'AssetsClaimed': {
-                    'assets': 'scale_info::479',
+                    'assets': 'scale_info::440',
                     'hash': 'scale_info::12',
                     'origin': 'scale_info::70',
                 },
                 'AssetsTrapped': {
-                    'assets': 'scale_info::479',
+                    'assets': 'scale_info::440',
                     'hash': 'scale_info::12',
                     'origin': 'scale_info::70',
                 },
-                'Attempted': {'outcome': 'scale_info::559'},
-                'FeesPaid': {'fees': ['scale_info::466'], 'paying': 'scale_info::70'},
+                'Attempted': {'outcome': 'scale_info::519'},
+                'FeesPaid': {'fees': ['scale_info::427'], 'paying': 'scale_info::70'},
                 'InvalidQuerier': {
                     'expected_querier': 'scale_info::70',
                     'maybe_actual_querier': (None, 'scale_info::70'),
@@ -11981,18 +11891,18 @@
                     'query_id': 'u64',
                 },
                 'NotifyTargetSendFail': {
-                    'error': 'scale_info::448',
+                    'error': 'scale_info::409',
                     'location': 'scale_info::70',
                     'query_id': 'u64',
                 },
                 'ResponseReady': {
                     'query_id': 'u64',
-                    'response': 'scale_info::469',
+                    'response': 'scale_info::430',
                 },
                 'ResponseTaken': {'query_id': 'u64'},
                 'Sent': {
                     'destination': 'scale_info::70',
-                    'message': ['scale_info::463'],
+                    'message': ['scale_info::424'],
                     'message_id': '[u8; 32]',
                     'origin': 'scale_info::70',
                 },
@@ -12005,24 +11915,24 @@
                     'query_id': 'u64',
                 },
                 'VersionChangeNotified': {
-                    'cost': ['scale_info::466'],
+                    'cost': ['scale_info::427'],
                     'destination': 'scale_info::70',
                     'message_id': '[u8; 32]',
                     'result': 'u32',
                 },
                 'VersionMigrationFinished': {'version': 'u32'},
                 'VersionNotifyRequested': {
-                    'cost': ['scale_info::466'],
+                    'cost': ['scale_info::427'],
                     'destination': 'scale_info::70',
                     'message_id': '[u8; 32]',
                 },
                 'VersionNotifyStarted': {
-                    'cost': ['scale_info::466'],
+                    'cost': ['scale_info::427'],
                     'destination': 'scale_info::70',
                     'message_id': '[u8; 32]',
                 },
                 'VersionNotifyUnrequested': {
-                    'cost': ['scale_info::466'],
+                    'cost': ['scale_info::427'],
                     'destination': 'scale_info::70',
                     'message_id': '[u8; 32]',
                 },
@@ -12247,9 +12157,9 @@
     'impl_name': 'parity-kusama',
     'impl_version': 0,
     'spec_name': 'kusama',
-    'spec_version': 1002004,
+    'spec_version': 1002006,
     'state_version': 1,
-    'transaction_version': 25,
+    'transaction_version': 26,
 }
 </code></pre>
 <h4 id="python_33">Python<a class="headerlink" href="#python_33" title="Permanent link">&para;</a></h4>

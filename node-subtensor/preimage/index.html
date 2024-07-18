@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -7636,6 +7640,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ensure_updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      ensure_updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#note_preimage" class="md-nav__link">
     <span class="md-ellipsis">
       note_preimage
@@ -7738,6 +7751,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#requeststatusfor" class="md-nav__link">
+    <span class="md-ellipsis">
+      RequestStatusFor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#statusfor" class="md-nav__link">
     <span class="md-ellipsis">
       StatusFor
@@ -7815,6 +7837,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#toofew" class="md-nav__link">
+    <span class="md-ellipsis">
+      TooFew
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      TooMany
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7880,6 +7920,26 @@
   
   <span class="md-ellipsis">
     Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
   </span>
   
 
@@ -8557,6 +8617,8 @@
       
         
       
+        
+      
     
     
     
@@ -8599,6 +8661,8 @@
       
         
           
+        
+      
         
       
         
@@ -8792,6 +8856,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ensure_updated" class="md-nav__link">
+    <span class="md-ellipsis">
+      ensure_updated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#note_preimage" class="md-nav__link">
     <span class="md-ellipsis">
       note_preimage
@@ -8894,6 +8967,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#requeststatusfor" class="md-nav__link">
+    <span class="md-ellipsis">
+      RequestStatusFor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#statusfor" class="md-nav__link">
     <span class="md-ellipsis">
       StatusFor
@@ -8971,6 +9053,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#toofew" class="md-nav__link">
+    <span class="md-ellipsis">
+      TooFew
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      TooMany
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8998,9 +9098,35 @@
 <hr />
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
-<h3 id="note_preimage">note_preimage<a class="headerlink" href="#note_preimage" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::note_preimage</code>].</p>
+<h3 id="ensure_updated">ensure_updated<a class="headerlink" href="#ensure_updated" title="Permanent link">&para;</a></h3>
+<p>Ensure that the a bulk of pre-images is upgraded.</p>
+<p>The caller pays no fee if at least 90% of pre-images were successfully updated.</p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hashes</td>
+<td><code>Vec&lt;T::Hash&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">call = substrate.compose_call(
+    'Preimage', 'ensure_updated', {'hashes': ['scale_info::13']}
+)
+</code></pre>
+<hr />
+<h3 id="note_preimage">note_preimage<a class="headerlink" href="#note_preimage" title="Permanent link">&para;</a></h3>
+<p>Register a preimage on-chain.</p>
+<p>If the preimage was previously requested, no fees or deposits are taken for providing
+the preimage. Otherwise, a deposit is taken proportional to the size of the preimage.</p>
+<h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9015,37 +9141,16 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Preimage', 'note_preimage', {'bytes': 'Bytes'}
 )
 </code></pre>
 <hr />
 <h3 id="request_preimage">request_preimage<a class="headerlink" href="#request_preimage" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::request_preimage</code>].</p>
-<h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hash</td>
-<td><code>T::Hash</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">call = substrate.compose_call(
-    'Preimage', 'request_preimage', {'hash': 'scale_info::12'}
-)
-</code></pre>
-<hr />
-<h3 id="unnote_preimage">unnote_preimage<a class="headerlink" href="#unnote_preimage" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::unnote_preimage</code>].</p>
+<p>Request a preimage be uploaded to the chain without paying any fees or deposits.</p>
+<p>If the preimage requests has already been provided on-chain, we unreserve any deposit
+a user may have paid, and take the control of the preimage out of their hands.</p>
 <h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9063,12 +9168,17 @@
 </table>
 <h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
-    'Preimage', 'unnote_preimage', {'hash': 'scale_info::12'}
+    'Preimage', 'request_preimage', {'hash': 'scale_info::13'}
 )
 </code></pre>
 <hr />
-<h3 id="unrequest_preimage">unrequest_preimage<a class="headerlink" href="#unrequest_preimage" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::unrequest_preimage</code>].</p>
+<h3 id="unnote_preimage">unnote_preimage<a class="headerlink" href="#unnote_preimage" title="Permanent link">&para;</a></h3>
+<p>Clear an unrequested preimage from the runtime storage.</p>
+<p>If <code>len</code> is provided, then it will be a much cheaper operation.</p>
+<ul>
+<li><code>hash</code>: The hash of the preimage to be removed from the store.</li>
+<li><code>len</code>: The length of the preimage of <code>hash</code>.</li>
+</ul>
 <h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9086,7 +9196,31 @@
 </table>
 <h4 id="python_3">Python<a class="headerlink" href="#python_3" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
-    'Preimage', 'unrequest_preimage', {'hash': 'scale_info::12'}
+    'Preimage', 'unnote_preimage', {'hash': 'scale_info::13'}
+)
+</code></pre>
+<hr />
+<h3 id="unrequest_preimage">unrequest_preimage<a class="headerlink" href="#unrequest_preimage" title="Permanent link">&para;</a></h3>
+<p>Clear a previously made request for a preimage.</p>
+<p>NOTE: THIS MUST NOT BE CALLED ON <code>hash</code> MORE TIMES THAN <code>request_preimage</code>.</p>
+<h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td><code>T::Hash</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="python_4">Python<a class="headerlink" href="#python_4" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">call = substrate.compose_call(
+    'Preimage', 'unrequest_preimage', {'hash': 'scale_info::13'}
 )
 </code></pre>
 <hr />
@@ -9094,26 +9228,6 @@
 <hr />
 <h3 id="cleared">Cleared<a class="headerlink" href="#cleared" title="Permanent link">&para;</a></h3>
 <p>A preimage has ben cleared.</p>
-<h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Composition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hash</td>
-<td><code>T::Hash</code></td>
-<td><code>scale_info::12</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="noted">Noted<a class="headerlink" href="#noted" title="Permanent link">&para;</a></h3>
-<p>A preimage has been noted.</p>
 <h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9127,13 +9241,13 @@
 <tr>
 <td>hash</td>
 <td><code>T::Hash</code></td>
-<td><code>scale_info::12</code></td>
+<td><code>scale_info::13</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="requested">Requested<a class="headerlink" href="#requested" title="Permanent link">&para;</a></h3>
-<p>A preimage has been requested.</p>
+<h3 id="noted">Noted<a class="headerlink" href="#noted" title="Permanent link">&para;</a></h3>
+<p>A preimage has been noted.</p>
 <h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9147,7 +9261,27 @@
 <tr>
 <td>hash</td>
 <td><code>T::Hash</code></td>
-<td><code>scale_info::12</code></td>
+<td><code>scale_info::13</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="requested">Requested<a class="headerlink" href="#requested" title="Permanent link">&para;</a></h3>
+<p>A preimage has been requested.</p>
+<h4 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Composition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td><code>T::Hash</code></td>
+<td><code>scale_info::13</code></td>
 </tr>
 </tbody>
 </table>
@@ -9155,23 +9289,41 @@
 <h2 id="storage-functions">Storage functions<a class="headerlink" href="#storage-functions" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="preimagefor">PreimageFor<a class="headerlink" href="#preimagefor" title="Permanent link">&para;</a></h3>
-<h4 id="python_4">Python<a class="headerlink" href="#python_4" title="Permanent link">&para;</a></h4>
+<h4 id="python_5">Python<a class="headerlink" href="#python_5" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
-    'Preimage', 'PreimageFor', [('scale_info::12', 'u32')]
+    'Preimage', 'PreimageFor', [('scale_info::13', 'u32')]
 )
 </code></pre>
 <h4 id="return-value">Return value<a class="headerlink" href="#return-value" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'Bytes'
 </code></pre>
 <hr />
-<h3 id="statusfor">StatusFor<a class="headerlink" href="#statusfor" title="Permanent link">&para;</a></h3>
+<h3 id="requeststatusfor">RequestStatusFor<a class="headerlink" href="#requeststatusfor" title="Permanent link">&para;</a></h3>
 <p>The request status of a given hash.</p>
-<h4 id="python_5">Python<a class="headerlink" href="#python_5" title="Permanent link">&para;</a></h4>
+<h4 id="python_6">Python<a class="headerlink" href="#python_6" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
-    'Preimage', 'StatusFor', ['scale_info::12']
+    'Preimage', 'RequestStatusFor', ['scale_info::13']
 )
 </code></pre>
 <h4 id="return-value_1">Return value<a class="headerlink" href="#return-value_1" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">{
+    'Requested': {
+        'count': 'u32',
+        'maybe_len': (None, 'u32'),
+        'maybe_ticket': (None, ('AccountId', 'u64')),
+    },
+    'Unrequested': {'len': 'u32', 'ticket': ('AccountId', 'u64')},
+}
+</code></pre>
+<hr />
+<h3 id="statusfor">StatusFor<a class="headerlink" href="#statusfor" title="Permanent link">&para;</a></h3>
+<p>The request status of a given hash.</p>
+<h4 id="python_7">Python<a class="headerlink" href="#python_7" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">result = substrate.query(
+    'Preimage', 'StatusFor', ['scale_info::13']
+)
+</code></pre>
+<h4 id="return-value_2">Return value<a class="headerlink" href="#return-value_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'Requested': {
         'count': 'u32',
@@ -9201,6 +9353,12 @@
 <hr />
 <h3 id="toobig">TooBig<a class="headerlink" href="#toobig" title="Permanent link">&para;</a></h3>
 <p>Preimage is too large to store on-chain.</p>
+<hr />
+<h3 id="toofew">TooFew<a class="headerlink" href="#toofew" title="Permanent link">&para;</a></h3>
+<p>Too few hashes were requested to be upgraded (i.e. zero).</p>
+<hr />
+<h3 id="toomany">TooMany<a class="headerlink" href="#toomany" title="Permanent link">&para;</a></h3>
+<p>More than <code>MAX_HASH_UPGRADE_BULK_COUNT</code> hashes were requested to be upgraded at once.</p>
 <hr />
 
 

@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -7660,6 +7664,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../scheduler/" class="md-nav__link">
         
   
@@ -7776,6 +7800,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#remove_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#set_key" class="md-nav__link">
     <span class="md-ellipsis">
       set_key
@@ -7830,6 +7863,15 @@
   <a href="#keychanged" class="md-nav__link">
     <span class="md-ellipsis">
       KeyChanged
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyremoved" class="md-nav__link">
+    <span class="md-ellipsis">
+      KeyRemoved
     </span>
   </a>
   
@@ -8503,6 +8545,8 @@
       
         
       
+        
+      
     
     
     
@@ -8545,6 +8589,8 @@
       
         
           
+        
+      
         
       
         
@@ -8738,6 +8784,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#remove_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#set_key" class="md-nav__link">
     <span class="md-ellipsis">
       set_key
@@ -8792,6 +8847,15 @@
   <a href="#keychanged" class="md-nav__link">
     <span class="md-ellipsis">
       KeyChanged
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyremoved" class="md-nav__link">
+    <span class="md-ellipsis">
+      KeyRemoved
     </span>
   </a>
   
@@ -8890,9 +8954,21 @@
 <hr />
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
-<h3 id="set_key">set_key<a class="headerlink" href="#set_key" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::set_key</code>].</p>
+<h3 id="remove_key">remove_key<a class="headerlink" href="#remove_key" title="Permanent link">&para;</a></h3>
+<p>Permanently removes the sudo key.</p>
+<p><strong>This cannot be un-done.</strong></p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
+<p>No attributes</p>
+<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">call = substrate.compose_call(
+    'Sudo', 'remove_key', {}
+)
+</code></pre>
+<hr />
+<h3 id="set_key">set_key<a class="headerlink" href="#set_key" title="Permanent link">&para;</a></h3>
+<p>Authenticates the current sudo key and sets the given AccountId (<code>new</code>) as the new sudo
+key.</p>
+<h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -8907,7 +8983,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Sudo', 'set_key', {
     'new': {
@@ -8922,8 +8998,8 @@
 </code></pre>
 <hr />
 <h3 id="sudo_1">sudo<a class="headerlink" href="#sudo_1" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::sudo</code>].</p>
-<h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
+<p>Authenticates the sudo key and dispatches a function call with <code>Root</code> origin.</p>
+<h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -8938,15 +9014,17 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
+<h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Sudo', 'sudo', {'call': 'Call'}
 )
 </code></pre>
 <hr />
 <h3 id="sudo_as">sudo_as<a class="headerlink" href="#sudo_as" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::sudo_as</code>].</p>
-<h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
+<p>Authenticates the sudo key and dispatches a function call with <code>Signed</code> origin from
+a given account.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -8965,7 +9043,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
+<h4 id="python_3">Python<a class="headerlink" href="#python_3" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Sudo', 'sudo_as', {
     'call': 'Call',
@@ -8981,8 +9059,11 @@
 </code></pre>
 <hr />
 <h3 id="sudo_unchecked_weight">sudo_unchecked_weight<a class="headerlink" href="#sudo_unchecked_weight" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::sudo_unchecked_weight</code>].</p>
-<h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
+<p>Authenticates the sudo key and dispatches a function call with <code>Root</code> origin.
+This function does not check the weight of the call, and instead allows the
+Sudo user to specify the weight of the call.</p>
+<p>The dispatch origin for this call must be <em>Signed</em>.</p>
+<h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9001,7 +9082,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="python_3">Python<a class="headerlink" href="#python_3" title="Permanent link">&para;</a></h4>
+<h4 id="python_4">Python<a class="headerlink" href="#python_4" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Sudo', 'sudo_unchecked_weight', {
     'call': 'Call',
@@ -9016,8 +9097,8 @@
 <h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="keychanged">KeyChanged<a class="headerlink" href="#keychanged" title="Permanent link">&para;</a></h3>
-<p>The [sudoer] just switched identity; the old key is supplied if one existed.</p>
-<h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
+<p>The sudo key has been updated.</p>
+<h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9028,16 +9109,26 @@
 </thead>
 <tbody>
 <tr>
-<td>old_sudoer</td>
+<td>old</td>
 <td><code>Option&lt;T::AccountId&gt;</code></td>
 <td><code>(None, 'AccountId')</code></td>
+</tr>
+<tr>
+<td>new</td>
+<td><code>T::AccountId</code></td>
+<td><code>AccountId</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
+<h3 id="keyremoved">KeyRemoved<a class="headerlink" href="#keyremoved" title="Permanent link">&para;</a></h3>
+<p>The key was permanently removed.</p>
+<h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
+<p>No attributes</p>
+<hr />
 <h3 id="sudid">Sudid<a class="headerlink" href="#sudid" title="Permanent link">&para;</a></h3>
-<p>A sudo just took place. [result]</p>
-<h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
+<p>A sudo call just took place.</p>
+<h4 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9056,8 +9147,8 @@
 </table>
 <hr />
 <h3 id="sudoasdone">SudoAsDone<a class="headerlink" href="#sudoasdone" title="Permanent link">&para;</a></h3>
-<p>A sudo just took place. [result]</p>
-<h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
+<p>A <a href="Pallet::sudo_as">sudo_as</a> call just took place.</p>
+<h4 id="attributes_8">Attributes<a class="headerlink" href="#attributes_8" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9079,7 +9170,7 @@
 <hr />
 <h3 id="key">Key<a class="headerlink" href="#key" title="Permanent link">&para;</a></h3>
 <p>The <code>AccountId</code> of the sudo key.</p>
-<h4 id="python_4">Python<a class="headerlink" href="#python_4" title="Permanent link">&para;</a></h4>
+<h4 id="python_5">Python<a class="headerlink" href="#python_5" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Sudo', 'Key', []
 )
@@ -9091,7 +9182,7 @@
 <h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="requiresudo">RequireSudo<a class="headerlink" href="#requiresudo" title="Permanent link">&para;</a></h3>
-<p>Sender must be the Sudo account</p>
+<p>Sender must be the Sudo account.</p>
 <hr />
 
 

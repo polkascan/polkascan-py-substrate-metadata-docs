@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -7906,6 +7910,8 @@
       
         
       
+        
+      
     
     
     
@@ -7957,6 +7963,26 @@
   
   <span class="md-ellipsis">
     AppWorkingGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../argobridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoBridge
   </span>
   
 
@@ -8825,6 +8851,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#updateargobridgeconstraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      UpdateArgoBridgeConstraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#updatechannelpayoutsproposalparameters" class="md-nav__link">
     <span class="md-ellipsis">
       UpdateChannelPayoutsProposalParameters
@@ -9557,6 +9592,8 @@
       
         
       
+        
+      
     
     
     
@@ -9943,6 +9980,15 @@
   <a href="#terminateworkinggroupleadproposalparameters" class="md-nav__link">
     <span class="md-ellipsis">
       TerminateWorkingGroupLeadProposalParameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateargobridgeconstraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      UpdateArgoBridgeConstraints
     </span>
   </a>
   
@@ -10463,6 +10509,28 @@
             ),
             'worker_id': 'u64',
         },
+        'UpdateArgoBridgeConstraints': {
+            'bridging_fee': (
+                None,
+                'u128',
+            ),
+            'operator_account': (
+                None,
+                'AccountId',
+            ),
+            'pauser_accounts': (
+                None,
+                ['AccountId'],
+            ),
+            'remote_chains': (
+                None,
+                ['u32'],
+            ),
+            'thawn_duration': (
+                None,
+                'u32',
+            ),
+        },
         'UpdateChannelPayouts': {
             'channel_cashouts_enabled': (
                 None,
@@ -10587,7 +10655,7 @@ Params:
 <tr>
 <td>None</td>
 <td><code>ProposalDetailsOf</code></td>
-<td><code>{'Signal': 'Bytes', 'RuntimeUpgrade': 'Bytes', 'FundingRequest': [{'account': 'AccountId', 'amount': 'u128'}], 'SetMaxValidatorCount': 'u32', 'CreateWorkingGroupLeadOpening': {'description': 'Bytes', 'stake_policy': {'stake_amount': 'u128', 'leaving_unstaking_period': 'u32'}, 'reward_per_block': (None, 'u128'), 'group': ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')}, 'FillWorkingGroupLeadOpening': {'opening_id': 'u64', 'application_id': 'u64', 'working_group': ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')}, 'UpdateWorkingGroupBudget': ('u128', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership'), ('Positive', 'Negative')), 'DecreaseWorkingGroupLeadStake': ('u64', 'u128', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'SlashWorkingGroupLead': ('u64', 'u128', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'SetWorkingGroupLeadReward': ('u64', (None, 'u128'), ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'TerminateWorkingGroupLead': {'worker_id': 'u64', 'slashing_amount': (None, 'u128'), 'group': ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')}, 'AmendConstitution': 'Bytes', 'CancelWorkingGroupLeadOpening': ('u64', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'SetMembershipPrice': 'u128', 'SetCouncilBudgetIncrement': 'u128', 'SetCouncilorReward': 'u128', 'SetInitialInvitationBalance': 'u128', 'SetInitialInvitationCount': 'u32', 'SetMembershipLeadInvitationQuota': 'u32', 'SetReferralCut': 'u8', 'VetoProposal': 'u32', 'UpdateGlobalNftLimit': (('Daily', 'Weekly'), 'u64'), 'UpdateChannelPayouts': {'commitment': (None, 'scale_info::11'), 'payload': (None, {'object_creation_params': {'size': 'u64', 'ipfs_content_id': 'Bytes'}, 'expected_data_size_fee': 'u128', 'expected_data_object_state_bloat_bond': 'u128'}), 'min_cashout_allowed': (None, 'u128'), 'max_cashout_allowed': (None, 'u128'), 'channel_cashouts_enabled': (None, 'bool')}, 'SetPalletFozenStatus': ('bool', ('ProjectToken',)), 'UpdateTokenPalletTokenConstraints': {'max_yearly_rate': (None, 'u32'), 'min_amm_slope': (None, 'u128'), 'min_sale_duration': (None, 'u32'), 'min_revenue_split_duration': (None, 'u32'), 'min_revenue_split_time_to_start': (None, 'u32'), 'sale_platform_fee': (None, 'u32'), 'amm_buy_tx_fees': (None, 'u32'), 'amm_sell_tx_fees': (None, 'u32'), 'bloat_bond': (None, 'u128')}, 'SetEraPayoutDampingFactor': 'u8', 'DecreaseCouncilBudget': 'u128'}</code></td>
+<td><code>{'Signal': 'Bytes', 'RuntimeUpgrade': 'Bytes', 'FundingRequest': [{'account': 'AccountId', 'amount': 'u128'}], 'SetMaxValidatorCount': 'u32', 'CreateWorkingGroupLeadOpening': {'description': 'Bytes', 'stake_policy': {'stake_amount': 'u128', 'leaving_unstaking_period': 'u32'}, 'reward_per_block': (None, 'u128'), 'group': ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')}, 'FillWorkingGroupLeadOpening': {'opening_id': 'u64', 'application_id': 'u64', 'working_group': ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')}, 'UpdateWorkingGroupBudget': ('u128', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership'), ('Positive', 'Negative')), 'DecreaseWorkingGroupLeadStake': ('u64', 'u128', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'SlashWorkingGroupLead': ('u64', 'u128', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'SetWorkingGroupLeadReward': ('u64', (None, 'u128'), ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'TerminateWorkingGroupLead': {'worker_id': 'u64', 'slashing_amount': (None, 'u128'), 'group': ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')}, 'AmendConstitution': 'Bytes', 'CancelWorkingGroupLeadOpening': ('u64', ('Forum', 'Storage', 'Content', 'OperationsAlpha', 'App', 'Distribution', 'OperationsBeta', 'OperationsGamma', 'Membership')), 'SetMembershipPrice': 'u128', 'SetCouncilBudgetIncrement': 'u128', 'SetCouncilorReward': 'u128', 'SetInitialInvitationBalance': 'u128', 'SetInitialInvitationCount': 'u32', 'SetMembershipLeadInvitationQuota': 'u32', 'SetReferralCut': 'u8', 'VetoProposal': 'u32', 'UpdateGlobalNftLimit': (('Daily', 'Weekly'), 'u64'), 'UpdateChannelPayouts': {'commitment': (None, 'scale_info::11'), 'payload': (None, {'object_creation_params': {'size': 'u64', 'ipfs_content_id': 'Bytes'}, 'expected_data_size_fee': 'u128', 'expected_data_object_state_bloat_bond': 'u128'}), 'min_cashout_allowed': (None, 'u128'), 'max_cashout_allowed': (None, 'u128'), 'channel_cashouts_enabled': (None, 'bool')}, 'SetPalletFozenStatus': ('bool', ('ProjectToken',)), 'UpdateTokenPalletTokenConstraints': {'max_yearly_rate': (None, 'u32'), 'min_amm_slope': (None, 'u128'), 'min_sale_duration': (None, 'u32'), 'min_revenue_split_duration': (None, 'u32'), 'min_revenue_split_time_to_start': (None, 'u32'), 'sale_platform_fee': (None, 'u32'), 'amm_buy_tx_fees': (None, 'u32'), 'amm_sell_tx_fees': (None, 'u32'), 'bloat_bond': (None, 'u128')}, 'UpdateArgoBridgeConstraints': {'operator_account': (None, 'AccountId'), 'pauser_accounts': (None, ['AccountId']), 'bridging_fee': (None, 'u128'), 'thawn_duration': (None, 'u32'), 'remote_chains': (None, ['u32'])}, 'SetEraPayoutDampingFactor': 'u8', 'DecreaseCouncilBudget': 'u128'}</code></td>
 </tr>
 <tr>
 <td>None</td>
@@ -10732,7 +10800,7 @@ Params:
 <h3 id="fundingrequestproposalmaxtotalamount">FundingRequestProposalMaxTotalAmount<a class="headerlink" href="#fundingrequestproposalmaxtotalamount" title="Permanent link">&para;</a></h3>
 <p>Maximum total amount in funding request proposal</p>
 <h4 id="value_7">Value<a class="headerlink" href="#value_7" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">1666666666660000
+<pre><code class="language-python">10000000000000000
 </code></pre>
 <h4 id="python_9">Python<a class="headerlink" href="#python_9" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'FundingRequestProposalMaxTotalAmount')
@@ -10746,7 +10814,7 @@ Params:
     'approval_threshold_percentage': 66,
     'constitutionality': 1,
     'grace_period': 1200,
-    'required_stake': 1666666666660,
+    'required_stake': 35000000000000,
     'slashing_quorum_percentage': 100,
     'slashing_threshold_percentage': 100,
     'voting_period': 43200,
@@ -11032,8 +11100,26 @@ Params:
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'TerminateWorkingGroupLeadProposalParameters')
 </code></pre>
 <hr />
-<h3 id="updatechannelpayoutsproposalparameters">UpdateChannelPayoutsProposalParameters<a class="headerlink" href="#updatechannelpayoutsproposalparameters" title="Permanent link">&para;</a></h3>
+<h3 id="updateargobridgeconstraints">UpdateArgoBridgeConstraints<a class="headerlink" href="#updateargobridgeconstraints" title="Permanent link">&para;</a></h3>
+<p>Set Argo Bridge Constraints</p>
 <h4 id="value_25">Value<a class="headerlink" href="#value_25" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">{
+    'approval_quorum_percentage': 100,
+    'approval_threshold_percentage': 100,
+    'constitutionality': 1,
+    'grace_period': 14400,
+    'required_stake': 16666666666600,
+    'slashing_quorum_percentage': 100,
+    'slashing_threshold_percentage': 100,
+    'voting_period': 100800,
+}
+</code></pre>
+<h4 id="python_27">Python<a class="headerlink" href="#python_27" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'UpdateArgoBridgeConstraints')
+</code></pre>
+<hr />
+<h3 id="updatechannelpayoutsproposalparameters">UpdateChannelPayoutsProposalParameters<a class="headerlink" href="#updatechannelpayoutsproposalparameters" title="Permanent link">&para;</a></h3>
+<h4 id="value_26">Value<a class="headerlink" href="#value_26" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'approval_quorum_percentage': 66,
     'approval_threshold_percentage': 100,
@@ -11045,12 +11131,12 @@ Params:
     'voting_period': 100800,
 }
 </code></pre>
-<h4 id="python_27">Python<a class="headerlink" href="#python_27" title="Permanent link">&para;</a></h4>
+<h4 id="python_28">Python<a class="headerlink" href="#python_28" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'UpdateChannelPayoutsProposalParameters')
 </code></pre>
 <hr />
 <h3 id="updateglobalnftlimitproposalparameters">UpdateGlobalNftLimitProposalParameters<a class="headerlink" href="#updateglobalnftlimitproposalparameters" title="Permanent link">&para;</a></h3>
-<h4 id="value_26">Value<a class="headerlink" href="#value_26" title="Permanent link">&para;</a></h4>
+<h4 id="value_27">Value<a class="headerlink" href="#value_27" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'approval_quorum_percentage': 66,
     'approval_threshold_percentage': 66,
@@ -11062,13 +11148,13 @@ Params:
     'voting_period': 28800,
 }
 </code></pre>
-<h4 id="python_28">Python<a class="headerlink" href="#python_28" title="Permanent link">&para;</a></h4>
+<h4 id="python_29">Python<a class="headerlink" href="#python_29" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'UpdateGlobalNftLimitProposalParameters')
 </code></pre>
 <hr />
 <h3 id="updatetokenpallettokenconstraints">UpdateTokenPalletTokenConstraints<a class="headerlink" href="#updatetokenpallettokenconstraints" title="Permanent link">&para;</a></h3>
 <p>pallet token governance parameters proposal</p>
-<h4 id="value_27">Value<a class="headerlink" href="#value_27" title="Permanent link">&para;</a></h4>
+<h4 id="value_28">Value<a class="headerlink" href="#value_28" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'approval_quorum_percentage': 66,
     'approval_threshold_percentage': 100,
@@ -11080,13 +11166,13 @@ Params:
     'voting_period': 100800,
 }
 </code></pre>
-<h4 id="python_29">Python<a class="headerlink" href="#python_29" title="Permanent link">&para;</a></h4>
+<h4 id="python_30">Python<a class="headerlink" href="#python_30" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'UpdateTokenPalletTokenConstraints')
 </code></pre>
 <hr />
 <h3 id="updateworkinggroupbudgetproposalparameters">UpdateWorkingGroupBudgetProposalParameters<a class="headerlink" href="#updateworkinggroupbudgetproposalparameters" title="Permanent link">&para;</a></h3>
 <p>Exports &#x27;Update Working Group Budget&#x27; proposal parameters.</p>
-<h4 id="value_28">Value<a class="headerlink" href="#value_28" title="Permanent link">&para;</a></h4>
+<h4 id="value_29">Value<a class="headerlink" href="#value_29" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'approval_quorum_percentage': 66,
     'approval_threshold_percentage': 66,
@@ -11098,12 +11184,12 @@ Params:
     'voting_period': 43200,
 }
 </code></pre>
-<h4 id="python_30">Python<a class="headerlink" href="#python_30" title="Permanent link">&para;</a></h4>
+<h4 id="python_31">Python<a class="headerlink" href="#python_31" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'UpdateWorkingGroupBudgetProposalParameters')
 </code></pre>
 <hr />
 <h3 id="vetoproposalproposalparameters">VetoProposalProposalParameters<a class="headerlink" href="#vetoproposalproposalparameters" title="Permanent link">&para;</a></h3>
-<h4 id="value_29">Value<a class="headerlink" href="#value_29" title="Permanent link">&para;</a></h4>
+<h4 id="value_30">Value<a class="headerlink" href="#value_30" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{
     'approval_quorum_percentage': 100,
     'approval_threshold_percentage': 100,
@@ -11115,7 +11201,7 @@ Params:
     'voting_period': 14400,
 }
 </code></pre>
-<h4 id="python_31">Python<a class="headerlink" href="#python_31" title="Permanent link">&para;</a></h4>
+<h4 id="python_32">Python<a class="headerlink" href="#python_32" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('ProposalsCodex', 'VetoProposalProposalParameters')
 </code></pre>
 <hr />

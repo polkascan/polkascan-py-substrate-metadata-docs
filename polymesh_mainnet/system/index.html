@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -7904,6 +7908,8 @@
       
         
       
+        
+      
     
     
     
@@ -7948,6 +7954,8 @@
       
         
           
+        
+      
         
       
         
@@ -8817,6 +8825,26 @@
   
   <span class="md-ellipsis">
     Staking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statetriemigration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StateTrieMigration
   </span>
   
 
@@ -10459,9 +10487,9 @@ the prefix we are removing to accurately calculate the weight of this function.<
 <pre><code class="language-python">{
     'logs': [
         {
-            'Other': 'Bytes',
             None: None,
             'Consensus': ('[u8; 4]', 'Bytes'),
+            'Other': 'Bytes',
             'PreRuntime': ('[u8; 4]', 'Bytes'),
             'RuntimeEnvironmentUpdated': None,
             'Seal': ('[u8; 4]', 'Bytes'),
@@ -10514,7 +10542,6 @@ the prefix we are removing to accurately calculate the weight of this function.<
 <pre><code class="language-python">[
     {
         'event': {
-            None: None,
             'Asset': {
                 'AssetAffirmationExemption': '[u8; 12]',
                 'AssetBalanceUpdated': (
@@ -10674,19 +10701,6 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'Unfrozen': '[u8; 32]',
                 'UnfrozenTx': ('[u8; 32]', 'scale_info::97'),
             },
-            'CapitalDistribution': {
-                'BenefitClaimed': (
-                    '[u8; 32]',
-                    '[u8; 32]',
-                    'scale_info::166',
-                    'scale_info::168',
-                    'u128',
-                    'u32',
-                ),
-                'Created': ('[u8; 32]', 'scale_info::166', 'scale_info::168'),
-                'Reclaimed': ('[u8; 32]', 'scale_info::166', 'u128'),
-                'Removed': ('[u8; 32]', 'scale_info::166'),
-            },
             'CddServiceProviders': {
                 'ActiveLimitChanged': ('[u8; 32]', 'u32', 'u32'),
                 'Dummy': None,
@@ -10696,22 +10710,6 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'MembersReset': ('[u8; 32]', ['[u8; 32]']),
                 'MembersSwapped': ('[u8; 32]', '[u8; 32]', '[u8; 32]'),
             },
-            'Checkpoint': {
-                'CheckpointCreated': ((None, '[u8; 32]'), '[u8; 12]', 'u64', 'u128', 'u64'),
-                'MaximumSchedulesComplexityChanged': ('[u8; 32]', 'u64'),
-                'ScheduleCreated': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'u64',
-                    'scale_info::173',
-                ),
-                'ScheduleRemoved': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'u64',
-                    'scale_info::173',
-                ),
-            },
             'CommitteeMembership': {
                 'ActiveLimitChanged': ('[u8; 32]', 'u32', 'u32'),
                 'Dummy': None,
@@ -10720,41 +10718,6 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'MemberRevoked': ('[u8; 32]', '[u8; 32]'),
                 'MembersReset': ('[u8; 32]', ['[u8; 32]']),
                 'MembersSwapped': ('[u8; 32]', '[u8; 32]', '[u8; 32]'),
-            },
-            'ComplianceManager': {
-                'AssetCompliancePaused': ('[u8; 32]', '[u8; 12]'),
-                'AssetComplianceReplaced': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    ['scale_info::177'],
-                ),
-                'AssetComplianceReset': ('[u8; 32]', '[u8; 12]'),
-                'AssetComplianceResumed': ('[u8; 32]', '[u8; 12]'),
-                'ComplianceRequirementChanged': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'scale_info::177',
-                ),
-                'ComplianceRequirementCreated': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'scale_info::177',
-                ),
-                'ComplianceRequirementRemoved': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'u32',
-                ),
-                'TrustedDefaultClaimIssuerAdded': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'scale_info::184',
-                ),
-                'TrustedDefaultClaimIssuerRemoved': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    '[u8; 32]',
-                ),
             },
             'Contracts': {
                 'Called': {'caller': 'AccountId', 'contract': 'AccountId'},
@@ -10778,64 +10741,6 @@ the prefix we are removing to accurately calculate the weight of this function.<
                     'beneficiary': 'AccountId',
                     'contract': 'AccountId',
                 },
-            },
-            'CorporateAction': {
-                'CAInitiated': (
-                    '[u8; 32]',
-                    'scale_info::166',
-                    'scale_info::193',
-                    'Bytes',
-                ),
-                'CALinkedToDoc': ('[u8; 32]', 'scale_info::166', ['u32']),
-                'CARemoved': ('[u8; 32]', 'scale_info::166'),
-                'DefaultTargetIdentitiesChanged': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'scale_info::190',
-                ),
-                'DefaultWithholdingTaxChanged': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    'u32',
-                ),
-                'DidWithholdingTaxChanged': (
-                    '[u8; 32]',
-                    '[u8; 12]',
-                    '[u8; 32]',
-                    (None, 'u32'),
-                ),
-                'MaxDetailsLengthChanged': ('[u8; 32]', 'u32'),
-                'RecordDateChanged': (
-                    '[u8; 32]',
-                    'scale_info::166',
-                    'scale_info::193',
-                ),
-            },
-            'CorporateBallot': {
-                'Created': (
-                    '[u8; 32]',
-                    'scale_info::166',
-                    'scale_info::203',
-                    'scale_info::204',
-                    'bool',
-                ),
-                'MetaChanged': (
-                    '[u8; 32]',
-                    'scale_info::166',
-                    'scale_info::204',
-                ),
-                'RCVChanged': ('[u8; 32]', 'scale_info::166', 'bool'),
-                'RangeChanged': (
-                    '[u8; 32]',
-                    'scale_info::166',
-                    'scale_info::203',
-                ),
-                'Removed': ('[u8; 32]', 'scale_info::166'),
-                'VoteCast': (
-                    '[u8; 32]',
-                    'scale_info::166',
-                    ['scale_info::213'],
-                ),
             },
             'ExternalAgents': {
                 'AgentAdded': ('[u8; 32]', '[u8; 12]', 'scale_info::72'),
@@ -10925,6 +10830,140 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'IndexFreed': {'index': 'u32'},
                 'IndexFrozen': {'index': 'u32', 'who': 'AccountId'},
             },
+            'System': {
+                'CodeUpdated': None,
+                'ExtrinsicFailed': {
+                    'dispatch_error': 'scale_info::24',
+                    'dispatch_info': 'scale_info::21',
+                },
+                'ExtrinsicSuccess': {'dispatch_info': 'scale_info::21'},
+                'KilledAccount': {'account': 'AccountId'},
+                'NewAccount': {'account': 'AccountId'},
+                'Remarked': {'hash': 'scale_info::11', 'sender': 'AccountId'},
+            },
+            None: None,
+            'CapitalDistribution': {
+                'BenefitClaimed': (
+                    '[u8; 32]',
+                    '[u8; 32]',
+                    'scale_info::166',
+                    'scale_info::168',
+                    'u128',
+                    'u32',
+                ),
+                'Created': ('[u8; 32]', 'scale_info::166', 'scale_info::168'),
+                'Reclaimed': ('[u8; 32]', 'scale_info::166', 'u128'),
+                'Removed': ('[u8; 32]', 'scale_info::166'),
+            },
+            'Checkpoint': {
+                'CheckpointCreated': ((None, '[u8; 32]'), '[u8; 12]', 'u64', 'u128', 'u64'),
+                'MaximumSchedulesComplexityChanged': ('[u8; 32]', 'u64'),
+                'ScheduleCreated': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'u64',
+                    'scale_info::173',
+                ),
+                'ScheduleRemoved': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'u64',
+                    'scale_info::173',
+                ),
+            },
+            'ComplianceManager': {
+                'AssetCompliancePaused': ('[u8; 32]', '[u8; 12]'),
+                'AssetComplianceReplaced': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    ['scale_info::177'],
+                ),
+                'AssetComplianceReset': ('[u8; 32]', '[u8; 12]'),
+                'AssetComplianceResumed': ('[u8; 32]', '[u8; 12]'),
+                'ComplianceRequirementChanged': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'scale_info::177',
+                ),
+                'ComplianceRequirementCreated': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'scale_info::177',
+                ),
+                'ComplianceRequirementRemoved': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'u32',
+                ),
+                'TrustedDefaultClaimIssuerAdded': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'scale_info::184',
+                ),
+                'TrustedDefaultClaimIssuerRemoved': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    '[u8; 32]',
+                ),
+            },
+            'CorporateAction': {
+                'CAInitiated': (
+                    '[u8; 32]',
+                    'scale_info::166',
+                    'scale_info::193',
+                    'Bytes',
+                ),
+                'CALinkedToDoc': ('[u8; 32]', 'scale_info::166', ['u32']),
+                'CARemoved': ('[u8; 32]', 'scale_info::166'),
+                'DefaultTargetIdentitiesChanged': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'scale_info::190',
+                ),
+                'DefaultWithholdingTaxChanged': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    'u32',
+                ),
+                'DidWithholdingTaxChanged': (
+                    '[u8; 32]',
+                    '[u8; 12]',
+                    '[u8; 32]',
+                    (None, 'u32'),
+                ),
+                'MaxDetailsLengthChanged': ('[u8; 32]', 'u32'),
+                'RecordDateChanged': (
+                    '[u8; 32]',
+                    'scale_info::166',
+                    'scale_info::193',
+                ),
+            },
+            'CorporateBallot': {
+                'Created': (
+                    '[u8; 32]',
+                    'scale_info::166',
+                    'scale_info::203',
+                    'scale_info::204',
+                    'bool',
+                ),
+                'MetaChanged': (
+                    '[u8; 32]',
+                    'scale_info::166',
+                    'scale_info::204',
+                ),
+                'RCVChanged': ('[u8; 32]', 'scale_info::166', 'bool'),
+                'RangeChanged': (
+                    '[u8; 32]',
+                    'scale_info::166',
+                    'scale_info::203',
+                ),
+                'Removed': ('[u8; 32]', 'scale_info::166'),
+                'VoteCast': (
+                    '[u8; 32]',
+                    'scale_info::166',
+                    ['scale_info::213'],
+                ),
+            },
             'MultiSig': {
                 'MultiSigCreated': (
                     '[u8; 32]',
@@ -10976,6 +11015,12 @@ the prefix we are removing to accurately calculate the weight of this function.<
                     'Transactional': 'scale_info::28',
                     'Unavailable': None,
                 },
+                'ProposalFailedToExecute': (
+                    '[u8; 32]',
+                    'AccountId',
+                    'u64',
+                    'scale_info::24',
+                ),
                 'ProposalRejected': ('[u8; 32]', 'AccountId', 'u64'),
                 'ProposalRejectionVote': (
                     '[u8; 32]',
@@ -11275,6 +11320,16 @@ the prefix we are removing to accurately calculate the weight of this function.<
                 'Unbonded': ('[u8; 32]', 'AccountId', 'u128'),
                 'Withdrawn': ('AccountId', 'u128'),
             },
+            'StateTrieMigration': {
+                'AutoMigrationFinished': None,
+                'Halted': {'error': 'scale_info::299'},
+                'Migrated': {
+                    'child': 'u32',
+                    'compute': 'scale_info::298',
+                    'top': 'u32',
+                },
+                'Slashed': {'amount': 'u128', 'who': 'AccountId'},
+            },
             'Statistics': {
                 'AssetStatsUpdated': (
                     '[u8; 32]',
@@ -11334,17 +11389,6 @@ the prefix we are removing to accurately calculate the weight of this function.<
                     'u128',
                     'u128',
                 ),
-            },
-            'System': {
-                'CodeUpdated': None,
-                'ExtrinsicFailed': {
-                    'dispatch_error': 'scale_info::24',
-                    'dispatch_info': 'scale_info::21',
-                },
-                'ExtrinsicSuccess': {'dispatch_info': 'scale_info::21'},
-                'KilledAccount': {'account': 'AccountId'},
-                'NewAccount': {'account': 'AccountId'},
-                'Remarked': {'hash': 'scale_info::11', 'sender': 'AccountId'},
             },
             'TechnicalCommittee': {
                 'Approved': (
@@ -11698,12 +11742,13 @@ the prefix we are removing to accurately calculate the weight of this function.<
         ('0x595ac34c5ea1f5fe', 1),
         ('0x9ea061a615cee2fe', 1),
         ('0x53df5001418f3b46', 1),
+        ('0x98cf18c375950e1f', 1),
     ],
     'authoring_version': 1,
     'impl_name': 'polymesh_mainnet',
     'impl_version': 0,
     'spec_name': 'polymesh_mainnet',
-    'spec_version': 6002010,
+    'spec_version': 6003020,
     'state_version': 1,
     'transaction_version': 4,
 }

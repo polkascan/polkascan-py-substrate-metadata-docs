@@ -12,7 +12,7 @@
         <link rel="prev" href="../randomnesscollectiveflip/">
       
       
-        <link rel="next" href="../scheduler/">
+        <link rel="next" href="../safemode/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -412,6 +412,8 @@
       
         
           
+        
+      
         
       
         
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -7846,9 +7850,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toomanyfields" class="md-nav__link">
+  <a href="#toomanyfieldsinidentityinfo" class="md-nav__link">
     <span class="md-ellipsis">
-      TooManyFields
+      TooManyFieldsInIdentityInfo
     </span>
   </a>
   
@@ -7863,6 +7867,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -8536,6 +8560,8 @@
       
         
       
+        
+      
     
     
     
@@ -8578,6 +8604,8 @@
       
         
           
+        
+      
         
       
         
@@ -8921,9 +8949,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toomanyfields" class="md-nav__link">
+  <a href="#toomanyfieldsinidentityinfo" class="md-nav__link">
     <span class="md-ellipsis">
-      TooManyFields
+      TooManyFieldsInIdentityInfo
     </span>
   </a>
   
@@ -8957,7 +8985,7 @@
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="clear_identity">clear_identity<a class="headerlink" href="#clear_identity" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::clear_identity</code>].</p>
+<p>Clear the identity of an account.</p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -8980,7 +9008,7 @@
 </code></pre>
 <hr />
 <h3 id="set_identity">set_identity<a class="headerlink" href="#set_identity" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::set_identity</code>].</p>
+<p>Register an identity for an account. This will overwrite any existing identity.</p>
 <h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9669,6 +9697,7 @@
 <h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="identitydissolved">IdentityDissolved<a class="headerlink" href="#identitydissolved" title="Permanent link">&para;</a></h3>
+<p>Emitted when a user dissolves an identity</p>
 <h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9688,6 +9717,7 @@
 </table>
 <hr />
 <h3 id="identityset">IdentitySet<a class="headerlink" href="#identityset" title="Permanent link">&para;</a></h3>
+<p>Emitted when a user registers an identity</p>
 <h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9719,7 +9749,7 @@
 <pre><code class="language-python">{
     'deposit': 'u64',
     'info': {
-        'additional': [('scale_info::167', 'scale_info::167')],
+        'additional': [('scale_info::171', 'scale_info::171')],
         'display': {
             'BlakeTwo256': '[u8; 32]',
             'Keccak256': '[u8; 32]',
@@ -10250,7 +10280,8 @@
 </code></pre>
 <hr />
 <h3 id="maxadditionalfields">MaxAdditionalFields<a class="headerlink" href="#maxadditionalfields" title="Permanent link">&para;</a></h3>
-<p>Maximum user-configured additional fields</p>
+<p>Configuration fields
+ Maximum user-configured additional fields</p>
 <h4 id="value_2">Value<a class="headerlink" href="#value_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">1
 </code></pre>
@@ -10261,12 +10292,12 @@
 <h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="cannotregister">CannotRegister<a class="headerlink" href="#cannotregister" title="Permanent link">&para;</a></h3>
-<p>Account attempted to register an identity but doesn&amp;#x27;t meet the requirements.</p>
+<p>Account attempted to register an identity but does not meet the requirements.</p>
 <hr />
 <h3 id="notregistered">NotRegistered<a class="headerlink" href="#notregistered" title="Permanent link">&para;</a></h3>
 <p>Account doesn&amp;#x27;t have a registered identity</p>
 <hr />
-<h3 id="toomanyfields">TooManyFields<a class="headerlink" href="#toomanyfields" title="Permanent link">&para;</a></h3>
+<h3 id="toomanyfieldsinidentityinfo">TooManyFieldsInIdentityInfo<a class="headerlink" href="#toomanyfieldsinidentityinfo" title="Permanent link">&para;</a></h3>
 <p>Account passed too many additional fields to their identity</p>
 <hr />
 
@@ -10315,13 +10346,13 @@
         
         
           
-          <a href="../scheduler/" class="md-footer__link md-footer__link--next" aria-label="Next: Scheduler">
+          <a href="../safemode/" class="md-footer__link md-footer__link--next" aria-label="Next: SafeMode">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Scheduler
+                SafeMode
               </div>
             </div>
             <div class="md-footer__button md-icon">

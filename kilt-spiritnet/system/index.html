@@ -530,6 +530,8 @@
       
         
       
+        
+      
     
     
     
@@ -1726,6 +1728,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1972,6 +1978,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../depositstorage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DepositStorage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../did/" class="md-nav__link">
         
   
@@ -1997,6 +2023,26 @@
   
   <span class="md-ellipsis">
     DidLookup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dipprovider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DipProvider
   </span>
   
 
@@ -4801,10 +4847,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -8683,6 +8725,8 @@
       
         
       
+        
+      
     
     
     
@@ -9175,6 +9219,8 @@
       
         
       
+        
+      
     
     
     
@@ -9217,6 +9263,8 @@
       
         
           
+        
+      
         
       
         
@@ -10306,18 +10354,6 @@
 <pre><code class="language-python">[
     {
         'event': {
-            'System': {
-                'CodeUpdated': None,
-                'ExtrinsicFailed': {
-                    'dispatch_error': 'scale_info::25',
-                    'dispatch_info': 'scale_info::22',
-                },
-                'ExtrinsicSuccess': {'dispatch_info': 'scale_info::22'},
-                'KilledAccount': {'account': 'AccountId'},
-                'NewAccount': {'account': 'AccountId'},
-                'Remarked': {'hash': 'scale_info::12', 'sender': 'AccountId'},
-            },
-            None: None,
             'Attestation': {
                 'AttestationCreated': (
                     'AccountId',
@@ -10393,7 +10429,7 @@
             },
             'Ctype': {'CTypeCreated': ('AccountId', 'scale_info::12'), 'CTypeUpdated': 'scale_info::12'},
             'CumulusXcm': {
-                'ExecutedDownward': ('[u8; 32]', 'scale_info::123'),
+                'ExecutedDownward': ('[u8; 32]', 'scale_info::137'),
                 'InvalidFormat': '[u8; 32]',
                 'UnsupportedVersion': '[u8; 32]',
             },
@@ -10454,6 +10490,18 @@
                     'voter': 'AccountId',
                 },
             },
+            'DepositStorage': {
+                'DepositAdded': {
+                    'deposit_entry': 'scale_info::122',
+                    'key': 'Bytes',
+                    'namespace': 'scale_info::120',
+                },
+                'DepositReclaimed': {
+                    'deposit_entry': 'scale_info::122',
+                    'key': 'Bytes',
+                    'namespace': 'scale_info::120',
+                },
+            },
             'Did': {
                 'DidCallDispatched': ('AccountId', 'scale_info::44'),
                 'DidCreated': ('AccountId', 'AccountId'),
@@ -10466,11 +10514,22 @@
                 'MigrationCompleted': None,
                 'MigrationProgress': None,
             },
+            'DipProvider': {
+                'VersionedIdentityCommitted': {
+                    'commitment': 'scale_info::12',
+                    'identifier': 'AccountId',
+                    'version': 'u16',
+                },
+                'VersionedIdentityDeleted': {
+                    'identifier': 'AccountId',
+                    'version': 'u16',
+                },
+            },
             'DmpQueue': {
                 'ExecutedDownward': {
                     'message_hash': '[u8; 32]',
                     'message_id': '[u8; 32]',
-                    'outcome': 'scale_info::123',
+                    'outcome': 'scale_info::137',
                 },
                 'InvalidFormat': {'message_hash': '[u8; 32]'},
                 'MaxMessagesExhausted': {'message_hash': '[u8; 32]'},
@@ -10594,34 +10653,34 @@
             },
             'PolkadotXcm': {
                 'AssetsClaimed': {
-                    'assets': 'scale_info::160',
+                    'assets': 'scale_info::174',
                     'hash': 'scale_info::12',
-                    'origin': 'scale_info::124',
+                    'origin': 'scale_info::138',
                 },
                 'AssetsTrapped': {
-                    'assets': 'scale_info::160',
+                    'assets': 'scale_info::174',
                     'hash': 'scale_info::12',
-                    'origin': 'scale_info::124',
+                    'origin': 'scale_info::138',
                 },
-                'Attempted': {'outcome': 'scale_info::123'},
-                'FeesPaid': {'fees': ['scale_info::138'], 'paying': 'scale_info::124'},
+                'Attempted': {'outcome': 'scale_info::137'},
+                'FeesPaid': {'fees': ['scale_info::152'], 'paying': 'scale_info::138'},
                 'InvalidQuerier': {
-                    'expected_querier': 'scale_info::124',
-                    'maybe_actual_querier': (None, 'scale_info::124'),
-                    'origin': 'scale_info::124',
+                    'expected_querier': 'scale_info::138',
+                    'maybe_actual_querier': (None, 'scale_info::138'),
+                    'origin': 'scale_info::138',
                     'query_id': 'u64',
                 },
                 'InvalidQuerierVersion': {
-                    'origin': 'scale_info::124',
+                    'origin': 'scale_info::138',
                     'query_id': 'u64',
                 },
                 'InvalidResponder': {
-                    'expected_location': (None, 'scale_info::124'),
-                    'origin': 'scale_info::124',
+                    'expected_location': (None, 'scale_info::138'),
+                    'origin': 'scale_info::138',
                     'query_id': 'u64',
                 },
                 'InvalidResponderVersion': {
-                    'origin': 'scale_info::124',
+                    'origin': 'scale_info::138',
                     'query_id': 'u64',
                 },
                 'Notified': {
@@ -10647,52 +10706,52 @@
                     'query_id': 'u64',
                 },
                 'NotifyTargetMigrationFail': {
-                    'location': 'scale_info::174',
+                    'location': 'scale_info::188',
                     'query_id': 'u64',
                 },
                 'NotifyTargetSendFail': {
-                    'error': 'scale_info::120',
-                    'location': 'scale_info::124',
+                    'error': 'scale_info::134',
+                    'location': 'scale_info::138',
                     'query_id': 'u64',
                 },
                 'ResponseReady': {
                     'query_id': 'u64',
-                    'response': 'scale_info::143',
+                    'response': 'scale_info::157',
                 },
                 'ResponseTaken': {'query_id': 'u64'},
                 'Sent': {
-                    'destination': 'scale_info::124',
-                    'message': ['scale_info::135'],
+                    'destination': 'scale_info::138',
+                    'message': ['scale_info::149'],
                     'message_id': '[u8; 32]',
-                    'origin': 'scale_info::124',
+                    'origin': 'scale_info::138',
                 },
                 'SupportedVersionChanged': {
-                    'location': 'scale_info::124',
+                    'location': 'scale_info::138',
                     'version': 'u32',
                 },
                 'UnexpectedResponse': {
-                    'origin': 'scale_info::124',
+                    'origin': 'scale_info::138',
                     'query_id': 'u64',
                 },
                 'VersionChangeNotified': {
-                    'cost': ['scale_info::138'],
-                    'destination': 'scale_info::124',
+                    'cost': ['scale_info::152'],
+                    'destination': 'scale_info::138',
                     'message_id': '[u8; 32]',
                     'result': 'u32',
                 },
                 'VersionNotifyRequested': {
-                    'cost': ['scale_info::138'],
-                    'destination': 'scale_info::124',
+                    'cost': ['scale_info::152'],
+                    'destination': 'scale_info::138',
                     'message_id': '[u8; 32]',
                 },
                 'VersionNotifyStarted': {
-                    'cost': ['scale_info::138'],
-                    'destination': 'scale_info::124',
+                    'cost': ['scale_info::152'],
+                    'destination': 'scale_info::138',
                     'message_id': '[u8; 32]',
                 },
                 'VersionNotifyUnrequested': {
-                    'cost': ['scale_info::138'],
-                    'destination': 'scale_info::124',
+                    'cost': ['scale_info::152'],
+                    'destination': 'scale_info::138',
                     'message_id': '[u8; 32]',
                 },
             },
@@ -10739,6 +10798,38 @@
                 },
                 'CredentialUnrevoked': {'credential_id': 'scale_info::12'},
             },
+            'Session': {'NewSession': {'session_index': 'u32'}},
+            'Tips': {
+                'NewTip': {'tip_hash': 'scale_info::12'},
+                'TipClosed': {
+                    'payout': 'u128',
+                    'tip_hash': 'scale_info::12',
+                    'who': 'AccountId',
+                },
+                'TipClosing': {'tip_hash': 'scale_info::12'},
+                'TipRetracted': {'tip_hash': 'scale_info::12'},
+                'TipSlashed': {
+                    'deposit': 'u128',
+                    'finder': 'AccountId',
+                    'tip_hash': 'scale_info::12',
+                },
+            },
+            'TipsMembership': (
+                'MemberAdded',
+                'MemberRemoved',
+                'MembersSwapped',
+                'MembersReset',
+                'KeyChanged',
+                'Dummy',
+            ),
+            'TransactionPayment': {
+                'TransactionFeePaid': {
+                    'actual_fee': 'u128',
+                    'tip': 'u128',
+                    'who': 'AccountId',
+                },
+            },
+            None: None,
             'Scheduler': {
                 'CallUnavailable': {
                     'id': (None, '[u8; 32]'),
@@ -10760,7 +10851,17 @@
                 },
                 'Scheduled': {'index': 'u32', 'when': 'u64'},
             },
-            'Session': {'NewSession': {'session_index': 'u32'}},
+            'System': {
+                'CodeUpdated': None,
+                'ExtrinsicFailed': {
+                    'dispatch_error': 'scale_info::25',
+                    'dispatch_info': 'scale_info::22',
+                },
+                'ExtrinsicSuccess': {'dispatch_info': 'scale_info::22'},
+                'KilledAccount': {'account': 'AccountId'},
+                'NewAccount': {'account': 'AccountId'},
+                'Remarked': {'hash': 'scale_info::12', 'sender': 'AccountId'},
+            },
             'TechnicalCommittee': {
                 'Approved': {'proposal_hash': 'scale_info::12'},
                 'Closed': {
@@ -10799,36 +10900,6 @@
                 'KeyChanged',
                 'Dummy',
             ),
-            'Tips': {
-                'NewTip': {'tip_hash': 'scale_info::12'},
-                'TipClosed': {
-                    'payout': 'u128',
-                    'tip_hash': 'scale_info::12',
-                    'who': 'AccountId',
-                },
-                'TipClosing': {'tip_hash': 'scale_info::12'},
-                'TipRetracted': {'tip_hash': 'scale_info::12'},
-                'TipSlashed': {
-                    'deposit': 'u128',
-                    'finder': 'AccountId',
-                    'tip_hash': 'scale_info::12',
-                },
-            },
-            'TipsMembership': (
-                'MemberAdded',
-                'MemberRemoved',
-                'MembersSwapped',
-                'MembersReset',
-                'KeyChanged',
-                'Dummy',
-            ),
-            'TransactionPayment': {
-                'TransactionFeePaid': {
-                    'actual_fee': 'u128',
-                    'tip': 'u128',
-                    'who': 'AccountId',
-                },
-            },
             'Treasury': {
                 'Awarded': {
                     'account': 'AccountId',
@@ -10876,7 +10947,7 @@
                 'BadFormat': {'message_hash': '[u8; 32]'},
                 'BadVersion': {'message_hash': '[u8; 32]'},
                 'Fail': {
-                    'error': 'scale_info::120',
+                    'error': 'scale_info::134',
                     'message_hash': '[u8; 32]',
                     'message_id': '[u8; 32]',
                     'weight': 'scale_info::10',
@@ -11090,12 +11161,13 @@
         ('0x26609555c0656603', 2),
         ('0xa47b7d544994c99b', 1),
         ('0x45bfba51a310b223', 1),
+        ('0xc3b3e8d33273990d', 1),
     ],
     'authoring_version': 1,
     'impl_name': 'kilt-spiritnet',
     'impl_version': 0,
     'spec_name': 'kilt-spiritnet',
-    'spec_version': 11210,
+    'spec_version': 11300,
     'state_version': 0,
     'transaction_version': 8,
 }

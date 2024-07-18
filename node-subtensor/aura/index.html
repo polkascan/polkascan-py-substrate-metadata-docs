@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -7548,6 +7552,30 @@
   <a href="#currentslot" class="md-nav__link">
     <span class="md-ellipsis">
       CurrentSlot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slotduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      SlotDuration
     </span>
   </a>
   
@@ -7718,6 +7746,26 @@
   
   <span class="md-ellipsis">
     Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
   </span>
   
 
@@ -8395,6 +8443,8 @@
       
         
       
+        
+      
     
     
     
@@ -8437,6 +8487,8 @@
       
         
           
+        
+      
         
       
         
@@ -8652,6 +8704,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slotduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      SlotDuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8695,6 +8771,19 @@
 </code></pre>
 <h4 id="return-value_1">Return value<a class="headerlink" href="#return-value_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'u64'
+</code></pre>
+<hr />
+<h2 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="slotduration">SlotDuration<a class="headerlink" href="#slotduration" title="Permanent link">&para;</a></h3>
+<p>The slot duration Aura should run with, expressed in milliseconds.
+ The effective value of this type should not change while the chain is running.</p>
+<p>For backwards compatibility either use [<code>MinimumPeriodTimesTwo</code>] or a const.</p>
+<h4 id="value">Value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">12000
+</code></pre>
+<h4 id="python_2">Python<a class="headerlink" href="#python_2" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">constant = substrate.get_constant('Aura', 'SlotDuration')
 </code></pre>
 <hr />
 

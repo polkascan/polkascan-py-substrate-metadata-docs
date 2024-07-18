@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7414,6 +7416,8 @@
       
         
       
+        
+      
     
     
     
@@ -7708,27 +7712,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cannotcommit" class="md-nav__link">
+  <a href="#accountnotallowedcommit" class="md-nav__link">
     <span class="md-ellipsis">
-      CannotCommit
+      AccountNotAllowedCommit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ratelimitexceeded" class="md-nav__link">
+  <a href="#commitmentsetratelimitexceeded" class="md-nav__link">
     <span class="md-ellipsis">
-      RateLimitExceeded
+      CommitmentSetRateLimitExceeded
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#toomanyfields" class="md-nav__link">
+  <a href="#toomanyfieldsincommitmentinfo" class="md-nav__link">
     <span class="md-ellipsis">
-      TooManyFields
+      TooManyFieldsInCommitmentInfo
     </span>
   </a>
   
@@ -7859,6 +7863,26 @@
   
   <span class="md-ellipsis">
     Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../safemode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SafeMode
   </span>
   
 
@@ -8536,6 +8560,8 @@
       
         
       
+        
+      
     
     
     
@@ -8578,6 +8604,8 @@
       
         
           
+        
+      
         
       
         
@@ -8903,27 +8931,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cannotcommit" class="md-nav__link">
+  <a href="#accountnotallowedcommit" class="md-nav__link">
     <span class="md-ellipsis">
-      CannotCommit
+      AccountNotAllowedCommit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ratelimitexceeded" class="md-nav__link">
+  <a href="#commitmentsetratelimitexceeded" class="md-nav__link">
     <span class="md-ellipsis">
-      RateLimitExceeded
+      CommitmentSetRateLimitExceeded
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#toomanyfields" class="md-nav__link">
+  <a href="#toomanyfieldsincommitmentinfo" class="md-nav__link">
     <span class="md-ellipsis">
-      TooManyFields
+      TooManyFieldsInCommitmentInfo
     </span>
   </a>
   
@@ -8957,7 +8985,7 @@
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="set_commitment">set_commitment<a class="headerlink" href="#set_commitment" title="Permanent link">&para;</a></h3>
-<p>See [<code>Pallet::set_commitment</code>].</p>
+<p>Set the commitment for a given netuid</p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9128,6 +9156,7 @@
 <h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="commitment">Commitment<a class="headerlink" href="#commitment" title="Permanent link">&para;</a></h3>
+<p>A commitment was set</p>
 <h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9338,6 +9367,7 @@
 </code></pre>
 <hr />
 <h3 id="maxfields">MaxFields<a class="headerlink" href="#maxfields" title="Permanent link">&para;</a></h3>
+<p>The maximum number of additional fields that can be added to a commitment</p>
 <h4 id="value_2">Value<a class="headerlink" href="#value_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">1
 </code></pre>
@@ -9346,6 +9376,7 @@
 </code></pre>
 <hr />
 <h3 id="ratelimit">RateLimit<a class="headerlink" href="#ratelimit" title="Permanent link">&para;</a></h3>
+<p>The rate limit for commitments</p>
 <h4 id="value_3">Value<a class="headerlink" href="#value_3" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">100
 </code></pre>
@@ -9355,13 +9386,13 @@
 <hr />
 <h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
 <hr />
-<h3 id="cannotcommit">CannotCommit<a class="headerlink" href="#cannotcommit" title="Permanent link">&para;</a></h3>
-<p>Account isn&amp;#x27;t allow to make commitments to the chain</p>
+<h3 id="accountnotallowedcommit">AccountNotAllowedCommit<a class="headerlink" href="#accountnotallowedcommit" title="Permanent link">&para;</a></h3>
+<p>Account is not allow to make commitments to the chain</p>
 <hr />
-<h3 id="ratelimitexceeded">RateLimitExceeded<a class="headerlink" href="#ratelimitexceeded" title="Permanent link">&para;</a></h3>
-<p>Account is trying to commit data too fast</p>
+<h3 id="commitmentsetratelimitexceeded">CommitmentSetRateLimitExceeded<a class="headerlink" href="#commitmentsetratelimitexceeded" title="Permanent link">&para;</a></h3>
+<p>Account is trying to commit data too fast, rate limit exceeded</p>
 <hr />
-<h3 id="toomanyfields">TooManyFields<a class="headerlink" href="#toomanyfields" title="Permanent link">&para;</a></h3>
+<h3 id="toomanyfieldsincommitmentinfo">TooManyFieldsInCommitmentInfo<a class="headerlink" href="#toomanyfieldsincommitmentinfo" title="Permanent link">&para;</a></h3>
 <p>Account passed too many additional fields to their commitment</p>
 <hr />
 

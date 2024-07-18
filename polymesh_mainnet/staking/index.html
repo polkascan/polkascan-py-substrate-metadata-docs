@@ -12,7 +12,7 @@
         <link rel="prev" href="../settlement/">
       
       
-        <link rel="next" href="../statistics/">
+        <link rel="next" href="../statetriemigration/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -412,6 +412,8 @@
       
         
           
+        
+      
         
       
         
@@ -1644,6 +1646,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3528,10 +3534,6 @@
       
         
           
-        
-      
-        
-      
         
       
         
@@ -7412,6 +7414,8 @@
       
         
       
+        
+      
     
     
     
@@ -7904,6 +7908,8 @@
       
         
       
+        
+      
     
     
     
@@ -7948,6 +7954,8 @@
       
         
           
+        
+      
         
       
         
@@ -9663,15 +9671,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#storageversion" class="md-nav__link">
-    <span class="md-ellipsis">
-      StorageVersion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#unappliedslashes" class="md-nav__link">
     <span class="md-ellipsis">
       UnappliedSlashes
@@ -9768,9 +9767,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#maxnominations" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxNominations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#maxnominatorrewardedpervalidator" class="md-nav__link">
     <span class="md-ellipsis">
       MaxNominatorRewardedPerValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxunlockingchunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxUnlockingChunks
     </span>
   </a>
   
@@ -9903,6 +9920,15 @@
   <a href="#bondtoosmall" class="md-nav__link">
     <span class="md-ellipsis">
       BondTooSmall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boundnotmet" class="md-nav__link">
+    <span class="md-ellipsis">
+      BoundNotMet
     </span>
   </a>
   
@@ -10224,6 +10250,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#toomanynominators" class="md-nav__link">
+    <span class="md-ellipsis">
+      TooManyNominators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toomanytargets" class="md-nav__link">
     <span class="md-ellipsis">
       TooManyTargets
@@ -10241,6 +10276,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../statetriemigration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    StateTrieMigration
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -11332,15 +11387,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#storageversion" class="md-nav__link">
-    <span class="md-ellipsis">
-      StorageVersion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#unappliedslashes" class="md-nav__link">
     <span class="md-ellipsis">
       UnappliedSlashes
@@ -11437,9 +11483,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#maxnominations" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxNominations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#maxnominatorrewardedpervalidator" class="md-nav__link">
     <span class="md-ellipsis">
       MaxNominatorRewardedPerValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxunlockingchunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      MaxUnlockingChunks
     </span>
   </a>
   
@@ -11572,6 +11636,15 @@
   <a href="#bondtoosmall" class="md-nav__link">
     <span class="md-ellipsis">
       BondTooSmall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boundnotmet" class="md-nav__link">
+    <span class="md-ellipsis">
+      BoundNotMet
     </span>
   </a>
   
@@ -11893,6 +11966,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#toomanynominators" class="md-nav__link">
+    <span class="md-ellipsis">
+      TooManyNominators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toomanytargets" class="md-nav__link">
     <span class="md-ellipsis">
       TooManyTargets
@@ -11929,13 +12011,11 @@
 <h2 id="calls">Calls<a class="headerlink" href="#calls" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="add_permissioned_validator">add_permissioned_validator<a class="headerlink" href="#add_permissioned_validator" title="Permanent link">&para;</a></h3>
-<p>Governance committee on 2/3 rds majority can introduce a new potential identity
-to the pool of permissioned entities who can run validators. Staking module uses <code>PermissionedIdentity</code>
-to ensure validators have completed KYB compliance and considers them for validation.</p>
-<p># Arguments
-* origin Required origin for adding a potential validator.
-* identity Validator&amp;#x27;s IdentityId.
-* intended_count No. of validators given identity intends to run.</p>
+<p>Scale up the ideal number of validators by a factor upto maximum of
+<code>ElectionProviderBase::MaxWinners</code>.</p>
+<p>The dispatch origin must be Root.</p>
+<p>## Complexity
+Same as [<code>Self::set_validator_count</code>].</p>
 <h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -11969,19 +12049,13 @@ to ensure validators have completed KYB compliance and considers them for valida
 be the account that controls it.</p>
 <p><code>value</code> must be more than the <code>minimum_balance</code> specified by <code>T::Currency</code>.</p>
 <p>The dispatch origin for this call must be <em>Signed</em> by the stash account.</p>
-<p>Emits <code>Bonded</code>.</p>
-<p># &lt;weight&gt;
+<p>Emits <code>Bonded</code>.
+## Complexity
 - Independent of the arguments. Moderate complexity.
 - O(1).
 - Three extra DB entries.</p>
 <p>NOTE: Two of the storage writes (<code>Self::bonded</code>, <code>Self::payee</code>) are <em>never</em> cleaned
 unless the <code>origin</code> falls below <em>existential deposit</em> and gets removed as dust.</p>
-<hr />
-<p>Weight: O(1)
-DB Weight:
-- Read: Bonded, Ledger, [Origin Account], Current Era, History Depth, Locks
-- Write: Bonded, Payee, [Origin Account], Locks, Ledger
-# &lt;/weight&gt;</p>
 <h4 id="attributes_1">Attributes<a class="headerlink" href="#attributes_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -11993,7 +12067,7 @@ DB Weight:
 <tbody>
 <tr>
 <td>controller</td>
-<td><code>&lt;T::Lookup as StaticLookup&gt;::Source</code></td>
+<td><code>AccountIdLookupOf&lt;T&gt;</code></td>
 </tr>
 <tr>
 <td>value</td>
@@ -12029,21 +12103,14 @@ DB Weight:
 <h3 id="bond_extra">bond_extra<a class="headerlink" href="#bond_extra" title="Permanent link">&para;</a></h3>
 <p>Add some extra amount that have appeared in the stash <code>free_balance</code> into the balance up
 for staking.</p>
+<p>The dispatch origin for this call must be <em>Signed</em> by the stash, not the controller.</p>
 <p>Use this if there are additional funds in your stash account that you wish to bond.
-Unlike [<code>bond</code>] or [<code>unbond</code>] this function does not impose any limitation on the amount
-that can be added.</p>
-<p>The dispatch origin for this call must be <em>Signed</em> by the stash, not the controller and
-it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
+Unlike <a href="Self::bond"><code>bond</code></a> or <a href="Self::unbond"><code>unbond</code></a> this function does not impose
+any limitation on the amount that can be added.</p>
 <p>Emits <code>Bonded</code>.</p>
-<p># &lt;weight&gt;
+<p>## Complexity
 - Independent of the arguments. Insignificant complexity.
-- O(1).
-- One DB entry.</p>
-<hr />
-<p>DB Weight:
-- Read: Era Election Status, Bonded, Ledger, [Origin Account], Locks
-- Write: [Origin Account], Locks, Ledger
-# &lt;/weight&gt;</p>
+- O(1).</p>
 <h4 id="attributes_2">Attributes<a class="headerlink" href="#attributes_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12067,15 +12134,8 @@ it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</cod
 <hr />
 <h3 id="cancel_deferred_slash">cancel_deferred_slash<a class="headerlink" href="#cancel_deferred_slash" title="Permanent link">&para;</a></h3>
 <p>Cancel enactment of a deferred slash.</p>
-<p>Can be called by the <code>T::SlashCancelOrigin</code>.</p>
+<p>Can be called by the <code>T::AdminOrigin</code>.</p>
 <p>Parameters: era and indices of the slashes for that era to kill.</p>
-<p># &lt;weight&gt;
-Complexity: O(U + S)
-with U unapplied slashes weighted with U=1000
-and S is the number of slash indices to be canceled.
-- Read: Unapplied Slashes
-- Write: Unapplied Slashes
-# &lt;/weight&gt;</p>
 <h4 id="attributes_3">Attributes<a class="headerlink" href="#attributes_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12108,7 +12168,7 @@ and S is the number of slash indices to be canceled.
 <p>Switch slashing status on the basis of given <code>SlashingSwitch</code>. Can only be called by root.</p>
 <p># Arguments
 * origin - AccountId of root.
-* slashing_switch - Switch used to set the targets for slashing.</p>
+* slashing_switch - Switch used to set the targets for s</p>
 <h4 id="attributes_4">Attributes<a class="headerlink" href="#attributes_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12139,18 +12199,11 @@ and S is the number of slash indices to be canceled.
 <h3 id="chill">chill<a class="headerlink" href="#chill" title="Permanent link">&para;</a></h3>
 <p>Declare no desire to either validate or nominate.</p>
 <p>Effects will be felt at the beginning of the next era.</p>
-<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.
-And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
-<p># &lt;weight&gt;
+<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.</p>
+<p>## Complexity
 - Independent of the arguments. Insignificant complexity.
 - Contains one read.
 - Writes are limited to the <code>origin</code> account key.</p>
-<hr />
-<p>Weight: O(1)
-DB Weight:
-- Read: EraElectionStatus, Ledger
-- Write: Validators, Nominators
-# &lt;/weight&gt;</p>
 <h4 id="attributes_5">Attributes<a class="headerlink" href="#attributes_5" title="Permanent link">&para;</a></h4>
 <p>No attributes</p>
 <h4 id="python_5">Python<a class="headerlink" href="#python_5" title="Permanent link">&para;</a></h4>
@@ -12171,7 +12224,7 @@ And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed
 * <code>BadOrigin</code> The origin was not a GC member.
 * <code>CallNotAllowed</code> The call is not allowed at the given time due to restrictions of election period.
 * <code>NotExists</code> Permissioned validator doesn&amp;#x27;t exist.
-* <code>NotStash</code> Not a stash account for the permissioned identity.</p>
+* <code>NotStash</code> Not a stash account for the permissioned i</p>
 <h4 id="attributes_6">Attributes<a class="headerlink" href="#attributes_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12204,11 +12257,13 @@ And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed
 <p>Force there to be a new era at the end of the next session. After this, it will be
 reset to normal (non-forced) behaviour.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
+<p># Warning</p>
+<p>The election process starts multiple blocks before the end of the era.
+If this is called just before a new era is triggered, the election process may not
+have enough blocks to get a result.</p>
+<p>## Complexity
 - No arguments.
-- Weight: O(1)
-- Write ForceEra
-# &lt;/weight&gt;</p>
+- Weight: O(1)</p>
 <h4 id="attributes_7">Attributes<a class="headerlink" href="#attributes_7" title="Permanent link">&para;</a></h4>
 <p>No attributes</p>
 <h4 id="python_7">Python<a class="headerlink" href="#python_7" title="Permanent link">&para;</a></h4>
@@ -12220,10 +12275,10 @@ reset to normal (non-forced) behaviour.</p>
 <h3 id="force_new_era_always">force_new_era_always<a class="headerlink" href="#force_new_era_always" title="Permanent link">&para;</a></h3>
 <p>Force there to be a new era at the end of sessions indefinitely.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
-- Weight: O(1)
-- Write: ForceEra
-# &lt;/weight&gt;</p>
+<p># Warning</p>
+<p>The election process starts multiple blocks before the end of the era.
+If this is called just before a new era is triggered, the election process may not
+have enough blocks to get a result.</p>
 <h4 id="attributes_8">Attributes<a class="headerlink" href="#attributes_8" title="Permanent link">&para;</a></h4>
 <p>No attributes</p>
 <h4 id="python_8">Python<a class="headerlink" href="#python_8" title="Permanent link">&para;</a></h4>
@@ -12235,11 +12290,13 @@ reset to normal (non-forced) behaviour.</p>
 <h3 id="force_no_eras">force_no_eras<a class="headerlink" href="#force_no_eras" title="Permanent link">&para;</a></h3>
 <p>Force there to be no new eras indefinitely.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
+<p># Warning</p>
+<p>The election process starts multiple blocks before the end of the era.
+Thus the election process may be ongoing when this is called. In this case the
+election will continue until the next era is triggered.</p>
+<p>## Complexity
 - No arguments.
-- Weight: O(1)
-- Write: ForceEra
-# &lt;/weight&gt;</p>
+- Weight: O(1)</p>
 <h4 id="attributes_9">Attributes<a class="headerlink" href="#attributes_9" title="Permanent link">&para;</a></h4>
 <p>No attributes</p>
 <h4 id="python_9">Python<a class="headerlink" href="#python_9" title="Permanent link">&para;</a></h4>
@@ -12251,12 +12308,6 @@ reset to normal (non-forced) behaviour.</p>
 <h3 id="force_unstake">force_unstake<a class="headerlink" href="#force_unstake" title="Permanent link">&para;</a></h3>
 <p>Force a current staker to become completely unstaked, immediately.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
-O(S) where S is the number of slashing spans to be removed
-Reads: Bonded, Slashing Spans, Account, Locks
-Writes: Bonded, Slashing Spans (if S &gt; 0), Ledger, Payee, Validators, Nominators, Account, Locks
-Writes Each: SpanSlash * S
-# &lt;/weight&gt;</p>
 <h4 id="attributes_10">Attributes<a class="headerlink" href="#attributes_10" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12286,11 +12337,11 @@ Writes Each: SpanSlash * S
 </code></pre>
 <hr />
 <h3 id="increase_validator_count">increase_validator_count<a class="headerlink" href="#increase_validator_count" title="Permanent link">&para;</a></h3>
-<p>Increments the ideal number of validators.</p>
+<p>Increments the ideal number of validators upto maximum of
+<code>ElectionProviderBase::MaxWinners</code>.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
-Same as [<code>set_validator_count</code>].
-# &lt;/weight&gt;</p>
+<p>## Complexity
+Same as [<code>Self::set_validator_count</code>].</p>
 <h4 id="attributes_11">Attributes<a class="headerlink" href="#attributes_11" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12314,21 +12365,12 @@ Same as [<code>set_validator_count</code>].
 <hr />
 <h3 id="nominate">nominate<a class="headerlink" href="#nominate" title="Permanent link">&para;</a></h3>
 <p>Declare the desire to nominate <code>targets</code> for the origin controller.</p>
-<p>Effects will be felt at the beginning of the next era. This can only be called when
-[<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
-<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.
-And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
-<p># &lt;weight&gt;
+<p>Effects will be felt at the beginning of the next era.</p>
+<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.</p>
+<p>## Complexity
 - The transaction&amp;#x27;s complexity is proportional to the size of <code>targets</code> (N)
-which is capped at CompactAssignments::LIMIT (MAX_NOMINATIONS).
+which is capped at CompactAssignments::LIMIT (T::MaxNominations).
 - Both the reads and writes follow a similar pattern.</p>
-<hr />
-<p>Weight: O(N)
-where N is the number of targets
-DB Weight:
-- Reads: Era Election Status, Ledger, Current Era
-- Writes: Validators, Nominators
-# &lt;/weight&gt;</p>
 <h4 id="attributes_12">Attributes<a class="headerlink" href="#attributes_12" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12340,7 +12382,7 @@ DB Weight:
 <tbody>
 <tr>
 <td>targets</td>
-<td><code>Vec&lt;&lt;T::Lookup as StaticLookup&gt;::Source&gt;</code></td>
+<td><code>Vec&lt;AccountIdLookupOf&lt;T&gt;&gt;</code></td>
 </tr>
 </tbody>
 </table>
@@ -12369,21 +12411,8 @@ DB Weight:
 </ul>
 <p>The origin of this call must be <em>Signed</em>. Any account can call this function, even if
 it is not one of the stakers.</p>
-<p>This can only be called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
-<p># &lt;weight&gt;
-- Time complexity: at most O(MaxNominatorRewardedPerValidator).
-- Contains a limited number of reads and writes.</p>
-<hr />
-<p>N is the Number of payouts for the validator (including the validator)
-Weight:
-- Reward Destination Staked: O(N)
-- Reward Destination Controller (Creating): O(N)
-DB Weight:
-- Read: EraElectionStatus, CurrentEra, HistoryDepth, ErasValidatorReward,
-        ErasStakersClipped, ErasRewardPoints, ErasValidatorPrefs (8 items)
-- Read Each: Bonded, Ledger, Payee, Locks, System Account (5 items)
-- Write Each: System Account, Locks, Ledger (3 items)
-# &lt;/weight&gt;</p>
+<p>## Complexity
+- At most O(MaxNominatorRewardedPerValidator).</p>
 <h4 id="attributes_13">Attributes<a class="headerlink" href="#attributes_13" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12413,7 +12442,6 @@ DB Weight:
 </code></pre>
 <hr />
 <h3 id="payout_stakers_by_system">payout_stakers_by_system<a class="headerlink" href="#payout_stakers_by_system" title="Permanent link">&para;</a></h3>
-<p>System version of <code>payout_stakers()</code>. Only be called by the root origin.</p>
 <h4 id="attributes_14">Attributes<a class="headerlink" href="#attributes_14" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12443,20 +12471,16 @@ DB Weight:
 </code></pre>
 <hr />
 <h3 id="reap_stash">reap_stash<a class="headerlink" href="#reap_stash" title="Permanent link">&para;</a></h3>
-<p>Remove all data structure concerning a staker/stash once its balance is at the minimum.
-This is essentially equivalent to <code>withdraw_unbonded</code> except it can be called by anyone
-and the target <code>stash</code> must have no funds left beyond the ED.</p>
-<p>This can be called from any origin.</p>
-<ul>
-<li><code>stash</code>: The stash account to reap. Its balance must be zero.</li>
-</ul>
-<p># &lt;weight&gt;
-Complexity: O(S) where S is the number of slashing spans on the account.
-DB Weight:
-- Reads: Stash Account, Bonded, Slashing Spans, Locks
-- Writes: Bonded, Slashing Spans (if S &gt; 0), Ledger, Payee, Validators, Nominators, Stash Account, Locks
-- Writes Each: SpanSlash * S
-# &lt;/weight&gt;</p>
+<p>Remove all data structures concerning a staker/stash once it is at a state where it can
+be considered <code>dust</code> in the staking system. The requirements are:</p>
+<ol>
+<li>the <code>total_balance</code> of the stash is below existential deposit.</li>
+<li>or, the <code>ledger.total</code> of the stash is below existential deposit.</li>
+</ol>
+<p>The former can happen in cases like a slash; the latter when a fully unbonded account
+is still receiving staking rewards in <code>RewardDestination::Staked</code>.</p>
+<p>It can be called by anyone, as long as <code>stash</code> meets the above requirements.</p>
+<p>Refunds the transaction fees upon successful execution.</p>
 <h4 id="attributes_15">Attributes<a class="headerlink" href="#attributes_15" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12487,21 +12511,10 @@ DB Weight:
 <hr />
 <h3 id="rebond">rebond<a class="headerlink" href="#rebond" title="Permanent link">&para;</a></h3>
 <p>Rebond a portion of the stash scheduled to be unlocked.</p>
-<p>The dispatch origin must be signed by the controller, and it can be only called when
-[<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
-<p># &lt;weight&gt;
+<p>The dispatch origin must be signed by the controller.</p>
+<p>## Complexity
 - Time complexity: O(L), where L is unlocking chunks
-- Bounded by <code>MAX_UNLOCKING_CHUNKS</code>.
-- Storage changes: Can&amp;#x27;t increase storage, only decrease it.</p>
-<hr />
-<ul>
-<li>DB Weight:<ul>
-<li>Reads: EraElectionStatus, Ledger, Locks, [Origin Account]</li>
-<li>Writes: [Origin Account], Locks, Ledger
-# &lt;/weight&gt;</li>
-</ul>
-</li>
-</ul>
+- Bounded by <code>MaxUnlockingChunks</code>.</p>
 <h4 id="attributes_16">Attributes<a class="headerlink" href="#attributes_16" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12552,11 +12565,11 @@ completed KYB compliance</p>
 </code></pre>
 <hr />
 <h3 id="scale_validator_count">scale_validator_count<a class="headerlink" href="#scale_validator_count" title="Permanent link">&para;</a></h3>
-<p>Scale up the ideal number of validators by a factor.</p>
+<p>Scale up the ideal number of validators by a factor upto maximum of
+<code>ElectionProviderBase::MaxWinners</code>.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
-Same as [<code>set_validator_count</code>].
-# &lt;/weight&gt;</p>
+<p>## Complexity
+Same as [<code>Self::set_validator_count</code>].</p>
 <h4 id="attributes_18">Attributes<a class="headerlink" href="#attributes_18" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12606,18 +12619,13 @@ committee is allowed to change this value.</p>
 <hr />
 <h3 id="set_controller">set_controller<a class="headerlink" href="#set_controller" title="Permanent link">&para;</a></h3>
 <p>(Re-)set the controller of a stash.</p>
-<p>Effects will be felt at the beginning of the next era.</p>
+<p>Effects will be felt instantly (as soon as this function is completed successfully).</p>
 <p>The dispatch origin for this call must be <em>Signed</em> by the stash, not the controller.</p>
-<p># &lt;weight&gt;
+<p>## Complexity
+O(1)
 - Independent of the arguments. Insignificant complexity.
 - Contains a limited number of reads.
 - Writes are limited to the <code>origin</code> account key.</p>
-<hr />
-<p>Weight: O(1)
-DB Weight:
-- Read: Bonded, Ledger New Controller, Ledger Old Controller
-- Write: Bonded, Ledger New Controller, Ledger Old Controller
-# &lt;/weight&gt;</p>
 <h4 id="attributes_20">Attributes<a class="headerlink" href="#attributes_20" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12629,7 +12637,7 @@ DB Weight:
 <tbody>
 <tr>
 <td>controller</td>
-<td><code>&lt;T::Lookup as StaticLookup&gt;::Source</code></td>
+<td><code>AccountIdLookupOf&lt;T&gt;</code></td>
 </tr>
 </tbody>
 </table>
@@ -12648,24 +12656,11 @@ DB Weight:
 </code></pre>
 <hr />
 <h3 id="set_history_depth">set_history_depth<a class="headerlink" href="#set_history_depth" title="Permanent link">&para;</a></h3>
-<p>Set <code>HistoryDepth</code> value. This function will delete any history information
-when <code>HistoryDepth</code> is reduced.</p>
-<p>Parameters:
-- <code>new_history_depth</code>: The new history depth you would like to set.
-- <code>era_items_deleted</code>: The number of items that will be deleted by this dispatch.
-   This should report all the storage items that will be deleted by clearing old
-   era history. Needed to report an accurate weight for the dispatch. Trusted by
-   <code>Root</code> to report an accurate number.</p>
-<p>Origin must be root.</p>
-<p># &lt;weight&gt;
-- E: Number of history depths removed, i.e. 10 -&gt; 7 = 3
-- Weight: O(E)
-- DB Weight:
-    - Reads: Current Era, History Depth
-    - Writes: History Depth
-    - Clear Prefix Each: Era Stakers, EraStakersClipped, ErasValidatorPrefs
-    - Writes Each: ErasValidatorReward, ErasRewardPoints, ErasTotalStake, ErasStartSessionIndex
-# &lt;/weight&gt;</p>
+<p>Rebond a portion of the stash scheduled to be unlocked.</p>
+<p>The dispatch origin must be signed by the controller.</p>
+<p>## Complexity
+- Time complexity: O(L), where L is unlocking chunks
+- Bounded by <code>MaxUnlockingChunks</code>.</p>
 <h4 id="attributes_21">Attributes<a class="headerlink" href="#attributes_21" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12680,7 +12675,7 @@ when <code>HistoryDepth</code> is reduced.</p>
 <td><code>EraIndex</code></td>
 </tr>
 <tr>
-<td>_era_items_deleted</td>
+<td>era_items_deleted</td>
 <td><code>u32</code></td>
 </tr>
 </tbody>
@@ -12688,7 +12683,7 @@ when <code>HistoryDepth</code> is reduced.</p>
 <h4 id="python_21">Python<a class="headerlink" href="#python_21" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">call = substrate.compose_call(
     'Staking', 'set_history_depth', {
-    '_era_items_deleted': 'u32',
+    'era_items_deleted': 'u32',
     'new_history_depth': 'u32',
 }
 )
@@ -12697,10 +12692,6 @@ when <code>HistoryDepth</code> is reduced.</p>
 <h3 id="set_invulnerables">set_invulnerables<a class="headerlink" href="#set_invulnerables" title="Permanent link">&para;</a></h3>
 <p>Set the validators who cannot be slashed (if any).</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
-- O(V)
-- Write: Invulnerables
-# &lt;/weight&gt;</p>
 <h4 id="attributes_22">Attributes<a class="headerlink" href="#attributes_22" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12723,10 +12714,10 @@ when <code>HistoryDepth</code> is reduced.</p>
 </code></pre>
 <hr />
 <h3 id="set_min_bond_threshold">set_min_bond_threshold<a class="headerlink" href="#set_min_bond_threshold" title="Permanent link">&para;</a></h3>
-<p>Changes min bond value to be used in validate(). Only Governance
+<p>Changes commission rate which applies to all validators. Only Governance
 committee is allowed to change this value.</p>
 <p># Arguments
-* <code>new_value</code> the new minimum</p>
+* <code>new_cap</code> the new commission cap.</p>
 <h4 id="attributes_23">Attributes<a class="headerlink" href="#attributes_23" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12750,22 +12741,14 @@ committee is allowed to change this value.</p>
 <hr />
 <h3 id="set_payee">set_payee<a class="headerlink" href="#set_payee" title="Permanent link">&para;</a></h3>
 <p>(Re-)set the payment target for a controller.</p>
-<p>Effects will be felt at the beginning of the next era.</p>
+<p>Effects will be felt instantly (as soon as this function is completed successfully).</p>
 <p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.</p>
-<p># &lt;weight&gt;
+<p>## Complexity
+- O(1)
 - Independent of the arguments. Insignificant complexity.
 - Contains a limited number of reads.
 - Writes are limited to the <code>origin</code> account key.</p>
 <hr />
-<ul>
-<li>Weight: O(1)</li>
-<li>DB Weight:<ul>
-<li>Read: Ledger</li>
-<li>Write: Payee
-# &lt;/weight&gt;</li>
-</ul>
-</li>
-</ul>
 <h4 id="attributes_24">Attributes<a class="headerlink" href="#attributes_24" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -12797,10 +12780,8 @@ committee is allowed to change this value.</p>
 <h3 id="set_validator_count">set_validator_count<a class="headerlink" href="#set_validator_count" title="Permanent link">&para;</a></h3>
 <p>Sets the ideal number of validators.</p>
 <p>The dispatch origin must be Root.</p>
-<p># &lt;weight&gt;
-Weight: O(1)
-Write: Validator Count
-# &lt;/weight&gt;</p>
+<p>## Complexity
+O(1)</p>
 <h4 id="attributes_25">Attributes<a class="headerlink" href="#attributes_25" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13187,29 +13168,16 @@ See [<code>submit_election_solution</code>].
 <p>Schedule a portion of the stash to be unlocked ready for transfer out after the bond
 period ends. If this leaves an amount actively bonded less than
 T::Currency::minimum_balance(), then it is increased to the full amount.</p>
+<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.</p>
 <p>Once the unlock period is done, you can call <code>withdraw_unbonded</code> to actually move
 the funds out of management ready for transfer.</p>
-<p>No more than a limited number of unlocking chunks (see <code>MAX_UNLOCKING_CHUNKS</code>)
-can co-exists at the same time. In that case, [<code>Call::withdraw_unbonded</code>] need
-to be called first to remove some of the chunks (if possible).</p>
-<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.
-And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
+<p>No more than a limited number of unlocking chunks (see <code>MaxUnlockingChunks</code>)
+can co-exists at the same time. If there are no unlocking chunks slots available
+[<code>Call::withdraw_unbonded</code>] is called to remove some of the chunks (if possible).</p>
+<p>If a user encounters the <code>InsufficientBond</code> error when calling this extrinsic,
+they should call <code>chill</code> first in order to free up their bonded funds.</p>
 <p>Emits <code>Unbonded</code>.</p>
 <p>See also [<code>Call::withdraw_unbonded</code>].</p>
-<p># &lt;weight&gt;
-- Independent of the arguments. Limited but potentially exploitable complexity.
-- Contains a limited number of reads.
-- Each call (requires the remainder of the bonded balance to be above <code>minimum_balance</code>)
-  will cause a new entry to be inserted into a vector (<code>Ledger.unlocking</code>) kept in storage.
-  The only way to clean the aforementioned storage item is also user-controlled via
-  <code>withdraw_unbonded</code>.
-- One DB entry.</p>
-<hr />
-<p>Weight: O(1)
-DB Weight:
-- Read: EraElectionStatus, Ledger, CurrentEra, Locks, [Origin Account]
-- Write: Locks, Ledger, [Origin Account]
-&lt;/weight&gt;</p>
 <h4 id="attributes_28">Attributes<a class="headerlink" href="#attributes_28" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13236,7 +13204,7 @@ DB Weight:
 <p># Arguments
 * origin which must be the required origin for adding a potential validator.
 * identity to add as a validator.
-* new_intended_count New value of intended count.</p>
+* new_intended_count New value of intended co</p>
 <h4 id="attributes_29">Attributes<a class="headerlink" href="#attributes_29" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13268,18 +13236,7 @@ DB Weight:
 <h3 id="validate">validate<a class="headerlink" href="#validate" title="Permanent link">&para;</a></h3>
 <p>Declare the desire to validate for the origin controller.</p>
 <p>Effects will be felt at the beginning of the next era.</p>
-<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.
-And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
-<p># &lt;weight&gt;
-- Independent of the arguments. Insignificant complexity.
-- Contains a limited number of reads.
-- Writes are limited to the <code>origin</code> account key.</p>
-<hr />
-<p>Weight: O(1)
-DB Weight:
-- Read: Era Election Status, Ledger
-- Write: Nominators, Validators
-# &lt;/weight&gt;</p>
+<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.</p>
 <h4 id="attributes_30">Attributes<a class="headerlink" href="#attributes_30" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13308,13 +13265,9 @@ DB Weight:
 <hr />
 <h3 id="validate_cdd_expiry_nominators">validate_cdd_expiry_nominators<a class="headerlink" href="#validate_cdd_expiry_nominators" title="Permanent link">&para;</a></h3>
 <p>Validate the nominators CDD expiry time.</p>
-<p>If an account from a given set of address is nominating then
-check the CDD expiry time of it and if it is expired
-then the account should be unbonded and removed from the nominating process.</p>
-<p>#&lt;weight&gt;
-- Depends on passed list of AccountId.
-- Depends on the no. of claim issuers an accountId has for the CDD expiry.
-#&lt;/weight&gt;</p>
+<p>If an account from a given set of address is nominating then check the CDD expiry time
+of it and if it is expired then the account should be unbonded and removed from the
+nominating process.</p>
 <h4 id="attributes_31">Attributes<a class="headerlink" href="#attributes_31" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13340,29 +13293,12 @@ then the account should be unbonded and removed from the nominating process.</p>
 <p>Remove any unlocked chunks from the <code>unlocking</code> queue from our management.</p>
 <p>This essentially frees up that balance to be used by the stash account to do
 whatever it wants.</p>
-<p>The dispatch origin for this call must be <em>Signed</em> by the controller, not the stash.
-And, it can be only called when [<code>EraElectionStatus</code>] is <code>Closed</code>.</p>
+<p>The dispatch origin for this call must be <em>Signed</em> by the controller.</p>
 <p>Emits <code>Withdrawn</code>.</p>
 <p>See also [<code>Call::unbond</code>].</p>
-<p># &lt;weight&gt;
-- Could be dependent on the <code>origin</code> argument and how much <code>unlocking</code> chunks exist.
- It implies <code>consolidate_unlocked</code> which loops over <code>Ledger.unlocking</code>, which is
- indirectly user-controlled. See [<code>unbond</code>] for more detail.
-- Contains a limited number of reads, yet the size of which could be large based on <code>ledger</code>.
-- Writes are limited to the <code>origin</code> account key.</p>
-<hr />
-<p>Complexity O(S) where S is the number of slashing spans to remove
-Update:
-- Reads: EraElectionStatus, Ledger, Current Era, Locks, [Origin Account]
-- Writes: [Origin Account], Locks, Ledger
-Kill:
-- Reads: EraElectionStatus, Ledger, Current Era, Bonded, Slashing Spans, [Origin
-  Account], Locks
-- Writes: Bonded, Slashing Spans (if S &gt; 0), Ledger, Payee, Validators, Nominators,
-  [Origin Account], Locks
-- Writes Each: SpanSlash * S
-NOTE: Weight annotation is the kill scenario, we refund otherwise.
-# &lt;/weight&gt;</p>
+<p>## Complexity
+O(S) where S is the number of slashing spans to remove
+NOTE: Weight annotation is the kill scenario, we refund otherwise.</p>
 <h4 id="attributes_32">Attributes<a class="headerlink" href="#attributes_32" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13387,7 +13323,7 @@ NOTE: Weight annotation is the kill scenario, we refund otherwise.
 <h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="bonded">Bonded<a class="headerlink" href="#bonded" title="Permanent link">&para;</a></h3>
-<p>An account has bonded this amount. [did, stash, amount]</p>
+<p>An account has bonded this amount. [stash, amount]</p>
 <p>NOTE: This event is only emitted when funds are bonded via a dispatchable. Notably,
 it will not be emitted for staking rewards when they are added to stake.</p>
 <h4 id="attributes_33">Attributes<a class="headerlink" href="#attributes_33" title="Permanent link">&para;</a></h4>
@@ -13407,12 +13343,12 @@ it will not be emitted for staking rewards when they are added to stake.</p>
 </tr>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13451,8 +13387,7 @@ it will not be emitted for staking rewards when they are added to stake.</p>
 <hr />
 <h3 id="erapayout">EraPayout<a class="headerlink" href="#erapayout" title="Permanent link">&para;</a></h3>
 <p>The era payout has been set; the first balance is the validator-payout; the second is
-the remainder from the maximum amount of reward.
-[era_index, validator_payout, remainder]</p>
+the remainder from the maximum amount of reward.</p>
 <h4 id="attributes_35">Attributes<a class="headerlink" href="#attributes_35" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13470,12 +13405,12 @@ the remainder from the maximum amount of reward.
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13501,12 +13436,12 @@ Caller, Stash accountId of nominators</p>
 </tr>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Vec&lt;AccountId&gt;</code></td>
+<td><code>Vec&lt;T::AccountId&gt;</code></td>
 <td><code>['AccountId']</code></td>
 </tr>
 </tbody>
@@ -13531,7 +13466,7 @@ Caller, Stash accountId of nominators</p>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13556,12 +13491,12 @@ Caller, Stash accountId of nominators</p>
 </tr>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Vec&lt;AccountId&gt;</code></td>
+<td><code>Vec&lt;T::AccountId&gt;</code></td>
 <td><code>['AccountId']</code></td>
 </tr>
 </tbody>
@@ -13569,7 +13504,7 @@ Caller, Stash accountId of nominators</p>
 <hr />
 <h3 id="oldslashingreportdiscarded">OldSlashingReportDiscarded<a class="headerlink" href="#oldslashingreportdiscarded" title="Permanent link">&para;</a></h3>
 <p>An old slashing report from a prior era was discarded because it could
-not be processed. [session_index]</p>
+not be processed.</p>
 <h4 id="attributes_39">Attributes<a class="headerlink" href="#attributes_39" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13641,7 +13576,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </table>
 <hr />
 <h3 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">&para;</a></h3>
-<p>The staker has been rewarded by this amount. [stash_identity, stash, amount]</p>
+<p>The nominator has been rewarded by this amount.</p>
 <h4 id="attributes_42">Attributes<a class="headerlink" href="#attributes_42" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13659,12 +13594,12 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </tr>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13684,7 +13619,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 <tbody>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
@@ -13701,8 +13636,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </table>
 <hr />
 <h3 id="slash">Slash<a class="headerlink" href="#slash" title="Permanent link">&para;</a></h3>
-<p>One validator (and its nominators) has been slashed by the given amount.
-[validator, amount]</p>
+<p>A staker (validator or nominator) has been slashed by the given amount.</p>
 <h4 id="attributes_44">Attributes<a class="headerlink" href="#attributes_44" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13715,12 +13649,12 @@ GC identity , Validator&amp;#x27;s identity.</p>
 <tbody>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13747,7 +13681,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </table>
 <hr />
 <h3 id="solutionstored">SolutionStored<a class="headerlink" href="#solutionstored" title="Permanent link">&para;</a></h3>
-<p>A new solution for the upcoming election has been stored. [compute]</p>
+<p>A new solution for the upcoming election has been stored.</p>
 <h4 id="attributes_46">Attributes<a class="headerlink" href="#attributes_46" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13767,7 +13701,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </table>
 <hr />
 <h3 id="stakingelection">StakingElection<a class="headerlink" href="#stakingelection" title="Permanent link">&para;</a></h3>
-<p>A new set of stakers was elected with the given [compute].</p>
+<p>A new set of stakers was elected.</p>
 <h4 id="attributes_47">Attributes<a class="headerlink" href="#attributes_47" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13787,7 +13721,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </table>
 <hr />
 <h3 id="unbonded">Unbonded<a class="headerlink" href="#unbonded" title="Permanent link">&para;</a></h3>
-<p>An account has unbonded this amount. [did, stash, amount]</p>
+<p>An account has unbonded this amount.</p>
 <h4 id="attributes_48">Attributes<a class="headerlink" href="#attributes_48" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13805,12 +13739,12 @@ GC identity , Validator&amp;#x27;s identity.</p>
 </tr>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13818,7 +13752,7 @@ GC identity , Validator&amp;#x27;s identity.</p>
 <hr />
 <h3 id="withdrawn">Withdrawn<a class="headerlink" href="#withdrawn" title="Permanent link">&para;</a></h3>
 <p>An account has called <code>withdraw_unbonded</code> and removed unbonding chunks worth <code>Balance</code>
-from the unlocking queue. [stash, amount]</p>
+from the unlocking queue.</p>
 <h4 id="attributes_49">Attributes<a class="headerlink" href="#attributes_49" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -13831,12 +13765,12 @@ from the unlocking queue. [stash, amount]</p>
 <tbody>
 <tr>
 <td>None</td>
-<td><code>AccountId</code></td>
+<td><code>T::AccountId</code></td>
 <td><code>AccountId</code></td>
 </tr>
 <tr>
 <td>None</td>
-<td><code>Balance</code></td>
+<td><code>BalanceOf&lt;T&gt;</code></td>
 <td><code>u128</code></td>
 </tr>
 </tbody>
@@ -13859,6 +13793,7 @@ from the unlocking queue. [stash, amount]</p>
 <hr />
 <h3 id="bonded_1">Bonded<a class="headerlink" href="#bonded_1" title="Permanent link">&para;</a></h3>
 <p>Map from all locked &quot;stash&quot; accounts to the controller account.</p>
+<p>TWOX-NOTE: SAFE since <code>AccountId</code> is a secure hash.</p>
 <h4 id="python_34">Python<a class="headerlink" href="#python_34" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'Bonded', ['AccountId']
@@ -13918,8 +13853,8 @@ from the unlocking queue. [stash, amount]</p>
 </code></pre>
 <hr />
 <h3 id="eraelectionstatus">EraElectionStatus<a class="headerlink" href="#eraelectionstatus" title="Permanent link">&para;</a></h3>
-<p>Flag to control the execution of the offchain election. When <code>Open(_)</code>, we accept
- solutions to be submitted.</p>
+<p>Flag to control the execution of the offchain election. When <code>Open(_)</code>, we accept solutions
+ to be submitted.</p>
 <h4 id="python_39">Python<a class="headerlink" href="#python_39" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'EraElectionStatus', []
@@ -13938,7 +13873,7 @@ from the unlocking queue. [stash, amount]</p>
 )
 </code></pre>
 <h4 id="return-value_7">Return value<a class="headerlink" href="#return-value_7" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">{'individual': 'scale_info::581', 'total': 'u32'}
+<pre><code class="language-python">{'individual': 'scale_info::591', 'total': 'u32'}
 </code></pre>
 <hr />
 <h3 id="erasstakers">ErasStakers<a class="headerlink" href="#erasstakers" title="Permanent link">&para;</a></h3>
@@ -14125,7 +14060,20 @@ from the unlocking queue. [stash, amount]</p>
 </code></pre>
 <hr />
 <h3 id="nominators">Nominators<a class="headerlink" href="#nominators" title="Permanent link">&para;</a></h3>
-<p>The map from nominator stash key to the set of stash keys of all validators to nominate.</p>
+<p>The map from nominator stash key to their nomination preferences, namely the validators that
+ they wish to support.</p>
+<p>Note that the keys of this storage map might become non-decodable in case the
+ [<code>Config::MaxNominations</code>] configuration is decreased. In this rare case, these nominators
+ are still existent in storage, their key is correct and retrievable (i.e. <code>contains_key</code>
+ indicates that they exist), but their value cannot be decoded. Therefore, the non-decodable
+ nominators will effectively not-exist, until they re-submit their preferences such that it
+ is within the bounds of the newly set <code>Config::MaxNominations</code>.</p>
+<p>This implies that <code>::iter_keys().count()</code> and <code>::iter().count()</code> might return different
+ values for this map. Moreover, the main <code>::count()</code> is aligned with the former, namely the
+ number of keys that exist.</p>
+<p>Lastly, if any of the nominators become non-decodable, they can be chilled immediately via
+ [<code>Call::chill_other</code>] dispatchable by anyone.</p>
+<p>TWOX-NOTE: SAFE since <code>AccountId</code> is a secure hash.</p>
 <h4 id="python_55">Python<a class="headerlink" href="#python_55" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'Nominators', ['AccountId']
@@ -14155,6 +14103,7 @@ from the unlocking queue. [stash, amount]</p>
 <hr />
 <h3 id="payee">Payee<a class="headerlink" href="#payee" title="Permanent link">&para;</a></h3>
 <p>Where the reward payment should be made. Keyed by stash.</p>
+<p>TWOX-NOTE: SAFE since <code>AccountId</code> is a secure hash.</p>
 <h4 id="python_57">Python<a class="headerlink" href="#python_57" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'Payee', ['AccountId']
@@ -14176,7 +14125,6 @@ from the unlocking queue. [stash, amount]</p>
 </code></pre>
 <hr />
 <h3 id="polymeshstorageversion">PolymeshStorageVersion<a class="headerlink" href="#polymeshstorageversion" title="Permanent link">&para;</a></h3>
-<p>Polymesh Storage version.</p>
 <h4 id="python_59">Python<a class="headerlink" href="#python_59" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'PolymeshStorageVersion', []
@@ -14293,36 +14241,14 @@ from the unlocking queue. [stash, amount]</p>
 <pre><code class="language-python">{'paid_out': 'u128', 'slashed': 'u128'}
 </code></pre>
 <hr />
-<h3 id="storageversion">StorageVersion<a class="headerlink" href="#storageversion" title="Permanent link">&para;</a></h3>
-<p>True if network has been upgraded to this version.
- Storage version of the pallet.</p>
-<p>This is set to v6.0.1 for new networks.</p>
-<h4 id="python_68">Python<a class="headerlink" href="#python_68" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">result = substrate.query(
-    'Staking', 'StorageVersion', []
-)
-</code></pre>
-<h4 id="return-value_35">Return value<a class="headerlink" href="#return-value_35" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">(
-    'V1_0_0Ancient',
-    'V2_0_0',
-    'V3_0_0',
-    'V4_0_0',
-    'V5_0_0',
-    'V6_0_0',
-    'V6_0_1',
-    'V7_0_0',
-)
-</code></pre>
-<hr />
 <h3 id="unappliedslashes">UnappliedSlashes<a class="headerlink" href="#unappliedslashes" title="Permanent link">&para;</a></h3>
 <p>All unapplied slashes that are queued for later.</p>
-<h4 id="python_69">Python<a class="headerlink" href="#python_69" title="Permanent link">&para;</a></h4>
+<h4 id="python_68">Python<a class="headerlink" href="#python_68" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'UnappliedSlashes', ['u32']
 )
 </code></pre>
-<h4 id="return-value_36">Return value<a class="headerlink" href="#return-value_36" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_35">Return value<a class="headerlink" href="#return-value_35" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">[
     {
         'others': [('AccountId', 'u128')],
@@ -14335,58 +14261,60 @@ from the unlocking queue. [stash, amount]</p>
 </code></pre>
 <hr />
 <h3 id="validatorcommissioncap">ValidatorCommissionCap<a class="headerlink" href="#validatorcommissioncap" title="Permanent link">&para;</a></h3>
-<p>Every validator has commission that should be in the range [0, Cap].</p>
-<h4 id="python_70">Python<a class="headerlink" href="#python_70" title="Permanent link">&para;</a></h4>
+<p>Allows flexibility in commission. Every validator has commission that should be in the
+ range [0, Cap].</p>
+<h4 id="python_69">Python<a class="headerlink" href="#python_69" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'ValidatorCommissionCap', []
+)
+</code></pre>
+<h4 id="return-value_36">Return value<a class="headerlink" href="#return-value_36" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">'u32'
+</code></pre>
+<hr />
+<h3 id="validatorcount">ValidatorCount<a class="headerlink" href="#validatorcount" title="Permanent link">&para;</a></h3>
+<p>The ideal number of active validators.</p>
+<h4 id="python_70">Python<a class="headerlink" href="#python_70" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">result = substrate.query(
+    'Staking', 'ValidatorCount', []
 )
 </code></pre>
 <h4 id="return-value_37">Return value<a class="headerlink" href="#return-value_37" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">'u32'
 </code></pre>
 <hr />
-<h3 id="validatorcount">ValidatorCount<a class="headerlink" href="#validatorcount" title="Permanent link">&para;</a></h3>
-<p>The ideal number of staking participants.</p>
-<h4 id="python_71">Python<a class="headerlink" href="#python_71" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">result = substrate.query(
-    'Staking', 'ValidatorCount', []
-)
-</code></pre>
-<h4 id="return-value_38">Return value<a class="headerlink" href="#return-value_38" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">'u32'
-</code></pre>
-<hr />
 <h3 id="validatorslashinera">ValidatorSlashInEra<a class="headerlink" href="#validatorslashinera" title="Permanent link">&para;</a></h3>
 <p>All slashing events on validators, mapped by era to the highest slash proportion
  and slash value of the era.</p>
-<h4 id="python_72">Python<a class="headerlink" href="#python_72" title="Permanent link">&para;</a></h4>
+<h4 id="python_71">Python<a class="headerlink" href="#python_71" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'ValidatorSlashInEra', ['u32', 'AccountId']
 )
 </code></pre>
-<h4 id="return-value_39">Return value<a class="headerlink" href="#return-value_39" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_38">Return value<a class="headerlink" href="#return-value_38" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">('u32', 'u128')
 </code></pre>
 <hr />
 <h3 id="validators">Validators<a class="headerlink" href="#validators" title="Permanent link">&para;</a></h3>
 <p>The map from (wannabe) validator stash key to the preferences of that validator.</p>
-<h4 id="python_73">Python<a class="headerlink" href="#python_73" title="Permanent link">&para;</a></h4>
+<p>TWOX-NOTE: SAFE since <code>AccountId</code> is a secure hash.</p>
+<h4 id="python_72">Python<a class="headerlink" href="#python_72" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">result = substrate.query(
     'Staking', 'Validators', ['AccountId']
 )
 </code></pre>
-<h4 id="return-value_40">Return value<a class="headerlink" href="#return-value_40" title="Permanent link">&para;</a></h4>
+<h4 id="return-value_39">Return value<a class="headerlink" href="#return-value_39" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">{'blocked': 'bool', 'commission': 'u32'}
 </code></pre>
 <hr />
 <h2 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="bondingduration">BondingDuration<a class="headerlink" href="#bondingduration" title="Permanent link">&para;</a></h3>
-<p>Number of eras that staked funds must remain bonded for.</p>
+<p>Number of eras that staked funds must remain bonded for.]</p>
 <h4 id="value">Value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">28
 </code></pre>
-<h4 id="python_74">Python<a class="headerlink" href="#python_74" title="Permanent link">&para;</a></h4>
+<h4 id="python_73">Python<a class="headerlink" href="#python_73" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'BondingDuration')
 </code></pre>
 <hr />
@@ -14399,16 +14327,16 @@ from the unlocking queue. [stash, amount]</p>
 <h4 id="value_1">Value<a class="headerlink" href="#value_1" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">600
 </code></pre>
-<h4 id="python_75">Python<a class="headerlink" href="#python_75" title="Permanent link">&para;</a></h4>
+<h4 id="python_74">Python<a class="headerlink" href="#python_74" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'ElectionLookahead')
 </code></pre>
 <hr />
 <h3 id="fixedyearlyreward">FixedYearlyReward<a class="headerlink" href="#fixedyearlyreward" title="Permanent link">&para;</a></h3>
-<p>Total year rewards that gets paid during fixed reward schedule.</p>
+<p>Yearly total reward amount that gets distributed when fixed rewards kicks in.</p>
 <h4 id="value_2">Value<a class="headerlink" href="#value_2" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">140000000000000
 </code></pre>
-<h4 id="python_76">Python<a class="headerlink" href="#python_76" title="Permanent link">&para;</a></h4>
+<h4 id="python_75">Python<a class="headerlink" href="#python_75" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'FixedYearlyReward')
 </code></pre>
 <hr />
@@ -14418,76 +14346,101 @@ from the unlocking queue. [stash, amount]</p>
 <h4 id="value_3">Value<a class="headerlink" href="#value_3" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">10
 </code></pre>
-<h4 id="python_77">Python<a class="headerlink" href="#python_77" title="Permanent link">&para;</a></h4>
+<h4 id="python_76">Python<a class="headerlink" href="#python_76" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'MaxIterations')
+</code></pre>
+<hr />
+<h3 id="maxnominations">MaxNominations<a class="headerlink" href="#maxnominations" title="Permanent link">&para;</a></h3>
+<p>Maximum number of nominations per nominator.</p>
+<h4 id="value_4">Value<a class="headerlink" href="#value_4" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">16
+</code></pre>
+<h4 id="python_77">Python<a class="headerlink" href="#python_77" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">constant = substrate.get_constant('Staking', 'MaxNominations')
 </code></pre>
 <hr />
 <h3 id="maxnominatorrewardedpervalidator">MaxNominatorRewardedPerValidator<a class="headerlink" href="#maxnominatorrewardedpervalidator" title="Permanent link">&para;</a></h3>
 <p>The maximum number of nominators rewarded for each validator.</p>
 <p>For each validator only the <code>$MaxNominatorRewardedPerValidator</code> biggest stakers can claim
  their reward. This used to limit the i/o cost for the nominator payout.</p>
-<h4 id="value_4">Value<a class="headerlink" href="#value_4" title="Permanent link">&para;</a></h4>
+<h4 id="value_5">Value<a class="headerlink" href="#value_5" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">2048
 </code></pre>
 <h4 id="python_78">Python<a class="headerlink" href="#python_78" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'MaxNominatorRewardedPerValidator')
 </code></pre>
 <hr />
-<h3 id="maxvalidatorperidentity">MaxValidatorPerIdentity<a class="headerlink" href="#maxvalidatorperidentity" title="Permanent link">&para;</a></h3>
-<p>Maximum number of validators for each permissioned identity.</p>
-<p>Max number of validators count = <code>MaxValidatorPerIdentity * Self::validator_count()</code>.</p>
-<h4 id="value_5">Value<a class="headerlink" href="#value_5" title="Permanent link">&para;</a></h4>
-<pre><code class="language-python">330000
+<h3 id="maxunlockingchunks">MaxUnlockingChunks<a class="headerlink" href="#maxunlockingchunks" title="Permanent link">&para;</a></h3>
+<p>The maximum number of <code>unlocking</code> chunks a [<code>StakingLedger</code>] can
+ have. Effectively determines how many unique eras a staker may be
+ unbonding in.</p>
+<p>Note: <code>MaxUnlockingChunks</code> is used as the upper bound for the
+ <code>BoundedVec</code> item <code>StakingLedger.unlocking</code>. Setting this value
+ lower than the existing value can lead to inconsistencies in the
+ <code>StakingLedger</code> and will need to be handled properly in a runtime
+ migration. The test <code>reducing_max_unlocking_chunks_abrupt</code> shows
+ this effect.</p>
+<h4 id="value_6">Value<a class="headerlink" href="#value_6" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">32
 </code></pre>
 <h4 id="python_79">Python<a class="headerlink" href="#python_79" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">constant = substrate.get_constant('Staking', 'MaxUnlockingChunks')
+</code></pre>
+<hr />
+<h3 id="maxvalidatorperidentity">MaxValidatorPerIdentity<a class="headerlink" href="#maxvalidatorperidentity" title="Permanent link">&para;</a></h3>
+<p>Maximum amount of validators that can run by an identity.
+ It will be MaxValidatorPerIdentity * Self::validator_count().</p>
+<h4 id="value_7">Value<a class="headerlink" href="#value_7" title="Permanent link">&para;</a></h4>
+<pre><code class="language-python">330000
+</code></pre>
+<h4 id="python_80">Python<a class="headerlink" href="#python_80" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'MaxValidatorPerIdentity')
 </code></pre>
 <hr />
 <h3 id="maxvariableinflationtotalissuance">MaxVariableInflationTotalIssuance<a class="headerlink" href="#maxvariableinflationtotalissuance" title="Permanent link">&para;</a></h3>
-<p>Maximum amount of <code>T::currency::total_issuance()</code> after that non-inflated rewards get paid.</p>
-<h4 id="value_6">Value<a class="headerlink" href="#value_6" title="Permanent link">&para;</a></h4>
+<p>Maximum amount of total issuance after which fixed rewards kicks in.</p>
+<h4 id="value_8">Value<a class="headerlink" href="#value_8" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">1000000000000000
 </code></pre>
-<h4 id="python_80">Python<a class="headerlink" href="#python_80" title="Permanent link">&para;</a></h4>
+<h4 id="python_81">Python<a class="headerlink" href="#python_81" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'MaxVariableInflationTotalIssuance')
 </code></pre>
 <hr />
 <h3 id="minsolutionscorebump">MinSolutionScoreBump<a class="headerlink" href="#minsolutionscorebump" title="Permanent link">&para;</a></h3>
 <p>The threshold of improvement that should be provided for a new solution to be accepted.</p>
-<h4 id="value_7">Value<a class="headerlink" href="#value_7" title="Permanent link">&para;</a></h4>
+<h4 id="value_9">Value<a class="headerlink" href="#value_9" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">500000
 </code></pre>
-<h4 id="python_81">Python<a class="headerlink" href="#python_81" title="Permanent link">&para;</a></h4>
+<h4 id="python_82">Python<a class="headerlink" href="#python_82" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'MinSolutionScoreBump')
 </code></pre>
 <hr />
 <h3 id="minimumbond">MinimumBond<a class="headerlink" href="#minimumbond" title="Permanent link">&para;</a></h3>
-<p>Minimum amount of POLYX that must be bonded for a new bond.</p>
-<h4 id="value_8">Value<a class="headerlink" href="#value_8" title="Permanent link">&para;</a></h4>
+<p>Minimum bond amount.</p>
+<h4 id="value_10">Value<a class="headerlink" href="#value_10" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">1000000
 </code></pre>
-<h4 id="python_82">Python<a class="headerlink" href="#python_82" title="Permanent link">&para;</a></h4>
+<h4 id="python_83">Python<a class="headerlink" href="#python_83" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'MinimumBond')
 </code></pre>
 <hr />
 <h3 id="sessionsperera">SessionsPerEra<a class="headerlink" href="#sessionsperera" title="Permanent link">&para;</a></h3>
 <p>Number of sessions per era.</p>
-<h4 id="value_9">Value<a class="headerlink" href="#value_9" title="Permanent link">&para;</a></h4>
+<h4 id="value_11">Value<a class="headerlink" href="#value_11" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">6
 </code></pre>
-<h4 id="python_83">Python<a class="headerlink" href="#python_83" title="Permanent link">&para;</a></h4>
+<h4 id="python_84">Python<a class="headerlink" href="#python_84" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'SessionsPerEra')
 </code></pre>
 <hr />
 <h3 id="slashdeferduration">SlashDeferDuration<a class="headerlink" href="#slashdeferduration" title="Permanent link">&para;</a></h3>
 <p>Number of eras that slashes are deferred by, after computation.</p>
-<p>This should be less than the bonding duration.
- Set to 0 if slashes should be applied immediately, without opportunity for
- intervention.</p>
-<h4 id="value_10">Value<a class="headerlink" href="#value_10" title="Permanent link">&para;</a></h4>
+<p>This should be less than the bonding duration. Set to 0 if slashes
+ should be applied immediately, without opportunity for intervention.</p>
+<h4 id="value_12">Value<a class="headerlink" href="#value_12" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">14
 </code></pre>
-<h4 id="python_84">Python<a class="headerlink" href="#python_84" title="Permanent link">&para;</a></h4>
+<h4 id="python_85">Python<a class="headerlink" href="#python_85" title="Permanent link">&para;</a></h4>
 <pre><code class="language-python">constant = substrate.get_constant('Staking', 'SlashDeferDuration')
 </code></pre>
 <hr />
@@ -14513,6 +14466,9 @@ from the unlocking queue. [stash, amount]</p>
 <hr />
 <h3 id="bondtoosmall">BondTooSmall<a class="headerlink" href="#bondtoosmall" title="Permanent link">&para;</a></h3>
 <p>When the amount to be bonded is less than <code>MinimumBond</code></p>
+<hr />
+<h3 id="boundnotmet">BoundNotMet<a class="headerlink" href="#boundnotmet" title="Permanent link">&para;</a></h3>
+<p>Some bound is not met.</p>
 <hr />
 <h3 id="callnotallowed">CallNotAllowed<a class="headerlink" href="#callnotallowed" title="Permanent link">&para;</a></h3>
 <p>The call is not allowed at the given time due to restrictions of election period.</p>
@@ -14622,6 +14578,10 @@ slash of the target.</p>
 <h3 id="stashidentitynotpermissioned">StashIdentityNotPermissioned<a class="headerlink" href="#stashidentitynotpermissioned" title="Permanent link">&para;</a></h3>
 <p>Validator stash identity was not permissioned.</p>
 <hr />
+<h3 id="toomanynominators">TooManyNominators<a class="headerlink" href="#toomanynominators" title="Permanent link">&para;</a></h3>
+<p>There are too many nominators in the system. Governance needs to adjust the staking
+settings to keep things safe for the runtime.</p>
+<hr />
 <h3 id="toomanytargets">TooManyTargets<a class="headerlink" href="#toomanytargets" title="Permanent link">&para;</a></h3>
 <p>Too many nomination targets supplied.</p>
 <hr />
@@ -14671,13 +14631,13 @@ slash of the target.</p>
         
         
           
-          <a href="../statistics/" class="md-footer__link md-footer__link--next" aria-label="Next: Statistics">
+          <a href="../statetriemigration/" class="md-footer__link md-footer__link--next" aria-label="Next: StateTrieMigration">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Statistics
+                StateTrieMigration
               </div>
             </div>
             <div class="md-footer__button md-icon">
